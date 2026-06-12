@@ -140,57 +140,14 @@
     flex-shrink: 0;
   }
 
-  /* Dark square with offset gold border = stamp effect */
-  .nav-brand-inner {
-    width: 44px;
-    height: 44px;
-    background: var(--dark);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
+  /* Logo image hover lift effect */
+  .nav-brand:hover img {
+    transform: translate(-2px, -2px);
     transition: transform 0.25s cubic-bezier(0.22,1,0.36,1);
   }
 
-  .nav-brand-inner::before {
-    content: '';
-    position: absolute;
-    inset: -3px;
-    border: 2px solid var(--accent2);
-    border-radius: 12px;
-    z-index: -1;
-    transition: inset 0.25s;
-  }
-
-  .nav-brand:hover .nav-brand-inner {
-    transform: translate(-2px, -2px);
-  }
-
-  .nav-brand:hover .nav-brand-inner::before {
-    inset: -5px;
-  }
-
-  .brand-monogram {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 20px;
-    letter-spacing: 1.5px;
-    color: var(--paper2);
-    line-height: 1;
-    display: flex;
-    align-items: baseline;
-    gap: 0;
-  }
-
-  .brand-monogram .bs {
-    font-size: 22px;
-    color: var(--accent); /* warm gold S */
-  }
-
-  .brand-monogram .bf {
-    font-size: 18px;
-    color: var(--paper2);
+  .nav-brand img {
+    transition: transform 0.25s cubic-bezier(0.22,1,0.36,1);
   }
 
   /* ── Full-screen overlay menu ── */
@@ -1538,36 +1495,13 @@
   }
 
   .footer-monogram {
-    width: 72px;
-    height: 72px;
-    background: rgba(240,232,204,0.06);
-    border: 1.5px solid rgba(240,232,204,0.15);
-    border-radius: 16px;
+    width: 90px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    position: relative;
   }
-
-  .footer-monogram::before {
-    content: '';
-    position: absolute;
-    inset: -4px;
-    border: 1px solid var(--accent);
-    border-radius: 20px;
-    opacity: 0.4;
-  }
-
-  .footer-monogram-text {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 30px;
-    letter-spacing: 2px;
-    line-height: 1;
-  }
-
-  .footer-monogram-text .ms { color: var(--accent); font-size: 34px; }
-  .footer-monogram-text .mf { color: var(--paper2); font-size: 26px; }
 
   .footer-links-block {
     text-align: right;
@@ -2884,9 +2818,7 @@
 <nav id="mainNav">
   <div class="nav-bar">
     <a href="#home" class="nav-brand">
-      <div class="nav-brand-inner">
-        <span class="brand-monogram"><span class="bs">S</span><span class="bf">F</span></span>
-      </div>
+      <img src="logo.svg" alt="Saniya Farooqui Logo" width="44" height="44" style="border-radius:10px;display:block;">
     </a>
     <ul id="navLinks">
       <li><a href="#home" class="active">Home</a></li>
@@ -3922,7 +3854,7 @@
 
       <!-- Centre Monogram -->
       <div class="footer-monogram">
-        <span class="footer-monogram-text"><span class="ms">S</span><span class="mf">F</span></span>
+        <img src="logo.svg" alt="Saniya Farooqui Logo" width="90" height="90" style="display:block;">
       </div>
 
       <!-- Social Links -->
