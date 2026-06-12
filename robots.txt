@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Point crawlers to your sitemap
+Sitemap: https://www.saniya.me/sitemap.xml
+
+# Block access to any sensitive folders (add more if you create them)
+Disallow: /private/
+Disallow: /admin/
