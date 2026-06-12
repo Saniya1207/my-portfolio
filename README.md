@@ -4,7 +4,7 @@ Welcome to my personal portfolio website! This portfolio showcases my skills, pr
 
 ## 🚀 Live Demo
 
-🔗 https://saniya-chi.vercel.app/
+🔗 https://www.saniya.me/
 
 ## 📌 About Me
 
