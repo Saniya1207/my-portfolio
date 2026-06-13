@@ -60,8 +60,8 @@ I enjoy building modern, responsive, and user-friendly web applications while co
 ## 🤝 Connect With Me
 
 * GitHub: https://github.com/Saniya1207
-* LinkedIn: https://www.linkedin.com/in/saniya-farooqui-0064a732a/
-* Email: saniya122400@gmail.com
+* LinkedIn: Add Your LinkedIn Link
+* Email: Add Your Email
 
 ## ⭐ Support
 
