@@ -2445,17 +2445,42 @@
       padding: 80px 20px 60px;
     }
 
+    #experience {
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+      overflow-x: hidden !important;
+    }
+
     #home, #certifications {
       padding-left: 20px;
       padding-right: 20px;
     }
 
     /* --- PROFILE --- */
-    .profile-inner, .major-phases, .experience-grid,
-    .contact-inner { grid-template-columns: 1fr; }
+    .profile-inner, .major-phases, .contact-inner { grid-template-columns: 1fr; }
+
+    /* --- CURRENTLY LEARNING CARDS — stack vertically on mobile --- */
+    .experience-grid {
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+
+    .learning-grid {
+      grid-template-columns: 1fr !important;
+      gap: 14px !important;
+    }
+
+    .exp-column {
+      width: 100% !important;
+      min-width: unset !important;
+      max-width: 100% !important;
+      overflow: visible !important;
+    }
 
     /* --- SKILLS --- */
-    .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .learning-grid { grid-template-columns: repeat(4, 1fr) !important; gap: 20px; }
+
+  .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
     .skills-infographic { flex-direction: column; gap: 20px; align-items: center; }
     .infographic-stat { width: 100%; }
     .skills-infographic div[style*="width:1px"] { display: none; }
@@ -2475,6 +2500,17 @@
 
   @media (max-width: 480px) {
     .hero-name { font-size: clamp(60px, 18vw, 80px); }
+
+    .experience-grid {
+      grid-template-columns: 1fr !important;
+      gap: 14px !important;
+      padding: 0 !important;
+    }
+
+    .exp-column {
+      width: 100% !important;
+      padding: 20px 16px !important;
+    }
     .hero-portrait { max-width: 200px; height: 220px; }
     .hero-inner { padding: 80px 16px 30px; gap: 16px; }
     .skills-grid { grid-template-columns: repeat(2, 1fr); }
@@ -2853,6 +2889,31 @@
     .journey-icon { margin-left: -32px; width: 40px; height: 40px; font-size: 18px; }
     .brand-grid { grid-template-columns: 1fr; }
     .brand-quote { font-size: 18px; }
+  }
+
+
+  /* ---- Currently Learning grid ---- */
+  .learning-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .learning-grid {
+      grid-template-columns: 1fr !important;
+      gap: 14px !important;
+    }
+    #learning {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .learning-grid {
+      grid-template-columns: 1fr !important;
+      gap: 12px !important;
+    }
   }
 
 </style>
@@ -3480,14 +3541,14 @@
 </section>
 
 <!-- ===== CURRENTLY LEARNING SECTION ===== -->
-<section id="learning" style="background:var(--bg2);padding:100px 60px 80px;min-height:auto;position:relative;overflow:hidden;">
+<section id="learning" style="background:var(--bg2);padding:100px 20px 80px;min-height:auto;position:relative;overflow:hidden;">
   <div class="grid-bg" style="opacity:0.3"></div>
   <div style="max-width:1100px;margin:0 auto;">
     <h2 class="section-title reveal">CURRENTLY LEARNING</h2>
     <div class="section-divider anim-draw"></div>
     <p class="source-tag">ALWAYS GROWING · ALWAYS BUILDING</p>
 
-    <div class="skills-grid reveal-stagger" style="grid-template-columns:repeat(4,1fr);margin-top:32px;">
+    <div class="skills-grid reveal-stagger learning-grid" style="margin-top:32px;">
 
       <div class="skill-card">
         <div class="skill-icon" style="color:#f7df1e;font-family:'Bebas Neue';font-size:13px;letter-spacing:0">JS</div>
