@@ -49,26 +49,6 @@ I enjoy building modern, responsive, and user-friendly web applications while co
 * Mobile-Friendly Interface
 * Fast Performance
 
-## 📂 Project Structure
-
-```bash
-my-portfolio/
-│
-├── public/
-├── src/
-│   ├── components/
-│   ├── assets/
-│   ├── pages/
-│   └── App.js
-│
-├── package.json
-└── README.md
-```
-
-## 📸 Preview
-
-Add screenshots of your portfolio here.
-
 ## 🎯 Future Improvements
 
 * Dark Mode
@@ -80,8 +60,8 @@ Add screenshots of your portfolio here.
 ## 🤝 Connect With Me
 
 * GitHub: https://github.com/Saniya1207
-* LinkedIn: Add Your LinkedIn Link
-* Email: Add Your Email
+* LinkedIn: https://www.linkedin.com/in/saniya-farooqui-0064a732a/
+* Email: saniya122400@gmail.com
 
 ## ⭐ Support
 
