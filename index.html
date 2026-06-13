@@ -4249,14 +4249,30 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-
 function sendToWhatsApp() {
-  const name = document.querySelector('input[placeholder="Name"]').value;
-  const email = document.querySelector('input[placeholder="Email Address"]').value;
-  const message = document.querySelector('textarea').value;
-  const phone = "917666886033"; 
-  const text = `Hello Saniya!%0AName: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
-  window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+    const name = document.getElementById("f-name").value.trim();
+    const email = document.getElementById("f-email").value.trim();
+    const message = document.getElementById("f-msg").value.trim();
+
+    if (!name) {
+        alert("Please enter your name.");
+        return;
+    }
+
+    const whatsappNumber = "917666886033";
+
+    const text =
+`Hello Saniya,
+
+👤 Name: ${name}
+📧 Email: ${email}
+
+💬 Message:
+${message}`;
+
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+    window.open(url, "_blank");
 }
 
 const skillSection = document.querySelector("#skills");
