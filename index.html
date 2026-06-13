@@ -2885,8 +2885,70 @@
     #why-hire-me,
     #learning { padding: 80px 24px 60px !important; }
 
-    .journey-timeline { padding-left: 20px; }
-    .journey-icon { margin-left: -32px; width: 40px; height: 40px; font-size: 18px; }
+    /* Journey — full width, card style on mobile */
+    .journey-timeline {
+      padding-left: 0 !important;
+      margin-top: 32px;
+    }
+
+    .journey-timeline::before {
+      display: none; /* hide vertical line on mobile */
+    }
+
+    .journey-item {
+      flex-direction: column !important;
+      gap: 0 !important;
+      margin-bottom: 24px !important;
+    }
+
+    .journey-icon {
+      margin-left: 0 !important;
+      width: 52px !important;
+      height: 52px !important;
+      font-size: 24px !important;
+      border-radius: 14px !important;
+      margin-bottom: 12px !important;
+      box-shadow: 3px 3px 0 var(--accent) !important;
+    }
+
+    .journey-content {
+      width: 100% !important;
+      padding: 20px 18px !important;
+      border-radius: 16px !important;
+      border-width: 2px !important;
+      box-shadow: 4px 4px 0 var(--dark) !important;
+    }
+
+    .journey-heading {
+      font-size: 28px !important;
+      line-height: 1.2 !important;
+      margin-bottom: 10px !important;
+    }
+
+    .journey-year {
+      font-size: 12px !important;
+      letter-spacing: 3px !important;
+      margin-bottom: 8px !important;
+    }
+
+    .journey-desc {
+      font-size: 14px !important;
+      line-height: 1.75 !important;
+    }
+
+    .journey-badge {
+      font-size: 12px !important;
+      padding: 6px 14px !important;
+      border-radius: 6px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+    }
+
+    #journey > div,
+    #brand > div,
+    #faq > div { padding: 80px 20px 60px; }
+
     .brand-grid { grid-template-columns: 1fr; }
     .brand-quote { font-size: 18px; }
   }
