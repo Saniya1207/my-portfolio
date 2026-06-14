@@ -1,9 +1,116 @@
+# ================================================================
+#  robots.txt — saniya.me
+#  Last updated: 2026-06-14
+#  Docs: https://developers.google.com/search/docs/crawling-indexing/robots/intro
+# ================================================================
+
+# ── Default: all well-behaved crawlers ──────────────────────────
 User-agent: *
 Allow: /
-
-# Point crawlers to your sitemap
-Sitemap: https://www.saniya.me/sitemap.xml
-
-# Block access to any sensitive folders (add more if you create them)
 Disallow: /private/
 Disallow: /admin/
+Disallow: /cgi-bin/
+Crawl-delay: 10
+
+# ── Googlebot — no delay, full access ───────────────────────────
+User-agent: Googlebot
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+
+# Allow only specific images for Googlebot-Image
+User-agent: Googlebot-Image
+Allow: /og-image.jpg
+Allow: /favicon-192.png
+Allow: /favicon-512.png
+Allow: /favicon-180.png
+Disallow: /
+
+# ── Bingbot ─────────────────────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 10
+
+# ── DuckDuckBot ─────────────────────────────────────────────────
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 10
+
+# ── AI SCRAPERS — BLOCK ALL ──────────────────────────────────────
+# OpenAI
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+# Anthropic
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+# Common Crawl (used to train LLMs)
+User-agent: CCBot
+Disallow: /
+
+# Meta AI
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Meta-ExternalFetcher
+Disallow: /
+
+# Bytedance / TikTok
+User-agent: Bytespider
+Disallow: /
+
+# Cohere
+User-agent: cohere-ai
+Disallow: /
+
+# Google Bard / Vertex AI scraper
+User-agent: Google-Extended
+Disallow: /
+
+# Amazon Alexa
+User-agent: ia_archiver
+Disallow: /
+
+# Omgili
+User-agent: Omgilibot
+Disallow: /
+
+# ── AI SEARCH — ALLOW (drives real traffic) ──────────────────────
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# ── SEO TOOLS — ALLOW (these help your rankings) ────────────────
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+User-agent: MJ12bot
+Allow: /
+
+User-agent: DotBot
+Allow: /
+
+User-agent: rogerbot
+Allow: /
+
+# ── SITEMAPS ─────────────────────────────────────────────────────
+Sitemap: https://www.saniya.me/sitemap.xml
+Sitemap: https://www.saniya.me/sitemap-images.xml

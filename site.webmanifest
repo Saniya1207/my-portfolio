@@ -1,12 +1,73 @@
 {
   "name": "Saniya Farooqui | Full-Stack Developer",
   "short_name": "Saniya.me",
-  "icons": [
-    { "src": "favicon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "favicon-512.png", "sizes": "512x512", "type": "image/png" }
-  ],
-  "theme_color": "#1a1a0e",
-  "background_color": "#1a1a0e",
+  "description": "Portfolio of Saniya Farooqui — Full-Stack Developer from Mumbai specialising in React, PHP, Node.js and React Native.",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "start_url": "/"
+  "orientation": "portrait-primary",
+  "theme_color": "#d4c9a8",
+  "background_color": "#1a1a0e",
+  "categories": ["portfolio", "developer", "technology"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Projects",
+      "short_name": "Projects",
+      "description": "See Saniya's latest projects",
+      "url": "/#projects",
+      "icons": [{ "src": "favicon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with Saniya Farooqui",
+      "url": "/#contact",
+      "icons": [{ "src": "favicon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Download Resume",
+      "short_name": "Resume",
+      "description": "Download Saniya's latest resume",
+      "url": "/#resume",
+      "icons": [{ "src": "favicon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "og-image.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Saniya Farooqui Portfolio — Desktop view"
+    }
+  ]
 }

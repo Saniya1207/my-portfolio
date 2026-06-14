@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  sitemap-images.xml — saniya.me
+  Dedicated image sitemap helps Google discover and index images
+  that may be loaded lazily or injected via JavaScript.
+  Docs: https://developers.google.com/search/docs/crawling-indexing/sitemaps/image-sitemaps
+-->
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://www.saniya.me/</loc>
+
+    <!-- OG / hero image -->
+    <image:image>
+      <image:loc>https://www.saniya.me/og-image.jpg</image:loc>
+      <image:title>Saniya Farooqui — Full-Stack Developer</image:title>
+      <image:caption>Hero image from the portfolio of Saniya Farooqui, Full-Stack Developer from Mumbai</image:caption>
+    </image:image>
+
+    <!-- Logo / avatar -->
+    <image:image>
+      <image:loc>https://www.saniya.me/logo.svg</image:loc>
+      <image:title>Saniya Farooqui Logo</image:title>
+    </image:image>
+
+    <!-- KisanX project screenshot (update src path if different) -->
+    <image:image>
+      <image:loc>https://www.saniya.me/kisanx-preview.jpg</image:loc>
+      <image:title>KisanX — Full-Stack Farmer Platform by Saniya Farooqui</image:title>
+      <image:caption>KisanX is a web and mobile platform for Indian farmers built by Saniya Farooqui. Won the Avishkar Research Award, University of Mumbai.</image:caption>
+    </image:image>
+
+  </url>
+
+</urlset>

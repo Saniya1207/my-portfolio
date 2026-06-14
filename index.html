@@ -1,101 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saniya Farooqui | Software Developer & Web Developer | Mumbai</title>
-<meta name="description" content="Saniya Farooqui — Software Developer & Computer Engineering Student at Mumbai University. Builds full-stack web applications using PHP, MySQL, React, Node.js and React Native. Open to internships and entry-level software engineering roles.">
-<meta name="keywords" content="Saniya Farooqui, Software Developer, Web Developer, Full Stack Developer, Mumbai, B.Sc IT, React, PHP, MySQL, Node.js, React Native, KisanX, Avishkar">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- ================================================================
+     PRIMARY META
+================================================================ -->
+<title>Saniya Farooqui | Full-Stack Developer — React · PHP · Node.js | Mumbai</title>
+<meta name="description" content="Saniya Farooqui — Full-Stack Developer & Computer Engineering student at Mumbai University. Builds scalable web and mobile apps with React, PHP, MySQL, Node.js and React Native. Avishkar Research Awardee. Open to internships and entry-level roles in Mumbai.">
+<meta name="keywords" content="Saniya Farooqui, software developer Mumbai, web developer Mumbai, full stack developer Mumbai, React developer India, PHP developer Mumbai, Node.js developer, React Native developer, KisanX developer, Avishkar award Mumbai University, internship developer Mumbai, freelance web developer Virar, B.Sc IT student Mumbai">
 <meta name="author" content="Saniya Farooqui">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="revisit-after" content="7 days">
 <meta name="rating" content="general">
-<meta name="language" content="English">
+<meta name="language" content="en-IN">
+<meta name="content-language" content="en-IN">
 <meta name="category" content="Technology, Web Development, Portfolio">
 <meta name="classification" content="Portfolio, Professional">
 <meta name="referrer" content="no-referrer-when-downgrade">
-<!-- Geo / Location Tags -->
+<meta name="color-scheme" content="light">
+
+<!-- ================================================================
+     GEO / LOCATION  (Virar, not central Mumbai)
+================================================================ -->
 <meta name="geo.region" content="IN-MH">
-<meta name="geo.placename" content="Mumbai, Maharashtra, India">
-<meta name="geo.position" content="19.0760;72.8777">
-<meta name="ICBM" content="19.0760, 72.8777">
-<!-- Mobile & Theme -->
-<meta name="theme-color" content="#d4c9a8">
+<meta name="geo.placename" content="Virar, Mumbai Metropolitan Region, Maharashtra, India">
+<meta name="geo.position" content="19.4663;72.8127">
+<meta name="ICBM" content="19.4663, 72.8127">
+
+<!-- ================================================================
+     MOBILE, PWA & WINDOWS TILE
+================================================================ -->
+<meta name="theme-color" content="#d4c9a8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1a0e"  media="(prefers-color-scheme: dark)">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Saniya Farooqui">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="format-detection" content="telephone=no">
-<meta property="og:title" content="Saniya Farooqui | Software Developer & Web Developer">
-<meta property="og:description" content="Building scalable web applications and digital solutions that solve real-world problems. Avishkar Research Awardee. Open to internships and entry-level software engineering roles.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.saniya.me/">
-<meta property="og:locale" content="en_IN">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Saniya Farooqui | Software Developer & Web Developer">
-<meta name="twitter:description" content="Building full-stack web applications that solve real-world problems. Currently seeking internships and entry-level software engineering roles.">
+<meta name="msapplication-TileColor" content="#1a1a0e">
+<meta name="msapplication-TileImage" content="/favicon-192.png">
+
+<!-- ================================================================
+     OPEN GRAPH — Facebook · LinkedIn · WhatsApp
+================================================================ -->
+<meta property="og:type"              content="website">
+<meta property="og:url"               content="https://www.saniya.me/">
+<meta property="og:site_name"         content="Saniya Farooqui — Portfolio">
+<meta property="og:title"             content="Saniya Farooqui | Full-Stack Developer — React · PHP · Node.js | Mumbai">
+<meta property="og:description"       content="Building scalable web and mobile applications that solve real-world problems. Avishkar Research Awardee. Open to internships and entry-level software engineering roles in Mumbai.">
+<meta property="og:locale"            content="en_IN">
+<meta property="og:image"             content="https://www.saniya.me/og-image.jpg">
+<meta property="og:image:secure_url"  content="https://www.saniya.me/og-image.jpg">
+<meta property="og:image:type"        content="image/jpeg">
+<meta property="og:image:width"       content="1200">
+<meta property="og:image:height"      content="630">
+<meta property="og:image:alt"         content="Saniya Farooqui — Full-Stack Developer Portfolio">
+
+<!-- ================================================================
+     TWITTER / X CARD
+================================================================ -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:site"        content="@saniyafarooqui">
+<meta name="twitter:creator"     content="@saniyafarooqui">
+<meta name="twitter:title"       content="Saniya Farooqui | Full-Stack Developer — React · PHP · Node.js">
+<meta name="twitter:description" content="Building full-stack web &amp; mobile apps that solve real-world problems. Avishkar Awardee. Open to internships in Mumbai.">
+<meta name="twitter:image"       content="https://www.saniya.me/og-image.jpg">
+<meta name="twitter:image:alt"   content="Saniya Farooqui — Full-Stack Developer Portfolio">
+<meta name="twitter:label1"      content="Role">
+<meta name="twitter:data1"       content="Full-Stack Developer">
+<meta name="twitter:label2"      content="Location">
+<meta name="twitter:data2"       content="Mumbai, India">
+
+<!-- ================================================================
+     STRUCTURED DATA — JSON-LD
+     Schema 1: ProfilePage + Person  (interlinked via @id)
+================================================================ -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": "https://www.saniya.me/#webpage",
+    "url": "https://www.saniya.me/",
+    "name": "Saniya Farooqui — Full-Stack Developer Portfolio",
+    "description": "Portfolio of Saniya Farooqui, Full-Stack Developer specialising in React, PHP, Node.js and React Native.",
+    "datePublished": "2025-01-01",
+    "dateModified": "2026-06-14",
+    "inLanguage": "en-IN",
+    "isPartOf": { "@id": "https://www.saniya.me/#website" },
+    "about":      { "@id": "https://www.saniya.me/#person" },
+    "mainEntity": { "@id": "https://www.saniya.me/#person" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://www.saniya.me/#person",
+    "name": "Saniya Farooqui",
+    "givenName": "Saniya",
+    "familyName": "Farooqui",
+    "jobTitle": "Full-Stack Developer",
+    "description": "Software Developer and Computer Engineering student at Mumbai University. Specialises in full-stack web development with React, PHP, MySQL, Node.js and React Native. Avishkar Research Awardee.",
+    "url": "https://www.saniya.me/",
+    "email": "saniya122400@gmail.com",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.saniya.me/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Virar",
+      "addressRegion": "Maharashtra",
+      "postalCode": "401303",
+      "addressCountry": "IN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "professional",
+      "email": "saniya122400@gmail.com",
+      "availableLanguage": ["English", "Hindi"]
+    },
+    "sameAs": [
+      "https://github.com/Saniya1207",
+      "https://www.linkedin.com/in/saniya-farooqui-dev/"
+    ],
+    "knowsAbout": [
+      "Web Development", "React.js", "Node.js", "PHP", "MySQL",
+      "MongoDB", "React Native", "REST API Design",
+      "Full-Stack Development", "JavaScript", "Express.js"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Patkar-Varde College",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Goregaon",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      }
+    },
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Full-Stack Web Developer",
+      "occupationLocation": { "@type": "City", "name": "Mumbai" },
+      "occupationalCategory": "15-1257.00",
+      "skills": "React.js, Node.js, PHP, MySQL, MongoDB, React Native, JavaScript, Express.js, REST APIs"
+    },
+    "award": "Avishkar Research Award — University of Mumbai"
+  }
+]
+</script>
+
+<!-- Schema 2: WebSite (enables Google Sitelinks Searchbox) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Saniya Farooqui",
-  "jobTitle": "Software Developer",
-  "description": "Software Developer and Computer Engineering student at Mumbai University. Specialises in full-stack web development with PHP, MySQL, React, Node.js and React Native.",
+  "@type": "WebSite",
+  "@id": "https://www.saniya.me/#website",
   "url": "https://www.saniya.me/",
-  "email": "saniya122400@gmail.com",
-  "address": { "@type": "PostalAddress", "addressLocality": "Virar", "addressRegion": "Maharashtra", "addressCountry": "IN" },
-  "sameAs": [
-    "https://github.com/Saniya1207",
-    "https://www.linkedin.com/in/saniya-farooqui-dev/"
-  ],
-  "knowsAbout": ["Web Development", "React.js", "Node.js", "PHP", "MySQL", "MongoDB", "React Native", "REST API Design", "Full-Stack Development"],
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "Patkar-Varde College",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Mumbai",
-      "addressRegion": "Maharashtra",
-      "addressCountry": "IN"
-    }
-  },
-  "hasOccupation": {
-    "@type": "Occupation",
-    "name": "Full-Stack Developer",
-    "occupationLocation": {
-      "@type": "City",
-      "name": "Mumbai"
-    },
-    "skills": "React.js, Node.js, PHP, MySQL, MongoDB, React Native"
-  },
-  "award": "Avishkar Research Award — Mumbai University"
+  "name": "Saniya Farooqui Portfolio",
+  "description": "Official portfolio of Saniya Farooqui, Full-Stack Developer from Mumbai.",
+  "inLanguage": "en-IN",
+  "publisher": { "@id": "https://www.saniya.me/#person" }
 }
 </script>
+
+<!-- Schema 3: FAQPage (boosts FAQ rich results in Google) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Saniya Farooqui open to internships?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — Saniya is actively seeking software engineering internships and entry-level developer roles in Mumbai and remotely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What technologies does Saniya Farooqui work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Saniya works with React.js, Node.js, PHP, MySQL, MongoDB, React Native, JavaScript and Express.js for full-stack web and mobile development."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is KisanX?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "KisanX is a full-stack web and mobile platform for Indian farmers, built by Saniya Farooqui. It won the Avishkar Research Award from the University of Mumbai."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is Saniya Farooqui based?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Saniya is based in Virar, in the Mumbai Metropolitan Region, Maharashtra, India."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I contact Saniya Farooqui?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can reach Saniya at saniya122400@gmail.com or through the contact form on her portfolio at https://www.saniya.me/#contact"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- ================================================================
+     CANONICAL & HREFLANG
+================================================================ -->
 <link rel="canonical" href="https://www.saniya.me/">
-<link rel="icon" type="image/svg+xml" href="logo.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="alternate" hreflang="en"      href="https://www.saniya.me/">
+<link rel="alternate" hreflang="en-in"   href="https://www.saniya.me/">
+<link rel="alternate" hreflang="x-default" href="https://www.saniya.me/">
+
+<!-- ================================================================
+     FAVICONS & MANIFEST
+================================================================ -->
+<link rel="icon"             type="image/svg+xml"  href="logo.svg">
+<link rel="icon"             type="image/png" sizes="96x96"   href="favicon-96.png">
+<link rel="icon"             type="image/png" sizes="32x32"   href="favicon-32.png">
+<link rel="icon"             type="image/png" sizes="192x192" href="favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
-<link rel="manifest" href="site.webmanifest">
-<meta property="og:image" content="https://www.saniya.me/og-image.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:image" content="https://www.saniya.me/og-image.jpg">
-<meta name="twitter:site" content="@saniyafarooqui">
-<meta name="twitter:creator" content="@saniyafarooqui">
-<meta name="twitter:image:alt" content="Saniya Farooqui — Full-Stack Developer Portfolio">
-<!-- Google Analytics GA4 -->
-<!-- Google Analytics GA4 - Measurement ID: G-GHS85ETTRD -->
+<link rel="mask-icon"        href="logo.svg" color="#1a1a0e">
+<link rel="shortcut icon"    href="favicon-32.png">
+<link rel="manifest"         href="site.webmanifest">
+
+<!-- ================================================================
+     GOOGLE ANALYTICS GA4
+================================================================ -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GHS85ETTRD"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-GHS85ETTRD');
+  gtag('config', 'G-GHS85ETTRD', { send_page_view: true });
 </script>
-<!-- Preconnect for performance -->
+
+<!-- ================================================================
+     PERFORMANCE — RESOURCE HINTS
+     Order matters: dns-prefetch → preconnect → preload → stylesheet
+================================================================ -->
+<!-- DNS prefetch for every external origin (zero-cost hint) -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+<!-- Preconnect for render-critical origins (opens TCP+TLS early) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<!-- Preload LCP / above-fold assets (fetchpriority=high skips queue) -->
+<link rel="preload" as="image" href="og-image.jpg" fetchpriority="high">
+<!-- Preload hero display font (Bebas Neue drives the giant hero name) -->
+<link rel="preload" as="font"
+      href="https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXooxW5rygbi49c.woff2"
+      type="font/woff2" crossorigin fetchpriority="high">
+<!-- Google Fonts stylesheet (display=swap already set — good) -->
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=Special+Elite&family=Oswald:wght@400;600;700&family=Source+Serif+4:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
   :root {
