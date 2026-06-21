@@ -20,11 +20,12 @@ Crawl-delay: 1
 
 User-agent: Googlebot-Image
 Allow: /og-image.jpg
+Allow: /favicon-32.png
 Allow: /favicon-192.png
 Allow: /favicon-512.png
 Allow: /favicon-180.png
-Allow: /mypic.png
 Allow: /logo.svg
+Allow: /mypic.png
 Allow: /kisanx-preview.jpg
 Disallow: /
 
