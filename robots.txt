@@ -1,101 +1,110 @@
 # ================================================================
 #  robots.txt — saniya.me
-#  Last updated: 2026-06-14
-#  Docs: https://developers.google.com/search/docs/crawling-indexing/robots/intro
+#  Saniya Farooqui | Full-Stack Developer | Co-Founder of KisanX
+#  Last updated: 2026-06-21
 # ================================================================
 
-# ── Default: all well-behaved crawlers ──────────────────────────
+# ---- Allow ALL major search engines ----
 User-agent: *
 Allow: /
 Disallow: /private/
 Disallow: /admin/
 Disallow: /cgi-bin/
-Crawl-delay: 10
+Disallow: /node_modules/
+Disallow: /.git/
 
-# ── Googlebot — no delay, full access ───────────────────────────
+# ---- Google ----
 User-agent: Googlebot
 Allow: /
-Disallow: /private/
-Disallow: /admin/
+Crawl-delay: 1
 
-# Allow only specific images for Googlebot-Image
 User-agent: Googlebot-Image
 Allow: /og-image.jpg
 Allow: /favicon-192.png
 Allow: /favicon-512.png
 Allow: /favicon-180.png
+Allow: /mypic.png
+Allow: /logo.svg
+Allow: /kisanx-preview.jpg
 Disallow: /
 
-# ── Bingbot ─────────────────────────────────────────────────────
+User-agent: Googlebot-Mobile
+Allow: /
+
+# ---- Bing / Microsoft ----
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 10
+Crawl-delay: 1
 
-# ── DuckDuckBot ─────────────────────────────────────────────────
+User-agent: msnbot
+Allow: /
+
+# ---- DuckDuckGo / Yahoo ----
 User-agent: DuckDuckBot
 Allow: /
-Crawl-delay: 10
 
-# ── AI SCRAPERS — BLOCK ALL ──────────────────────────────────────
-# OpenAI
+User-agent: Slurp
+Allow: /
+
+# ---- Social Media Crawlers (needed for link previews) ----
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# ---- AI / LLM CRAWLERS — ALLOWED FOR MAXIMUM AI-SEARCH VISIBILITY ----
+# Google-Extended controls inclusion in Google AI Overview / Gemini grounding.
+# Blocking this can cause AI Overview to omit you entirely.
+User-agent: Google-Extended
+Allow: /
+
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: ChatGPT-User
-Disallow: /
+Allow: /
 
 User-agent: OAI-SearchBot
-Disallow: /
-
-# Anthropic
-User-agent: Claude-Web
-Disallow: /
+Allow: /
 
 User-agent: ClaudeBot
-Disallow: /
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
 
 User-agent: anthropic-ai
-Disallow: /
+Allow: /
 
-# Common Crawl (used to train LLMs)
-User-agent: CCBot
-Disallow: /
-
-# Meta AI
-User-agent: FacebookBot
-Disallow: /
-
-User-agent: Meta-ExternalFetcher
-Disallow: /
-
-# Bytedance / TikTok
-User-agent: Bytespider
-Disallow: /
-
-# Cohere
-User-agent: cohere-ai
-Disallow: /
-
-# Google Bard / Vertex AI scraper
-User-agent: Google-Extended
-Disallow: /
-
-# Amazon Alexa
-User-agent: ia_archiver
-Disallow: /
-
-# Omgili
-User-agent: Omgilibot
-Disallow: /
-
-# ── AI SEARCH — ALLOW (drives real traffic) ──────────────────────
 User-agent: PerplexityBot
 Allow: /
 
 User-agent: YouBot
 Allow: /
 
-# ── SEO TOOLS — ALLOW (these help your rankings) ────────────────
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# ---- SEO / Backlink tools — allowed (helps off-page SEO tracking) ----
 User-agent: AhrefsBot
 Allow: /
 
@@ -111,6 +120,9 @@ Allow: /
 User-agent: rogerbot
 Allow: /
 
-# ── SITEMAPS ─────────────────────────────────────────────────────
+# ---- SITEMAPS ----
 Sitemap: https://www.saniya.me/sitemap.xml
 Sitemap: https://www.saniya.me/sitemap-images.xml
+
+# ---- Host Declaration ----
+Host: https://www.saniya.me
