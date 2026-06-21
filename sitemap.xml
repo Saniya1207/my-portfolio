@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
+  ============================================================
   sitemap.xml — saniya.me
-  Last updated: 2026-06-14
+  Saniya Farooqui | Full-Stack Developer | Co-Founder of KisanX
+  Last updated: 2026-06-21
+  ============================================================
 
-  NOTE: Fragment/anchor URLs (#skills, #projects etc.) are IGNORED
-  by Google. Only the root URL is submitted for this single-page site.
-  Images are in sitemap-images.xml
+  NOTE: This is a single-page portfolio (SPA-style sections).
+  Fragment/anchor URLs (#skills, #projects, #contact etc.) are
+  NEVER included — Google explicitly ignores URL fragments when
+  crawling, so listing them only adds noise. Only real, separately
+  fetchable resources are listed below.
+
+  Image sitemap is kept separate at sitemap-images.xml and
+  referenced independently in robots.txt, per Google's own
+  recommendation to split content and image sitemaps for clarity.
 -->
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -14,12 +23,26 @@
     http://www.sitemaps.org/schemas/sitemap/0.9
     http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- Homepage — the only real URL on a single-page portfolio -->
+  <!-- ============================================================
+       HOMEPAGE — the entire portfolio lives here
+       ============================================================ -->
   <url>
     <loc>https://www.saniya.me/</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-21T00:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- ============================================================
+       RESUME PDF — Google indexes PDF content directly and can
+       surface it in search/AI Overview for "Saniya Farooqui resume"
+       type queries. Listing it here speeds up discovery.
+       ============================================================ -->
+  <url>
+    <loc>https://www.saniya.me/RESUME.pdf</loc>
+    <lastmod>2026-06-21T00:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>

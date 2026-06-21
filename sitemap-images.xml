@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
+  ============================================================
   sitemap-images.xml — saniya.me
-  Dedicated image sitemap helps Google discover and index images
-  that may be loaded lazily or injected via JavaScript.
+  Saniya Farooqui | Full-Stack Developer | Co-Founder of KisanX
+  Last updated: 2026-06-21
+
+  Dedicated image sitemap — helps Google discover and index
+  images that load via CSS/JS rather than plain <img> tags,
+  and lets each image carry its own title/caption for Google
+  Images search visibility.
   Docs: https://developers.google.com/search/docs/crawling-indexing/sitemaps/image-sitemaps
 -->
 <urlset
@@ -12,24 +18,38 @@
   <url>
     <loc>https://www.saniya.me/</loc>
 
-    <!-- OG / hero image -->
+    <!-- Hero / OG image — shown in social previews and search snippets -->
     <image:image>
       <image:loc>https://www.saniya.me/og-image.jpg</image:loc>
-      <image:title>Saniya Farooqui — Full-Stack Developer</image:title>
-      <image:caption>Hero image from the portfolio of Saniya Farooqui, Full-Stack Developer from Mumbai</image:caption>
+      <image:title>Saniya Farooqui — Full-Stack Developer &amp; Co-Founder of KisanX</image:title>
+      <image:caption>Portfolio hero image of Saniya Farooqui, Full-Stack Developer from Mumbai, India</image:caption>
+      <image:license>https://www.saniya.me/</image:license>
     </image:image>
 
-    <!-- Logo / avatar -->
+    <!-- Profile photo — used in hero section -->
+    <image:image>
+      <image:loc>https://www.saniya.me/mypic.png</image:loc>
+      <image:title>Saniya Farooqui — Profile Photo</image:title>
+      <image:caption>Saniya Farooqui, Full-Stack Developer and Co-Founder of KisanX, Mumbai</image:caption>
+    </image:image>
+
+    <!-- Primary logo (SVG) -->
     <image:image>
       <image:loc>https://www.saniya.me/logo.svg</image:loc>
-      <image:title>Saniya Farooqui Logo</image:title>
+      <image:title>Saniya Farooqui — Logo</image:title>
+      <image:caption>Official logo of Saniya Farooqui's developer portfolio</image:caption>
     </image:image>
 
-    <!-- KisanX project screenshot (update src path if different) -->
+    <!-- Secondary logo / brand mark -->
     <image:image>
-      <image:loc>https://www.saniya.me/kisanx-preview.jpg</image:loc>
-      <image:title>KisanX — Full-Stack Farmer Platform by Saniya Farooqui</image:title>
-      <image:caption>KisanX is a web and mobile platform for Indian farmers built by Saniya Farooqui. Won the Avishkar Research Award, University of Mumbai.</image:caption>
+      <image:loc>https://www.saniya.me/logoimage.png</image:loc>
+      <image:title>Saniya Farooqui — Brand Mark</image:title>
+    </image:image>
+
+    <!-- App icons (helps Google match icons to PWA/app listings) -->
+    <image:image>
+      <image:loc>https://www.saniya.me/favicon-512.png</image:loc>
+      <image:title>Saniya Farooqui — App Icon</image:title>
     </image:image>
 
   </url>
