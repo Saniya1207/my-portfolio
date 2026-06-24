@@ -1,7 +1,7 @@
 # ================================================================
 #  robots.txt — saniya.me
 #  Saniya Farooqui | Full-Stack Developer | Co-Founder of KisanX
-#  Last updated: 2026-06-21
+#  Last updated: 2026-06-24
 # ================================================================
 
 # ---- Allow ALL major search engines ----
@@ -18,16 +18,10 @@ User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
 
+# Image crawling fully enabled — needed for Google Images visibility
+# on the profile photo, project screenshots and logo.
 User-agent: Googlebot-Image
-Allow: /og-image.jpg
-Allow: /favicon-32.png
-Allow: /favicon-192.png
-Allow: /favicon-512.png
-Allow: /favicon-180.png
-Allow: /logo.svg
-Allow: /mypic.png
-Allow: /kisanx-preview.jpg
-Disallow: /
+Allow: /
 
 User-agent: Googlebot-Mobile
 Allow: /

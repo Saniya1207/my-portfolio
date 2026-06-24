@@ -3,12 +3,11 @@
   ============================================================
   sitemap-images.xml — saniya.me
   Saniya Farooqui | Full-Stack Developer | Co-Founder of KisanX
-  Last updated: 2026-06-21
+  Last updated: 2026-06-24
 
   Dedicated image sitemap — helps Google discover and index
-  images that load via CSS/JS rather than plain <img> tags,
-  and lets each image carry its own title/caption for Google
-  Images search visibility.
+  images and lets each one carry its own title/caption for
+  Google Images search visibility.
   Docs: https://developers.google.com/search/docs/crawling-indexing/sitemaps/image-sitemaps
 -->
 <urlset
@@ -28,8 +27,8 @@
 
     <!-- Profile photo — used in hero section -->
     <image:image>
-      <image:loc>https://www.saniya.me/mypic.png</image:loc>
-      <image:title>Saniya Farooqui — Profile Photo</image:title>
+      <image:loc>https://www.saniya.me/saniya-farooqui-full-stack-developer-mumbai.png</image:loc>
+      <image:title>Saniya Farooqui — Full Stack Developer, Mumbai</image:title>
       <image:caption>Saniya Farooqui, Full-Stack Developer and Co-Founder of KisanX, Mumbai</image:caption>
     </image:image>
 
@@ -42,8 +41,9 @@
 
     <!-- Secondary logo / brand mark -->
     <image:image>
-      <image:loc>https://www.saniya.me/logoimage.png</image:loc>
+      <image:loc>https://www.saniya.me/saniya-farooqui-logo.png</image:loc>
       <image:title>Saniya Farooqui — Brand Mark</image:title>
+      <image:caption>Saniya Farooqui portfolio brand mark and wordmark</image:caption>
     </image:image>
 
     <!-- App icons (helps Google match icons to PWA/app listings) -->
@@ -52,6 +52,22 @@
       <image:title>Saniya Farooqui — App Icon</image:title>
     </image:image>
 
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/about/</loc>
+    <image:image>
+      <image:loc>https://www.saniya.me/saniya-farooqui-full-stack-developer-mumbai.png</image:loc>
+      <image:title>Saniya Farooqui — Full Stack Developer, Mumbai</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/projects/kisanx/</loc>
+    <image:image>
+      <image:loc>https://www.saniya.me/og-image.jpg</image:loc>
+      <image:title>KisanX — Agricultural Marketplace by Saniya Farooqui</image:title>
+    </image:image>
   </url>
 
 </urlset>

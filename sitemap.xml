@@ -3,18 +3,18 @@
   ============================================================
   sitemap.xml — saniya.me
   Saniya Farooqui | Full-Stack Developer | Co-Founder of KisanX
-  Last updated: 2026-06-21
+  Last updated: 2026-06-24
   ============================================================
 
-  NOTE: This is a single-page portfolio (SPA-style sections).
-  Fragment/anchor URLs (#skills, #projects, #contact etc.) are
-  NEVER included — Google explicitly ignores URL fragments when
-  crawling, so listing them only adds noise. Only real, separately
-  fetchable resources are listed below.
+  The homepage remains a rich single-page portfolio (its own
+  in-page sections are not listed here — Google ignores URL
+  fragments when crawling). Alongside it, each topic now also
+  has its own dedicated, separately indexable page for deeper
+  search visibility: About, Projects (+ 3 case studies), Blog
+  (+ 5 articles), Resume, Certifications and Contact.
 
   Image sitemap is kept separate at sitemap-images.xml and
-  referenced independently in robots.txt, per Google's own
-  recommendation to split content and image sitemaps for clarity.
+  referenced independently in robots.txt.
 -->
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -24,13 +24,114 @@
     http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <!-- ============================================================
-       HOMEPAGE — the entire portfolio lives here
+       HOMEPAGE
        ============================================================ -->
   <url>
     <loc>https://www.saniya.me/</loc>
-    <lastmod>2026-06-21T00:00:00+05:30</lastmod>
+    <lastmod>2026-06-24T00:00:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- ============================================================
+       CORE PAGES
+       ============================================================ -->
+  <url>
+    <loc>https://www.saniya.me/about/</loc>
+    <lastmod>2026-06-24T00:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/projects/</loc>
+    <lastmod>2026-06-24T00:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/projects/kisanx/</loc>
+    <lastmod>2026-06-24T00:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/projects/the-capital-home/</loc>
+    <lastmod>2026-06-24T00:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/projects/vastu-properties/</loc>
+    <lastmod>2026-06-24T00:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/blog/</loc>
+    <lastmod>2026-06-24T00:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/blog/how-i-built-kisanx/</loc>
+    <lastmod>2026-06-21T00:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/blog/full-stack-journey/</loc>
+    <lastmod>2026-06-21T00:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/blog/php-vs-mern/</loc>
+    <lastmod>2026-06-21T00:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/blog/top-fullstack-projects/</loc>
+    <lastmod>2026-06-21T00:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/blog/react-native-jwt-otp/</loc>
+    <lastmod>2026-06-21T00:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/resume/</loc>
+    <lastmod>2026-06-24T00:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/certifications/</loc>
+    <lastmod>2026-06-24T00:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/contact/</loc>
+    <lastmod>2026-06-24T00:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- ============================================================
@@ -40,7 +141,7 @@
        ============================================================ -->
   <url>
     <loc>https://www.saniya.me/RESUME.pdf</loc>
-    <lastmod>2026-06-21T00:00:00+05:30</lastmod>
+    <lastmod>2026-06-24T00:00:00+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
