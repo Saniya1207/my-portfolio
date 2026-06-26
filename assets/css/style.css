@@ -1380,6 +1380,12 @@
     object-fit: cover;
     border-radius: 0;
   }
+
+  .hero-graphic {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
   
 
   .profile-pic {
@@ -2888,7 +2894,7 @@
 /* ---- Generic subpage header (replaces big hero on inner pages) ---- */
 .page-head {
   position: relative;
-  padding: 150px 24px 70px;
+  padding: 18px 24px 46px;
   text-align: center;
   overflow: hidden;
 }
@@ -2904,29 +2910,30 @@
 
 .page-head h1 {
   font-family: 'Bebas Neue', cursive;
-  font-size: clamp(40px, 7vw, 84px);
+  font-size: clamp(36px, 6vw, 68px);
   letter-spacing: 2px;
   color: var(--dark);
-  line-height: 1.05;
+  line-height: 1.08;
 }
 
 .page-head p.page-sub {
   font-family: 'Source Serif 4', serif;
   font-weight: 300;
   font-size: 15px;
-  line-height: 1.75;
+  line-height: 1.7;
   color: var(--text-light);
-  max-width: 620px;
-  margin: 18px auto 0;
+  max-width: 600px;
+  margin: 14px auto 0;
 }
 
-/* ---- Breadcrumb ---- */
+/* ---- Breadcrumb (sits right under the fixed nav — the ONLY element
+   responsible for clearing it, so page-head doesn't also need to) ---- */
 .breadcrumb-bar {
   position: relative;
   z-index: 5;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 100px 24px 0;
+  padding: 86px 24px 0;
 }
 .breadcrumb-bar ol {
   display: flex;
@@ -2940,15 +2947,15 @@
   color: var(--text-light);
   opacity: 0.75;
 }
-.breadcrumb-bar a { color: var(--text-light); text-decoration: none; border-bottom: 1px solid transparent; }
-.breadcrumb-bar a:hover { color: var(--dark); border-bottom-color: var(--accent2); }
+.breadcrumb-bar a { color: var(--accent2); text-decoration: underline; text-decoration-color: rgba(139,105,20,0.35); border-bottom: none; }
+.breadcrumb-bar a:hover { color: var(--dark); text-decoration-color: var(--dark); }
 .breadcrumb-bar li:not(:last-child)::after { content: "/"; margin-left: 6px; opacity: 0.5; }
 .breadcrumb-bar li[aria-current="page"] { color: var(--dark); opacity: 1; }
 
 /* ---- Generic content section wrapper for subpages ---- */
 .subpage-section {
   position: relative;
-  padding: 70px 24px 90px;
+  padding: 44px 24px 54px;
   overflow: hidden;
 }
 .subpage-section.alt { background: var(--paper); }
@@ -2964,40 +2971,56 @@
   font-family: 'Source Serif 4', serif;
   font-weight: 300;
   font-size: 15px;
-  line-height: 1.85;
+  line-height: 1.8;
   color: var(--text-light);
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 .subpage-inner h2.block-title {
   font-family: 'Bebas Neue', cursive;
-  font-size: clamp(28px, 4vw, 40px);
+  font-size: clamp(26px, 3.6vw, 36px);
   letter-spacing: 1.5px;
   color: var(--dark);
-  margin: 8px 0 6px;
+  margin: 30px 0 10px;
 }
+.subpage-inner h2.block-title:first-child { margin-top: 0; }
 .subpage-inner h3 {
   font-family: 'Oswald', sans-serif;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.5px;
   color: var(--dark);
-  margin: 28px 0 10px;
+  margin: 22px 0 8px;
 }
-.subpage-inner ul.plain-list { margin: 0 0 18px 20px; }
+.subpage-inner ul.plain-list { margin: 0 0 16px 20px; }
 .subpage-inner ul.plain-list li {
   font-family: 'Source Serif 4', serif;
   font-weight: 300;
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 1.75;
   color: var(--text-light);
   margin-bottom: 8px;
 }
 .subpage-inner strong { color: var(--dark); font-family: 'Oswald', sans-serif; font-size: 0.95em; font-weight: 700; }
-.subpage-inner a.inline-link { color: var(--accent2); text-decoration: underline; text-decoration-color: rgba(139,105,20,0.4); }
-.subpage-inner a.inline-link:hover { color: var(--dark); }
+.subpage-inner a.inline-link,
+.article-body a {
+  color: var(--accent2);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--accent2);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  transition: color 0.2s, background 0.2s;
+  padding: 0 1px;
+  border-radius: 2px;
+}
+.subpage-inner a.inline-link:hover,
+.article-body a:hover {
+  color: var(--dark);
+  background: rgba(184,160,96,0.18);
+}
 
 /* ---- Pill / tag row ---- */
-.tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 24px; }
+.tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
 .tag-pill {
   font-family: 'Oswald', sans-serif;
   font-size: 11px;
@@ -3056,14 +3079,26 @@
   flex: 1;
 }
 .entity-card .entity-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-family: 'Oswald', sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 1px;
   color: var(--dark);
   text-transform: uppercase;
+  border: 1.5px solid var(--dark);
+  border-radius: 999px;
+  padding: 7px 14px;
+  align-self: flex-start;
+  transition: all 0.25s ease;
 }
-.entity-card:hover .entity-cta { color: var(--accent2); }
+.entity-card:hover .entity-cta {
+  background: var(--dark);
+  color: var(--paper2);
+  border-color: var(--dark);
+}
 
 /* ---- Blog meta row ---- */
 .post-meta {
@@ -3079,47 +3114,48 @@
 /* ---- Article body (blog posts) ---- */
 .article-body h2 {
   font-family: 'Bebas Neue', cursive;
-  font-size: clamp(26px, 3.6vw, 36px);
+  font-size: clamp(24px, 3.4vw, 32px);
   letter-spacing: 1px;
   color: var(--dark);
-  margin: 38px 0 14px;
+  margin: 28px 0 10px;
 }
+.article-body h2:first-of-type { margin-top: 0; }
 .article-body h3 {
   font-family: 'Oswald', sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: var(--dark);
-  margin: 24px 0 10px;
+  margin: 20px 0 8px;
 }
 .article-body p {
   font-family: 'Source Serif 4', serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.85;
   color: var(--text-light);
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
-.article-body ul { margin: 0 0 18px 22px; }
+.article-body ul { margin: 0 0 15px 22px; }
 .article-body li {
   font-family: 'Source Serif 4', serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: 1.85;
+  line-height: 1.8;
   color: var(--text-light);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .article-body blockquote {
   border-left: 3px solid var(--accent2);
   padding: 4px 0 4px 20px;
-  margin: 24px 0;
+  margin: 18px 0;
   font-style: italic;
   color: var(--dark);
 }
 
 /* ---- Related posts / internal-link rail ---- */
 .related-rail {
-  margin-top: 50px;
-  padding-top: 30px;
+  margin-top: 34px;
+  padding-top: 22px;
   border-top: 1px solid var(--grid);
 }
 .related-rail .related-label {
@@ -3131,15 +3167,26 @@
   margin-bottom: 14px;
 }
 .related-rail ul { list-style: none; margin: 0; }
-.related-rail li { margin-bottom: 10px; }
+.related-rail li { margin-bottom: 8px; }
 .related-rail a {
+  display: block;
   font-family: 'Source Serif 4', serif;
   font-size: 14px;
+  font-weight: 600;
   color: var(--dark);
   text-decoration: none;
-  border-bottom: 1px solid var(--accent);
+  padding: 10px 14px;
+  border: 1px solid var(--grid);
+  border-radius: 6px;
+  background: var(--paper2);
+  transition: all 0.2s ease;
 }
-.related-rail a:hover { color: var(--accent2); }
+.related-rail a:hover {
+  color: var(--paper2);
+  background: var(--dark);
+  border-color: var(--dark);
+  transform: translateX(3px);
+}
 
 /* ---- Resume page ---- */
 .resume-toolbar {
@@ -3198,11 +3245,117 @@
 }
 .toc-box ol { margin: 0 0 0 18px; }
 .toc-box li { margin-bottom: 6px; }
-.toc-box a { font-family: 'Source Serif 4', serif; font-size: 13.5px; color: var(--text-light); text-decoration: none; }
-.toc-box a:hover { color: var(--accent2); }
+.toc-box a { font-family: 'Source Serif 4', serif; font-size: 13.5px; font-weight: 600; color: var(--accent2); text-decoration: none; }
+.toc-box a:hover { color: var(--dark); text-decoration: underline; }
 
 @media (max-width: 600px) {
-  .page-head { padding: 130px 20px 50px; }
-  .breadcrumb-bar { padding: 90px 20px 0; }
-  .subpage-section { padding: 50px 18px 60px; }
+  .page-head { padding: 14px 18px 36px; }
+  .breadcrumb-bar { padding: 78px 18px 0; }
+  .subpage-section { padding: 34px 16px 44px; }
+}
+
+/* ================================================================
+   DARK MODE
+   ================================================================
+   Re-defines the page "surface + ink" tokens for a dark palette.
+   A handful of elements were ALWAYS intentionally dark-with-light-
+   text (footer, primary buttons, badges, the mobile nav overlay) —
+   those get --dark/--paper2 re-anchored back to their original
+   values locally so they don't flip along with the rest of the
+   page and lose contrast.
+================================================================ */
+
+[data-theme="dark"] {
+  --bg: #15140f;
+  --bg2: #1c1a14;
+  --dark: #ece2c0;
+  --paper: #1c1a14;
+  --paper2: #242018;
+  --text: #e8dfc0;
+  --text-light: #b3a87f;
+  --grid: rgba(240,232,204,0.07);
+}
+
+[data-theme="dark"] footer,
+[data-theme="dark"] #navLinks li a:hover,
+[data-theme="dark"] #navLinks li a.active,
+[data-theme="dark"] .card-btn:hover,
+[data-theme="dark"] .card-btn.primary,
+[data-theme="dark"] .carousel-btn:hover,
+[data-theme="dark"] .phase-header,
+[data-theme="dark"] .download-btn,
+[data-theme="dark"] .social-btn:hover,
+[data-theme="dark"] .minor-card-img .img-label,
+[data-theme="dark"] .journey-badge,
+[data-theme="dark"] .faq-question.active,
+[data-theme="dark"] .brand-statement {
+  --dark: #1a1a0e;
+  --paper2: #f0e8cc;
+}
+
+/* Hardcoded (non-variable) spots that need an explicit dark-mode value */
+[data-theme="dark"] .nav-bar {
+  background: rgba(21,20,15,0.92);
+}
+
+[data-theme="dark"] .hero-sky {
+  background: linear-gradient(180deg, #1c2438 0%, #15140f 100%);
+  opacity: 0.45;
+}
+
+[data-theme="dark"] .portrait-placeholder {
+  background: linear-gradient(135deg, #3a3424 0%, #221f15 60%, #15140d 100%);
+}
+
+[data-theme="dark"] body {
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+/* ---- Theme toggle button ---- */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1.5px solid var(--dark);
+  background: transparent;
+  color: var(--dark);
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+.theme-toggle:hover {
+  background: var(--dark);
+  color: var(--paper2);
+  transform: translateY(-1px);
+}
+.theme-toggle .icon-moon { display: inline; }
+.theme-toggle .icon-sun { display: none; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+[data-theme="dark"] .theme-toggle .icon-sun { display: inline; }
+
+.ov-theme-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+.ov-theme-row .theme-toggle {
+  border-color: rgba(240,232,204,0.4);
+  color: #f0e8cc;
+}
+.ov-theme-row .theme-toggle:hover {
+  background: rgba(240,232,204,0.15);
+  color: #f0e8cc;
+}
+.ov-theme-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(240,232,204,0.6);
 }

@@ -1,5 +1,7 @@
 # saniya.me — SEO Update (June 2026)
 
+> **Update (latest):** see the [What changed — Round 2](#what-changed--round-2-dark-mode--hero-graphic--spacing-fixes) section near the bottom for the most recent changes (dark mode, hero graphic, spacing/link fixes on the new pages).
+
 This package is a **drop-in replacement** for your current site files. Your
 design, colours, fonts, layout, animations and every existing section on the
 homepage are untouched. What changed is everything *around* the page —
@@ -105,3 +107,60 @@ don't accidentally drop it when you upload this package.
 - The KisanX GitHub repo links, live-site URLs for The Capital Home and
   Vastu Properties, and all dates/scores carried over from your existing
   site and résumé were kept exactly as you had them.
+
+---
+
+## What changed — Round 2 (dark mode, hero graphic, spacing fixes)
+
+### 1. Personal photo removed from the homepage hero
+The `<picture>`/`<img>` block in the hero section is gone. In its place is
+a custom inline SVG illustration — a tilted "code editor window" graphic
+(title bar, code lines, a `</>` glyph, corner ornaments matching your logo)
+drawn entirely in your existing gold/cream/dark palette. Same size and
+position as the old photo, so nothing else in the layout shifted.
+
+The photo files themselves (`saniya-farooqui-full-stack-developer-mumbai.png`
++ `.webp`) are still included in the package in case you want them for
+LinkedIn or elsewhere, but nothing on the live site displays them anymore.
+`sitemap-images.xml` was updated to stop listing them as on-page images.
+
+### 2. Dark mode, site-wide
+Every page now has a small sun/moon toggle in the nav bar (and in the
+mobile menu). It:
+- Respects the visitor's system preference on first visit
+- Remembers their choice (`localStorage`) so it persists across pages
+- Applies instantly with no flash-of-wrong-theme on load
+
+**Why this took real care:** your colour system reuses `--dark` for two
+different jobs — as the *text* colour for headings, and as the
+*background* colour for things like the footer, primary buttons, and
+badges (which already had light text on a dark background by design).
+Flipping `--dark` globally for dark mode would have made the footer/buttons
+turn light-on-light and disappear. So dark mode flips the page surface and
+heading-ink tokens globally, then explicitly "re-anchors" `--dark` back to
+its original near-black value *just* inside the handful of elements that
+were already intentionally dark (footer, primary buttons, download button,
+phase headers, badges, FAQ active state) — so they stay exactly as they
+look today, and everything else correctly inverts.
+
+### 3. Fixed the spacing on every new page
+Found the actual bug: the breadcrumb row and the page header both had
+their own "clear the fixed nav" top padding stacked on top of each other —
+about 250px of dead space before any text appeared. Only one of them needs
+that clearance now. Combined with tighter heading/paragraph margins
+throughout (`/about/`, `/projects/`, `/blog/` posts, etc.), pages should
+feel noticeably less empty/bloated without losing readability.
+
+### 4. Made links look like links
+- Inline text links (`a.inline-link`) are now bolder, underlined in gold,
+  with a soft highlight on hover — clearer that they're clickable, not just
+  slightly-different-coloured text.
+- Card "Read more" links are now visible pill buttons with a border, not
+  plain text.
+- "Related reading" links at the bottom of each page are now bordered rows
+  with a hover state, instead of a plain underlined list — each one's
+  destination is in its own line so it's obvious what you're clicking into.
+
+If anything on a specific page still feels off (a particular link, a
+particular paragraph), point me at that exact page and I'll tighten it
+further — this round focused on the patterns that repeat across all of them.

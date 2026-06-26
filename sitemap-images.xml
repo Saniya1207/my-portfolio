@@ -25,13 +25,6 @@
       <image:license>https://www.saniya.me/</image:license>
     </image:image>
 
-    <!-- Profile photo — used in hero section -->
-    <image:image>
-      <image:loc>https://www.saniya.me/saniya-farooqui-full-stack-developer-mumbai.png</image:loc>
-      <image:title>Saniya Farooqui — Full Stack Developer, Mumbai</image:title>
-      <image:caption>Saniya Farooqui, Full-Stack Developer and Co-Founder of KisanX, Mumbai</image:caption>
-    </image:image>
-
     <!-- Primary logo (SVG) -->
     <image:image>
       <image:loc>https://www.saniya.me/logo.svg</image:loc>
@@ -52,14 +45,6 @@
       <image:title>Saniya Farooqui — App Icon</image:title>
     </image:image>
 
-  </url>
-
-  <url>
-    <loc>https://www.saniya.me/about/</loc>
-    <image:image>
-      <image:loc>https://www.saniya.me/saniya-farooqui-full-stack-developer-mumbai.png</image:loc>
-      <image:title>Saniya Farooqui — Full Stack Developer, Mumbai</image:title>
-    </image:image>
   </url>
 
   <url>

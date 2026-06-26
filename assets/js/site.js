@@ -8,6 +8,26 @@
 (function () {
   "use strict";
 
+  /* ---- Dark mode toggle ---- */
+  function setTheme(theme) {
+    if (theme === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      document.documentElement.removeAttribute("data-theme");
+    }
+    try {
+      localStorage.setItem("theme", theme);
+    } catch (e) {}
+  }
+  function toggleTheme() {
+    var isDark = document.documentElement.getAttribute("data-theme") === "dark";
+    setTheme(isDark ? "light" : "dark");
+  }
+  ["themeToggle", "themeToggleOverlay"].forEach(function (id) {
+    var btn = document.getElementById(id);
+    if (btn) btn.addEventListener("click", toggleTheme);
+  });
+
   /* ---- Hamburger / overlay menu ---- */
   var hamburger = document.getElementById("hamburger");
   var navOverlay = document.getElementById("navOverlay");
