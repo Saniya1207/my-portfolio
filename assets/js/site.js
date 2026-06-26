@@ -28,6 +28,23 @@
     if (btn) btn.addEventListener("click", toggleTheme);
   });
 
+  /* If the person hasn't manually chosen a theme on this site yet, keep
+     following their phone/OS theme live (e.g. if it auto-switches at
+     sunset) instead of only checking it once on page load. */
+  try {
+    if (!localStorage.getItem("theme") && window.matchMedia) {
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (e) {
+        if (!localStorage.getItem("theme")) {
+          if (e.matches) {
+            document.documentElement.setAttribute("data-theme", "dark");
+          } else {
+            document.documentElement.removeAttribute("data-theme");
+          }
+        }
+      });
+    }
+  } catch (e) {}
+
   /* ---- Hamburger / overlay menu ---- */
   var hamburger = document.getElementById("hamburger");
   var navOverlay = document.getElementById("navOverlay");

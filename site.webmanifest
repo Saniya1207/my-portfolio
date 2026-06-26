@@ -8,8 +8,8 @@
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "theme_color": "#d4c9a8",
-  "background_color": "#1a1a0e",
+  "theme_color": "#fbe6ee",
+  "background_color": "#241019",
   "categories": ["portfolio", "developer", "technology"],
   "prefer_related_applications": false,
   "icons": [

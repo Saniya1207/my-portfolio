@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a1a0e;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#2a2a18;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#2a0f1d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3a1828;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#d4aa50;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#8b6914;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#f0b8cd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c2487a;stop-opacity:1" />
     </linearGradient>
   </defs>
 
@@ -20,17 +20,17 @@
 
   <!-- Inner gold frame -->
   <rect x="20" y="20" width="160" height="160" rx="16" ry="16"
-        fill="none" stroke="#b8a060" stroke-width="1" opacity="0.4" />
+        fill="none" stroke="#e8a0bb" stroke-width="1" opacity="0.4" />
 
   <!-- Corner ornaments -->
-  <line x1="20" y1="35" x2="20" y2="20" stroke="#b8a060" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
-  <line x1="20" y1="20" x2="35" y2="20" stroke="#b8a060" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
-  <line x1="180" y1="35" x2="180" y2="20" stroke="#b8a060" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
-  <line x1="165" y1="20" x2="180" y2="20" stroke="#b8a060" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
-  <line x1="20" y1="165" x2="20" y2="180" stroke="#b8a060" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
-  <line x1="20" y1="180" x2="35" y2="180" stroke="#b8a060" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
-  <line x1="180" y1="165" x2="180" y2="180" stroke="#b8a060" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
-  <line x1="165" y1="180" x2="180" y2="180" stroke="#b8a060" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <line x1="20" y1="35" x2="20" y2="20" stroke="#e8a0bb" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <line x1="20" y1="20" x2="35" y2="20" stroke="#e8a0bb" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <line x1="180" y1="35" x2="180" y2="20" stroke="#e8a0bb" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <line x1="165" y1="20" x2="180" y2="20" stroke="#e8a0bb" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <line x1="20" y1="165" x2="20" y2="180" stroke="#e8a0bb" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <line x1="20" y1="180" x2="35" y2="180" stroke="#e8a0bb" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <line x1="180" y1="165" x2="180" y2="180" stroke="#e8a0bb" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <line x1="165" y1="180" x2="180" y2="180" stroke="#e8a0bb" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
 
   <!-- S letter — warm gold, large -->
   <text x="58" y="132"
@@ -47,7 +47,7 @@
         font-size="76"
         font-weight="700"
         font-style="italic"
-        fill="#f0e8cc"
+        fill="#ffeaf1"
         letter-spacing="0"
         opacity="0.92">F</text>
 
@@ -59,7 +59,7 @@
         font-family="'Trebuchet MS', Helvetica, sans-serif"
         font-size="9.5"
         font-weight="600"
-        fill="#b8a060"
+        fill="#e8a0bb"
         text-anchor="middle"
         letter-spacing="3.5">SANIYA FAROOQUI</text>
 </svg>

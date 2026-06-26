@@ -51,14 +51,14 @@
 <!-- ================================================================
      MOBILE, PWA & WINDOWS TILE
 ================================================================ -->
-<meta name="theme-color" content="#d4c9a8" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1a1a0e"  media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fbe6ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#241019"  media="(prefers-color-scheme: dark)">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Saniya Farooqui">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="format-detection" content="telephone=no">
-<meta name="msapplication-TileColor" content="#1a1a0e">
+<meta name="msapplication-TileColor" content="#c2487a">
 <meta name="msapplication-TileImage" content="/favicon-192.png">
 
 <!-- ================================================================
@@ -382,7 +382,7 @@
 <link rel="icon"             type="image/png" sizes="512x512" href="/favicon-512.png">
 <link rel="icon"             type="image/svg+xml"  href="/logo.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
-<link rel="mask-icon"        href="/logo.svg" color="#1a1a0e">
+<link rel="mask-icon"        href="/logo.svg" color="#5c1f3d">
 <link rel="shortcut icon"    type="image/png" href="/favicon-32.png">
 <link rel="manifest"         href="/site.webmanifest">
 
@@ -514,13 +514,13 @@
         <svg class="hero-graphic" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decorative illustration of a code editor window">
           <defs>
             <linearGradient id="heroGoldLine" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#f0e8cc"/>
-              <stop offset="100%" stop-color="#b8a060"/>
+              <stop offset="0%" stop-color="#ffeaf1"/>
+              <stop offset="100%" stop-color="#e8a0bb"/>
             </linearGradient>
           </defs>
 
           <!-- corner ornaments, echoing the logo -->
-          <g stroke="#f0e8cc" stroke-width="3" stroke-linecap="round" opacity="0.55">
+          <g stroke="var(--dark)" stroke-width="3" stroke-linecap="round" opacity="0.55">
             <path d="M70 90 V60 H100" fill="none"/>
             <path d="M530 90 V60 H500" fill="none"/>
             <path d="M70 710 V740 H100" fill="none"/>
@@ -528,39 +528,39 @@
           </g>
 
           <!-- floating decorative tags -->
-          <g font-family="'Oswald', sans-serif" font-weight="600" fill="#f0e8cc" opacity="0.5">
+          <g font-family="'Oswald', sans-serif" font-weight="600" fill="var(--dark)" opacity="0.5">
             <text x="95" y="170" font-size="22" letter-spacing="1">&lt;/&gt;</text>
             <text x="445" y="225" font-size="18" letter-spacing="1">{ }</text>
             <text x="80" y="610" font-size="18" letter-spacing="1">=&gt;</text>
             <text x="460" y="600" font-size="16" letter-spacing="1">API</text>
           </g>
 
-          <!-- tilted code editor window -->
+          <!-- tilted code editor window (kept permanently dark, like a real code editor) -->
           <g transform="translate(300 400) rotate(-4) translate(-220 -165)">
-            <rect x="0" y="0" width="440" height="330" rx="14" fill="#15140d" opacity="0.9" stroke="#b8a060" stroke-width="2"/>
+            <rect x="0" y="0" width="440" height="330" rx="14" fill="#2a1020" opacity="0.92" stroke="#e8a0bb" stroke-width="2"/>
             <!-- title bar -->
-            <rect x="0" y="0" width="440" height="36" rx="14" fill="#1f1d12"/>
+            <rect x="0" y="0" width="440" height="36" rx="14" fill="#1f0c18"/>
             <circle cx="22" cy="18" r="6" fill="#8b3a1a"/>
-            <circle cx="44" cy="18" r="6" fill="#b8a060"/>
+            <circle cx="44" cy="18" r="6" fill="#e8a0bb"/>
             <circle cx="66" cy="18" r="6" fill="#3a7a3a"/>
-            <text x="220" y="23" text-anchor="middle" font-family="'Oswald', sans-serif" font-size="11" letter-spacing="2" fill="#b8a060" opacity="0.7">KISANX.JSX</text>
+            <text x="220" y="23" text-anchor="middle" font-family="'Oswald', sans-serif" font-size="11" letter-spacing="2" fill="#e8a0bb" opacity="0.7">KISANX.JSX</text>
 
             <!-- code lines -->
             <g fill="none" stroke-linecap="round">
-              <rect x="28" y="62"  width="150" height="9" rx="4" fill="#b8a060" opacity="0.9"/>
-              <rect x="28" y="86"  width="230" height="9" rx="4" fill="#f0e8cc" opacity="0.75"/>
-              <rect x="52" y="110" width="190" height="9" rx="4" fill="#f0e8cc" opacity="0.55"/>
+              <rect x="28" y="62"  width="150" height="9" rx="4" fill="#e8a0bb" opacity="0.9"/>
+              <rect x="28" y="86"  width="230" height="9" rx="4" fill="#ffeaf1" opacity="0.75"/>
+              <rect x="52" y="110" width="190" height="9" rx="4" fill="#ffeaf1" opacity="0.55"/>
               <rect x="52" y="134" width="140" height="9" rx="4" fill="#3a7a3a" opacity="0.7"/>
-              <rect x="76" y="158" width="170" height="9" rx="4" fill="#f0e8cc" opacity="0.45"/>
-              <rect x="76" y="182" width="110" height="9" rx="4" fill="#b8a060" opacity="0.8"/>
-              <rect x="28" y="214" width="200" height="9" rx="4" fill="#f0e8cc" opacity="0.55"/>
-              <rect x="28" y="238" width="260" height="9" rx="4" fill="#f0e8cc" opacity="0.35"/>
+              <rect x="76" y="158" width="170" height="9" rx="4" fill="#ffeaf1" opacity="0.45"/>
+              <rect x="76" y="182" width="110" height="9" rx="4" fill="#e8a0bb" opacity="0.8"/>
+              <rect x="28" y="214" width="200" height="9" rx="4" fill="#ffeaf1" opacity="0.55"/>
+              <rect x="28" y="238" width="260" height="9" rx="4" fill="#ffeaf1" opacity="0.35"/>
               <rect x="52" y="262" width="120" height="9" rx="4" fill="#8b3a1a" opacity="0.7"/>
-              <rect x="28" y="294" width="60"  height="9" rx="4" fill="#b8a060" opacity="0.9"/>
+              <rect x="28" y="294" width="60"  height="9" rx="4" fill="#e8a0bb" opacity="0.9"/>
             </g>
 
             <!-- blinking cursor -->
-            <rect x="190" y="294" width="3" height="11" fill="#f0e8cc" opacity="0.9"/>
+            <rect x="190" y="294" width="3" height="11" fill="#ffeaf1" opacity="0.9"/>
           </g>
 
           <!-- large monogram glyph, bottom right, echoing the brand mark -->
@@ -1622,11 +1622,10 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("visible");
 
-      // Animate stat bars
-      if (entry.target.classList.contains("profile-numbers")) {
+      // Animate stat bars (only the first time this section appears)
+      if (entry.target.classList.contains("profile-numbers") && !entry.target.dataset.barsAnimated) {
+        entry.target.dataset.barsAnimated = "true";
         document.querySelectorAll(".stat-bar").forEach(bar => {
-          bar.classList.remove("bar-animated");
-          void bar.offsetWidth; // reflow force karo
           bar.classList.add("bar-animated");
         });
       }
@@ -1635,11 +1634,8 @@ const observer = new IntersectionObserver((entries) => {
 
     } else {
       entry.target.classList.remove("visible");
-      // Numbers reset karo taaki scroll wapas aane pe dobara animate ho
-      entry.target.querySelectorAll(".stat-value, .infographic-pct").forEach(el => {
-        const original = el.getAttribute("data-target");
-        if (original) el.innerText = "0";
-      });
+      // Numbers/bars are left as they are — they animate once on first
+      // scroll-into-view and then stay at their final value.
     }
   });
 }, { threshold: 0.1});
@@ -1652,10 +1648,12 @@ revealElements.forEach(el => observer.observe(el));
 ========================= */
 function animateNumbers() {
   document.querySelectorAll(".stat-value, .infographic-pct").forEach(el => {
+    if (el.dataset.counted) return; // already animated once — leave it at its final value
     const target = parseFloat(el.getAttribute("data-target") || el.innerText);
     if (!el.getAttribute("data-target")) {
       el.setAttribute("data-target", el.innerText); // original value save karo
     }
+    el.dataset.counted = "true";
     let count = 0;
     const increment = target / 50;
     const update = () => {
@@ -1883,6 +1881,21 @@ function toggleTheme() {
   if (btn) btn.addEventListener("click", toggleTheme);
 });
 
+/* Follow the phone/OS theme live if no manual choice has been made yet */
+try {
+  if (!localStorage.getItem("theme") && window.matchMedia) {
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+      if (!localStorage.getItem("theme")) {
+        if (e.matches) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+          document.documentElement.removeAttribute("data-theme");
+        }
+      }
+    });
+  }
+} catch (e) {}
+
 window.addEventListener("scroll", () => {
   let current = "";
   sections.forEach(sec => {
@@ -1927,17 +1940,13 @@ const skillSection = document.querySelector("#skills");
 const skillBarObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     const bars = entry.target.querySelectorAll(".skill-bar-inner");
-    if (entry.isIntersecting) {
+    if (entry.isIntersecting && !entry.target.dataset.barsFilled) {
+      entry.target.dataset.barsFilled = "true";
       bars.forEach(bar => {
-        bar.style.width = "0";
-        void bar.offsetWidth;
         bar.style.width = bar.dataset.width;
       });
-    } else {
-      bars.forEach(bar => {
-        bar.style.width = "0"; // reset for reanimation
-      });
     }
+    // No "else" reset — bars stay filled once they've animated in.
   });
 }, { threshold: 0.2 });
 

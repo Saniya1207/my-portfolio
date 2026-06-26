@@ -164,3 +164,56 @@ feel noticeably less empty/bloated without losing readability.
 If anything on a specific page still feels off (a particular link, a
 particular paragraph), point me at that exact page and I'll tighten it
 further — this round focused on the patterns that repeat across all of them.
+
+---
+
+## What changed — Round 3 (pink theme, system theme detection, scroll fixes)
+
+### 1. Whole site re-coloured to baby pink
+Every colour token changed — light mode is now baby pink (`#fbe6ee` base,
+deep rose-plum `#5c1f3d` for text/headings, rose `#e8a0bb`/`#c2487a` for
+accents and links), and dark mode is now a deep wine/maroon (`#241019`
+base, blush pink `#f7d8e6` for text, same rose accents popping against the
+dark background). This touched:
+
+- The root colour variables in `assets/css/style.css`
+- ~35 hardcoded glow/shadow colours on cards and buttons that don't use
+  variables (these were gold-tinted before, now rose-tinted)
+- The hero illustration (the code-editor graphic) — recoloured, and the
+  parts that need to stay readable in both themes now use `var(--dark)`
+  so they automatically adjust
+- **The logo itself** (`logo.svg`) — recoloured from gold-on-black to
+  pink-on-plum, and all four favicon PNGs were regenerated from it so the
+  browser tab icon matches
+- `site.webmanifest`, meta `theme-color` tags (the colour your phone's
+  browser chrome/status bar picks up), and Windows tile colour
+
+**One thing I couldn't touch:** `og-image.jpg` (the image shown in
+WhatsApp/social link previews) isn't part of your uploaded files, so if it
+visually shows the old gold theme, you'll want to redo that one separately
+— I don't have the source to regenerate it.
+
+### 2. Theme now properly follows your phone
+On top of checking your system preference once on page load, every page
+now also *listens* for your phone's theme changing live — so if your
+phone auto-switches to dark mode at sunset while the site is open, it
+follows along immediately, no refresh needed. This only applies as long as
+you haven't manually tapped the toggle on this site — once you do, your
+manual choice is remembered and takes priority (standard behaviour, same
+as most apps).
+
+### 3. Stat counters and skill bars no longer replay on every scroll
+Found it in your own code comments, actually — they were deliberately
+*resetting to 0* every time you scrolled away, specifically so they'd
+animate again the next time you scrolled back. That's exactly what you
+asked to stop. Fixed in `index.html`:
+- The "Projects Shipped / Certifications Earned / Technologies Mastered /
+  SY GPA" counters (search for `function animateNumbers`) now animate once
+  and stay at their final number.
+- The skill percentage bars (search for `skillBarObserver`) now fill once
+  and stay filled.
+
+If you ever want to do this yourself in future: the pattern to look for is
+any `IntersectionObserver` callback with an `else` branch that resets a
+value back to `0` or `"0"` — deleting that reset (and adding a simple
+"already did this" flag so it doesn't restart) is the whole fix.
