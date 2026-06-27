@@ -1,4 +1,4 @@
-  :root {
+:root {
     --bg: #fdf2f6;
     --bg2: #fae7ef;
     --dark: #3d1228;
@@ -711,6 +711,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
+    margin-top: 28px;
   }
 
   .phase-card {
