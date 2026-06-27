@@ -217,3 +217,49 @@ If you ever want to do this yourself in future: the pattern to look for is
 any `IntersectionObserver` callback with an `else` branch that resets a
 value back to `0` or `"0"` — deleting that reset (and adding a simple
 "already did this" flag so it doesn't restart) is the whole fix.
+
+---
+
+## What changed — Round 4 (nav bar colour bug, numbering, padding, carousel)
+
+### 1. Fixed the nav bar — it was still the old khaki colour
+Real bug: `.nav-bar`'s background was a hardcoded `rgba(212,201,168,0.92)`
+(the old tan) that never went through the pink rebrand because it wasn't
+using a colour variable. Sitting on top of a pink page, it looked like a
+leftover. Fixed to a pink-tinted translucent background that matches.
+
+### 2. Removed the numbers from the mobile menu
+The `01 / 02 / 03...` next to each link in the hamburger menu are gone,
+on every page.
+
+### 3. Light mode: background lighter, text darker
+- Background went from `#fbe6ee` → `#fdf2f6` (noticeably lighter, closer
+  to white-pink)
+- Heading/body text went from `#5c1f3d` → `#3d1228` (darker plum, more
+  contrast against the lighter background)
+- Dark mode's anchored chrome (footer, buttons, badges) and the logo/
+  favicons were all updated to match the new shade so nothing looks like
+  it's from a different version of the palette.
+
+### 4. Featured Project box padding tightened
+Reduced the outer padding on the "Featured Project" card (40px → 32px),
+and added a proper mobile-specific padding for both that card and the
+Phase 1/2 sub-cards (they were using the same fixed padding at every
+screen size before, which felt heavy on a phone). If this still isn't the
+exact spot you meant, tell me which element specifically and I'll go
+straight to it.
+
+### 5. Minor Projects carousel now supports swipe/scroll directly
+Previously the only way to move between cards was the ← → arrow buttons —
+the track itself had `overflow: hidden`, so swiping or scrolling did
+nothing. It's now a native horizontally-scrollable strip with snap points:
+you can swipe (touch), drag, or two-finger scroll straight through the
+cards on both desktop and mobile, and the arrow buttons still work as a
+secondary way to move one card at a time.
+
+### Confirming the scroll-animation behaviour
+Just to close the loop on this — yes, it's exactly as you described:
+each animated element (stat counters, skill bars) plays its animation
+once, the moment it's scrolled into view, and then stays at its final
+value. It won't replay on a second scroll past, and it won't play before
+you actually reach it either.

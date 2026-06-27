@@ -1,14 +1,14 @@
   :root {
-    --bg: #fbe6ee;
-    --bg2: #f6d3e1;
-    --dark: #5c1f3d;
-    --paper: #fdf1f5;
-    --paper2: #ffeaf1;
+    --bg: #fdf2f6;
+    --bg2: #fae7ef;
+    --dark: #3d1228;
+    --paper: #fef8fb;
+    --paper2: #fdedf3;
     --accent: #e8a0bb;
-    --accent2: #c2487a;
-    --text: #5c1f3d;
-    --text-light: #8a4a68;
-    --grid: rgba(92,31,61,0.08);
+    --accent2: #b0386a;
+    --text: #3d1228;
+    --text-light: #6b2f4a;
+    --grid: rgba(61,18,40,0.07);
     --green: #3a7a3a;
     --rust: #8b3a1a;
   }
@@ -39,7 +39,7 @@
     justify-content: center;
     align-items: center;
     padding: 14px 24px;
-    background: rgba(212,201,168,0.92);
+    background: rgba(251,230,238,0.92);
     backdrop-filter: blur(6px);
     border-bottom: 1px solid var(--grid);
     position: relative;
@@ -139,7 +139,7 @@
     top: 0; right: 0;
     width: 60%;
     height: 55%;
-    background: linear-gradient(180deg, #f5c9dc 0%, #fbe6ee 100%);
+    background: linear-gradient(180deg, #f5c9dc 0%, #fdf2f6 100%);
     border-radius: 0 0 0 40%;
     opacity: 0.5;
   }
@@ -512,18 +512,25 @@
 
   .minor-carousel {
     position: relative;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     margin-top: 20px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
   }
+
+  .minor-carousel::-webkit-scrollbar { display: none; }
 
   .minor-cards-track {
     display: flex;
     gap: 24px;
-    transition: transform 0.4s ease;
   }
 
   .minor-card {
     flex: 0 0 calc(50% - 12px);
+    scroll-snap-align: start;
     background: var(--bg2);
     border: 2px solid var(--dark);
     border-radius: 12px;
@@ -667,7 +674,7 @@
     background: var(--bg2);
     border: 2px solid var(--dark);
     border-radius: 16px;
-    padding: 40px;
+    padding: 32px 36px;
     transition: all 0.4s cubic-bezier(0.22,1,0.36,1);
   }
 
@@ -2144,7 +2151,7 @@
       display: block;
       width: 18px;
       height: 2px;
-      background: #ffeaf1;
+      background: #fdedf3;
       border-radius: 2px;
       position: absolute;
     }
@@ -2174,7 +2181,7 @@
       font-family: 'Bebas Neue', cursive;
       font-size: 44px;
       letter-spacing: 2px;
-      color: #ffeaf1;
+      color: #fdedf3;
       text-decoration: none;
       display: flex;
       align-items: center;
@@ -2190,7 +2197,7 @@
       font-family: 'Oswald', sans-serif;
       font-size: 11px;
       letter-spacing: 1px;
-      color: #c2487a;
+      color: #b0386a;
       font-weight: 400;
       min-width: 20px;
     }
@@ -2365,6 +2372,9 @@
     /* --- PROFILE --- */
     .profile-inner, .major-phases, .contact-inner { grid-template-columns: 1fr; }
 
+    .major-projects-section { padding: 22px 18px; }
+    .phase-body { padding: 16px 14px; }
+
     /* --- CURRENTLY LEARNING CARDS — stack vertically on mobile --- */
     .experience-grid {
       grid-template-columns: 1fr !important;
@@ -2445,7 +2455,7 @@
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #ffeaf1;
+    color: #fdedf3;
     text-decoration: none;
     padding: 14px 24px;
     border-bottom: 1px solid rgba(255,255,255,0.07);
@@ -2469,7 +2479,7 @@
     box-shadow: 0 8px 32px rgba(0,0,0,0.4);
   }
 
-  #overlayClose { display: flex; align-items: center; justify-content: center; position: absolute; top: 10px; right: 14px; width: 36px; height: 36px; background: rgba(240,232,204,0.1); border: 1px solid rgba(240,232,204,0.25); border-radius: 8px; color: #ffeaf1; font-size: 18px; cursor: pointer; z-index: 10000; }
+  #overlayClose { display: flex; align-items: center; justify-content: center; position: absolute; top: 10px; right: 14px; width: 36px; height: 36px; background: rgba(240,232,204,0.1); border: 1px solid rgba(240,232,204,0.25); border-radius: 8px; color: #fdedf3; font-size: 18px; cursor: pointer; z-index: 10000; }
 
   .overlay-inner {
     padding: 16px 0 20px;
@@ -2491,7 +2501,7 @@
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #ffeaf1;
+    color: #fdedf3;
     text-decoration: none;
     padding: 13px 24px;
     border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -2507,7 +2517,7 @@
   .ov-link em {
     font-style: normal;
     font-size: 11px;
-    color: #c2487a;
+    color: #b0386a;
     letter-spacing: 1px;
     min-width: 20px;
   }
@@ -2537,7 +2547,7 @@
 
   .ov-social:hover {
     background: rgba(232, 160, 187,0.25);
-    color: #ffeaf1;
+    color: #fdedf3;
   }
 
   /* ===========================
@@ -3289,8 +3299,8 @@
 [data-theme="dark"] .journey-badge,
 [data-theme="dark"] .faq-question.active,
 [data-theme="dark"] .brand-statement {
-  --dark: #5c1f3d;
-  --paper2: #ffeaf1;
+  --dark: #3d1228;
+  --paper2: #fdedf3;
 }
 
 /* Hardcoded (non-variable) spots that need an explicit dark-mode value */
@@ -3346,11 +3356,11 @@
 }
 .ov-theme-row .theme-toggle {
   border-color: rgba(240,232,204,0.4);
-  color: #ffeaf1;
+  color: #fdedf3;
 }
 .ov-theme-row .theme-toggle:hover {
   background: rgba(240,232,204,0.15);
-  color: #ffeaf1;
+  color: #fdedf3;
 }
 .ov-theme-label {
   font-family: 'Oswald', sans-serif;

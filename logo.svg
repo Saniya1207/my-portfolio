@@ -6,7 +6,7 @@
     </linearGradient>
     <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#f0b8cd;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#c2487a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b0386a;stop-opacity:1" />
     </linearGradient>
   </defs>
 
@@ -47,7 +47,7 @@
         font-size="76"
         font-weight="700"
         font-style="italic"
-        fill="#ffeaf1"
+        fill="#fdedf3"
         letter-spacing="0"
         opacity="0.92">F</text>
 
