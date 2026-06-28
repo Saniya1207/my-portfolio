@@ -2797,7 +2797,7 @@
   @media (max-width: 768px) {
     #journey > div,
     #brand > div,
-    #faq > div { padding: 80px 24px 60px; }
+    #faq > div { padding: 80px 24px 60px !important; }
 
     #why-hire-me,
     #learning { padding: 80px 24px 60px !important; }
@@ -2864,7 +2864,7 @@
 
     #journey > div,
     #brand > div,
-    #faq > div { padding: 80px 20px 60px; }
+    #faq > div { padding: 80px 20px 60px !important; }
 
     .brand-grid { grid-template-columns: 1fr; }
     .brand-quote { font-size: 18px; }
