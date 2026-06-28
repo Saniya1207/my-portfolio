@@ -113,7 +113,6 @@
 
   /* ===== SECTION BASE ===== */
   section {
-    min-height: 100vh;
     position: relative;
     overflow: hidden;
   }
@@ -259,7 +258,7 @@
 
   #profile {
     background: var(--paper);
-    padding: 100px 60px 80px;
+    padding: 60px 60px 50px;
   }
 
   .profile-inner {
@@ -373,7 +372,7 @@
 
   #skills {
     background: var(--bg2);
-    padding: 100px 60px 80px;
+    padding: 60px 60px 50px;
   }
 
   .skills-grid {
@@ -495,7 +494,7 @@
 
   #projects {
     background: var(--paper);
-    padding: 100px 60px 80px;
+    padding: 60px 60px 50px;
   }
 
   .minor-projects-section {
@@ -819,7 +818,7 @@
 
   #experience {
     background: var(--bg2);
-    padding: 100px 60px 80px;
+    padding: 60px 60px 50px;
   }
 
   .experience-grid {
@@ -919,7 +918,7 @@
 
   #certifications {
     background: var(--paper);
-    padding: 100px 60px 80px;
+    padding: 60px 60px 50px;
   }
 
   .cert-inner {
@@ -1036,7 +1035,7 @@
 
   #contact {
     background: var(--bg2);
-    padding: 100px 60px 80px;
+    padding: 60px 60px 50px;
   }
 
   .contact-inner {
@@ -2355,8 +2354,8 @@
     .tech-icons { display: none; }
 
     /* --- SECTIONS --- */
-    #profile, #skills, #projects, #experience, #contact {
-      padding: 80px 20px 60px;
+    #profile, #skills, #projects, #experience, #contact, #certifications {
+      padding: 50px 20px 40px;
     }
 
     #experience {
@@ -2797,10 +2796,10 @@
   @media (max-width: 768px) {
     #journey > div,
     #brand > div,
-    #faq > div { padding: 80px 24px 60px !important; }
+    #faq > div { padding: 50px 20px 40px !important; }
 
     #why-hire-me,
-    #learning { padding: 80px 24px 60px !important; }
+    #learning { padding: 50px 20px 40px !important; }
 
     /* Journey — full width, card style on mobile */
     .journey-timeline {
@@ -2864,7 +2863,7 @@
 
     #journey > div,
     #brand > div,
-    #faq > div { padding: 80px 20px 60px !important; }
+    #faq > div { padding: 50px 20px 40px !important; }
 
     .brand-grid { grid-template-columns: 1fr; }
     .brand-quote { font-size: 18px; }
