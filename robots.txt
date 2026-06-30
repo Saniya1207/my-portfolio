@@ -16,7 +16,6 @@ Disallow: /.git/
 # ---- Google ----
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
 
 # Image crawling fully enabled — needed for Google Images visibility
 # on the profile photo, project screenshots and logo.
@@ -29,7 +28,6 @@ Allow: /
 # ---- Bing / Microsoft ----
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
 
 User-agent: msnbot
 Allow: /
@@ -119,5 +117,3 @@ Allow: /
 Sitemap: https://www.saniya.me/sitemap.xml
 Sitemap: https://www.saniya.me/sitemap-images.xml
 
-# ---- Host Declaration ----
-Host: https://www.saniya.me
