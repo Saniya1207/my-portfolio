@@ -2,8 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  
-  <!-- Primary Homepage & Portfolio Master -->
+
+  <!-- ============================================================
+       HOMEPAGE
+       ============================================================ -->
   <url>
     <loc>https://www.saniya.me/</loc>
     <lastmod>2026-08-16T16:00:00+05:30</lastmod>
@@ -11,7 +13,85 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Resume PDF Asset -->
+  <!-- ============================================================
+       PROJECTS & CASE STUDIES
+       ============================================================ -->
+  <url>
+    <loc>https://www.saniya.me/projects/</loc>
+    <lastmod>2026-08-16T16:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/projects/kisanx/</loc>
+    <lastmod>2026-08-16T16:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/projects/the-capital-home/</loc>
+    <lastmod>2026-08-16T16:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/projects/vastu-properties/</loc>
+    <lastmod>2026-08-16T16:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ============================================================
+       BLOG & ARTICLES
+       ============================================================ -->
+  <url>
+    <loc>https://www.saniya.me/blog/</loc>
+    <lastmod>2026-08-16T16:00:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/blog/how-i-built-kisanx/</loc>
+    <lastmod>2026-08-16T16:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/blog/full-stack-journey/</loc>
+    <lastmod>2026-08-16T16:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/blog/php-vs-mern/</loc>
+    <lastmod>2026-08-16T16:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/blog/top-fullstack-projects/</loc>
+    <lastmod>2026-08-16T16:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.saniya.me/blog/react-native-jwt-otp/</loc>
+    <lastmod>2026-08-16T16:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============================================================
+       RESUME
+       ============================================================ -->
   <url>
     <loc>https://www.saniya.me/RESUME.pdf</loc>
     <lastmod>2026-08-16T16:00:00+05:30</lastmod>

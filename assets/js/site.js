@@ -1,232 +1,200 @@
-/**
- * Saniya Farooqui - Portfolio Interactive Logic & Enhancements
- */
+/* ================================================================
+   site.js — shared behaviour for inner pages
+   (About, Projects, Blog, Resume, Contact, Certifications)
+   Mirrors the nav + reveal-on-scroll behaviour already used on the
+   homepage so the feel of the site stays identical across pages.
+================================================================ */
 
-document.addEventListener('DOMContentLoaded', () => {
-  initTheme();
-  initMobileNav();
-  initFaqAccordion();
-  initStackTabs();
-  initScrollSpy();
-  initStatsCountUp();
-});
+(function () {
+  "use strict";
 
-/* ==========================================================================
-   THEME TOGGLE (DARK / LIGHT)
-   ========================================================================== */
-function initTheme() {
-  const themeToggles = document.querySelectorAll('.btn-theme-toggle');
-  
-  // Set initial icon
-  updateThemeIcons();
-
-  themeToggles.forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      updateThemeIcons();
-    });
-  });
-}
-
-function updateThemeIcons() {
-  const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-  const themeToggles = document.querySelectorAll('.btn-theme-toggle');
-  
-  themeToggles.forEach(toggle => {
-    toggle.innerHTML = currentTheme === 'dark' ? '☀️' : '🌙';
-    toggle.setAttribute('aria-label', `Switch to ${currentTheme === 'dark' ? 'light' : 'dark'} mode`);
-  });
-}
-
-/* ==========================================================================
-   MOBILE NAVIGATION DRAWER
-   ========================================================================== */
-function initMobileNav() {
-  const mobileToggle = document.getElementById('mobileToggle');
-  const mobileDrawer = document.getElementById('mobileDrawer');
-  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-
-  if (!mobileToggle || !mobileDrawer) return;
-
-  mobileToggle.addEventListener('click', () => {
-    const isOpen = mobileDrawer.classList.contains('open');
-    if (isOpen) {
-      mobileDrawer.classList.remove('open');
-      mobileToggle.innerHTML = '☰';
+  /* ---- Dark mode toggle ---- */
+  function setTheme(theme) {
+    if (theme === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
     } else {
-      mobileDrawer.classList.add('open');
-      mobileToggle.innerHTML = '✕';
+      document.documentElement.removeAttribute("data-theme");
     }
+    try {
+      localStorage.setItem("theme", theme);
+    } catch (e) {}
+  }
+  function toggleTheme() {
+    var isDark = document.documentElement.getAttribute("data-theme") === "dark";
+    setTheme(isDark ? "light" : "dark");
+  }
+  ["themeToggle", "themeToggleOverlay"].forEach(function (id) {
+    var btn = document.getElementById(id);
+    if (btn) btn.addEventListener("click", toggleTheme);
   });
 
-  mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileDrawer.classList.remove('open');
-      mobileToggle.innerHTML = '☰';
-    });
-  });
-
-  // Close drawer on click outside
-  document.addEventListener('click', (e) => {
-    if (!mobileDrawer.contains(e.target) && !mobileToggle.contains(e.target)) {
-      mobileDrawer.classList.remove('open');
-      mobileToggle.innerHTML = '☰';
-    }
-  });
-}
-
-/* ==========================================================================
-   LOCAL SEO FAQ ACCORDION
-   ========================================================================== */
-function initFaqAccordion() {
-  const faqItems = document.querySelectorAll('.faq-accordion-item');
-
-  faqItems.forEach(item => {
-    const btn = item.querySelector('.faq-btn');
-    const content = item.querySelector('.faq-content');
-
-    btn.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
-
-      // Close all items
-      faqItems.forEach(otherItem => {
-        otherItem.classList.remove('active');
-        const otherContent = otherItem.querySelector('.faq-content');
-        if (otherContent) otherContent.style.maxHeight = null;
-      });
-
-      // Open current if wasn't active
-      if (!isActive) {
-        item.classList.add('active');
-        content.style.maxHeight = content.scrollHeight + 30 + 'px';
-      }
-    });
-  });
-}
-
-/* ==========================================================================
-   TECH STACK FILTER TABS
-   ========================================================================== */
-function initStackTabs() {
-  const tabs = document.querySelectorAll('.stack-tab');
-  const skillCards = document.querySelectorAll('.skill-pill-card');
-
-  if (!tabs.length || !skillCards.length) return;
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-
-      const filter = tab.getAttribute('data-filter');
-
-      skillCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
-          card.style.display = 'flex';
-          card.style.opacity = '1';
-        } else {
-          card.style.display = 'none';
+  /* If the person hasn't manually chosen a theme on this site yet, keep
+     following their phone/OS theme live (e.g. if it auto-switches at
+     sunset) instead of only checking it once on page load. */
+  try {
+    if (!localStorage.getItem("theme") && window.matchMedia) {
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (e) {
+        if (!localStorage.getItem("theme")) {
+          if (e.matches) {
+            document.documentElement.setAttribute("data-theme", "dark");
+          } else {
+            document.documentElement.removeAttribute("data-theme");
+          }
         }
       });
-    });
-  });
-}
+    }
+  } catch (e) {}
 
-/* ==========================================================================
-   ACTIVE SCROLL SPY
-   ========================================================================== */
-function initScrollSpy() {
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
+  /* ---- Hamburger / overlay menu ---- */
+  var hamburger = document.getElementById("hamburger");
+  var navOverlay = document.getElementById("navOverlay");
 
-  window.addEventListener('scroll', () => {
-    let scrollY = window.pageYOffset;
-
-    sections.forEach(current => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 120;
-      const sectionId = current.getAttribute('id');
-
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
-  });
-}
-
-/* ==========================================================================
-   NUMBER COUNT-UP ANIMATION
-   ========================================================================== */
-function initStatsCountUp() {
-  const statNumbers = document.querySelectorAll('.metric-num[data-target]');
-  if (!statNumbers.length) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const target = parseFloat(el.getAttribute('data-target'));
-        const isDecimal = target % 1 !== 0;
-        let count = 0;
-        const speed = target / 35;
-
-        const updateCount = () => {
-          count += speed;
-          if (count < target) {
-            el.innerText = isDecimal ? count.toFixed(2) : Math.ceil(count) + '+';
-            requestAnimationFrame(updateCount);
-          } else {
-            el.innerText = isDecimal ? target.toFixed(2) : target + '+';
-          }
-        };
-
-        updateCount();
-        observer.unobserve(el);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  statNumbers.forEach(stat => observer.observe(stat));
-}
-
-/* ==========================================================================
-   DIRECT WHATSAPP INSTANT SENDER
-   ========================================================================== */
-function sendWhatsAppMessage(event) {
-  event.preventDefault();
-  
-  const name = document.getElementById('wa-name').value.trim();
-  const email = document.getElementById('wa-email').value.trim();
-  const service = document.getElementById('wa-service').value;
-  const message = document.getElementById('wa-msg').value.trim();
-
-  if (!name || !message) {
-    alert('Please enter your name and message to continue.');
-    return false;
+  function openMenu() {
+    navOverlay.style.display = "block";
+    hamburger.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function closeMenu() {
+    navOverlay.style.display = "none";
+    hamburger.classList.remove("open");
+    document.body.style.overflow = "";
   }
 
-  const phone = '917666886033';
-  const formattedText = 
-`👋 Hello Saniya! I am contacting you from your portfolio:
+  if (hamburger && navOverlay) {
+    hamburger.addEventListener("click", function () {
+      navOverlay.style.display === "block" ? closeMenu() : openMenu();
+    });
+    document.querySelectorAll(".ov-link").forEach(function (l) {
+      l.addEventListener("click", closeMenu);
+    });
+  }
 
-👤 Name: ${name}
-📧 Email: ${email || 'Not provided'}
-💼 Project/Service: ${service}
+  /* ---- Highlight current page in nav based on path ---- */
+  var here = window.location.pathname.replace(/\/index\.html$/, "/");
+  document.querySelectorAll("#navLinks a, .ov-link").forEach(function (link) {
+    var href = link.getAttribute("href");
+    if (!href) return;
+    if (href === here || (href !== "/" && here.indexOf(href) === 0)) {
+      link.classList.add("active");
+    }
+  });
 
-💬 Message:
-${message}`;
+  /* ---- Scroll reveal (same classes/behaviour as homepage) ---- */
+  var reveals = document.querySelectorAll(
+    ".reveal, .reveal-stagger, .section-divider, .entity-card, .resume-block"
+  );
 
-  const encodedUrl = `https://wa.me/${phone}?text=${encodeURIComponent(formattedText)}`;
-  window.open(encodedUrl, '_blank');
-  return false;
-}
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible");
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  reveals.forEach(function (el) {
+    observer.observe(el);
+  });
+
+  /* ---- FAQ accordion (re-used on Contact / Certifications / Blog) ---- */
+  window.toggleFaq = function (btn) {
+    var answer = btn.nextElementSibling;
+    var isOpen = answer.classList.contains("open");
+    document.querySelectorAll(".faq-answer").forEach(function (a) {
+      a.classList.remove("open");
+    });
+    document.querySelectorAll(".faq-question").forEach(function (b) {
+      b.classList.remove("active");
+    });
+    if (!isOpen) {
+      answer.classList.add("open");
+      btn.classList.add("active");
+    }
+  };
+
+  /* ---- WhatsApp contact form (Contact page) ---- */
+  window.sendToWhatsApp = function () {
+    var nameEl = document.getElementById("f-name");
+    var emailEl = document.getElementById("f-email");
+    var msgEl = document.getElementById("f-msg");
+    var name = nameEl ? nameEl.value.trim() : "";
+    var email = emailEl ? emailEl.value.trim() : "";
+    var message = msgEl ? msgEl.value.trim() : "";
+
+    if (!name) {
+      alert("Please enter your name.");
+      return;
+    }
+
+    var whatsappNumber = "917666886033";
+    var text =
+      "Hello Saniya,\n\n👤 Name: " +
+      name +
+      "\n📧 Email: " +
+      email +
+      "\n\n💬 Message:\n" +
+      message;
+
+    var url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(text);
+    window.open(url, "_blank");
+  };
+
+  /* ---- Interactive Custom Cursor (Inner Pages) ---- */
+  if (window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    var dot = document.createElement("div");
+    dot.className = "custom-cursor-dot";
+    var ring = document.createElement("div");
+    ring.className = "custom-cursor-ring";
+    document.body.appendChild(dot);
+    document.body.appendChild(ring);
+
+    var mouseX = window.innerWidth / 2;
+    var mouseY = window.innerHeight / 2;
+    var ringX = mouseX;
+    var ringY = mouseY;
+    var isMoving = false;
+
+    window.addEventListener("mousemove", function (e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      dot.style.left = mouseX + "px";
+      dot.style.top = mouseY + "px";
+      if (!isMoving) {
+        isMoving = true;
+        dot.style.opacity = "1";
+        ring.style.opacity = "0.8";
+      }
+    });
+
+    function renderCursor() {
+      ringX += (mouseX - ringX) * 0.16;
+      ringY += (mouseY - ringY) * 0.16;
+      ring.style.left = ringX + "px";
+      ring.style.top = ringY + "px";
+      requestAnimationFrame(renderCursor);
+    }
+    requestAnimationFrame(renderCursor);
+
+    document.addEventListener("mousedown", function () {
+      ring.classList.add("cursor-click");
+    });
+    document.addEventListener("mouseup", function () {
+      ring.classList.remove("cursor-click");
+    });
+
+    document.querySelectorAll("a, button, input, textarea, select, .entity-card, .resume-block, .project-card").forEach(function (target) {
+      target.addEventListener("mouseenter", function () {
+        ring.classList.add("cursor-hover");
+        dot.style.transform = "translate(-50%, -50%) scale(1.5)";
+      });
+      target.addEventListener("mouseleave", function () {
+        ring.classList.remove("cursor-hover");
+        dot.style.transform = "translate(-50%, -50%) scale(1)";
+      });
+    });
+  }
+})();
