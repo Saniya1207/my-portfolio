@@ -1,15 +1,15 @@
 {
-  "name": "Saniya Farooqui | Full-Stack Developer",
-  "short_name": "Saniya.me",
-  "description": "Portfolio of Saniya Farooqui — Full-Stack Developer from Mumbai specialising in React, PHP, Node.js and React Native.",
+  "name": "Saniya Farooqui | Web Developer in Vasai-Virar & Mumbai",
+  "short_name": "Saniya Farooqui",
+  "description": "Portfolio of Saniya Farooqui — Full-Stack Web Developer from Vasai-Virar & Mumbai specialising in React, PHP, Node.js and UI/UX.",
   "lang": "en-IN",
   "dir": "ltr",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "theme_color": "#fdf2f6",
-  "background_color": "#241019",
+  "theme_color": "#0a0d14",
+  "background_color": "#0a0d14",
   "categories": ["portfolio", "developer", "technology"],
   "prefer_related_applications": false,
   "icons": [
@@ -43,31 +43,22 @@
       "name": "View Projects",
       "short_name": "Projects",
       "description": "See Saniya's latest projects",
-      "url": "/projects/",
+      "url": "/#projects",
       "icons": [{ "src": "/favicon-192.png", "sizes": "192x192" }]
     },
     {
-      "name": "Contact",
+      "name": "Contact Me",
       "short_name": "Contact",
       "description": "Get in touch with Saniya Farooqui",
-      "url": "/contact/",
+      "url": "/#contact",
       "icons": [{ "src": "/favicon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Download Resume",
       "short_name": "Resume",
       "description": "Download Saniya's latest resume",
-      "url": "/resume/",
+      "url": "/RESUME.pdf",
       "icons": [{ "src": "/favicon-192.png", "sizes": "192x192" }]
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/og-image.jpg",
-      "sizes": "1200x630",
-      "type": "image/jpeg",
-      "form_factor": "wide",
-      "label": "Saniya Farooqui Portfolio — Desktop view"
     }
   ]
 }

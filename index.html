@@ -1,121 +1,65 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
-<script>
-  (function () {
-    try {
-      var saved = localStorage.getItem('theme');
-      var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-    } catch (e) {}
-  })();
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  
+  <!-- ================================================================
+       PRIMARY SEO META TAGS — TARGETING LOCAL & GLOBAL KEYWORDS
+       Keywords: Saniya Farooqui, Web Developer in Vasai Virar, Nallasopara, Mumbai
+  ================================================================ -->
+  <title>Saniya Farooqui | Web Developer in Vasai-Virar &amp; Mumbai | Full Stack Developer</title>
+  <meta name="description" content="Saniya Farooqui is a professional Full-Stack Web Developer based in Vasai-Virar, Nallasopara &amp; Mumbai. Co-Founder of KisanX (Avishkar Awardee). Expert in React, Node.js, PHP, MERN &amp; responsive UI/UX web development.">
+  <meta name="keywords" content="Saniya Farooqui, Saniya Farooqui web developer, web developer in vasai virar, web developer in nallasopara, web developer near me, freelance web developer mumbai, full stack developer vasai virar, frontend developer mumbai, KisanX co-founder, web designer vasai virar">
+  <meta name="author" content="Saniya Farooqui">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://www.saniya.me/">
 
-<!-- ================================================================
-     PRIMARY META
-================================================================ -->
-<title>Saniya Farooqui | Full Stack Developer | Co-Founder of KisanX</title>
-<meta name="description" content="Saniya Farooqui — Full Stack Web Developer in Mumbai and Co-Founder of KisanX. Explore Saniya Farooqui's portfolio featuring React, Node.js, PHP and MongoDB projects, case studies and freelance web development work.">
-<meta name="keywords" content="Saniya Farooqui, Saniya Farooqui web developer, Saniya Farooqui KisanX, Saniya Farooqui Mumbai, Saniya Farooqui portfolio, Saniya Farooqui full stack developer, web developer Mumbai, KisanX co-founder">
-<meta name="author" content="Saniya Farooqui">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<meta name="revisit-after" content="7 days">
-<meta name="rating" content="general">
-<meta name="language" content="en-IN">
-<meta name="content-language" content="en-IN">
-<meta name="category" content="Technology, Web Development, Portfolio">
-<meta name="classification" content="Portfolio, Professional">
-<meta name="referrer" content="no-referrer-when-downgrade">
-<meta name="subject" content="Saniya Farooqui - Full-Stack Developer & Co-Founder of KisanX Portfolio">
-<meta name="owner" content="Saniya Farooqui">
-<meta name="url" content="https://www.saniya.me">
-<meta name="identifier-URL" content="https://www.saniya.me">
-<meta name="pagename" content="Saniya Farooqui | Full-Stack Developer & Co-Founder of KisanX">
-<meta name="coverage" content="Worldwide">
-<meta name="distribution" content="Global">
-<meta name="target" content="all">
-<meta name="application-name" content="Saniya Farooqui Portfolio">
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="color-scheme" content="light">
+  <!-- Location / Geo Meta Tags for Vasai-Virar & Mumbai Local Ranking -->
+  <meta name="geo.region" content="IN-MH">
+  <meta name="geo.placename" content="Vasai-Virar, Nallasopara, Mumbai, Maharashtra, India">
+  <meta name="geo.position" content="19.4663;72.8127">
+  <meta name="ICBM" content="19.4663, 72.8127">
 
-<!-- ================================================================
-     GEO / LOCATION  (Virar, not central Mumbai)
-================================================================ -->
-<meta name="geo.region" content="IN-MH">
-<meta name="geo.placename" content="Virar, Mumbai Metropolitan Region, Maharashtra, India">
-<meta name="geo.position" content="19.4663;72.8127">
-<meta name="ICBM" content="19.4663, 72.8127">
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.saniya.me/">
+  <meta property="og:site_name" content="Saniya Farooqui — Portfolio">
+  <meta property="og:title" content="Saniya Farooqui | Web Developer in Vasai-Virar &amp; Mumbai">
+  <meta property="og:description" content="Full-Stack Web Developer &amp; Co-Founder of KisanX. Specializing in high-performance websites, React, Node.js, and modern UI/UX design in Vasai-Virar &amp; Mumbai.">
+  <meta property="og:image" content="https://www.saniya.me/favicon-512.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:locale" content="en_IN">
 
-<!-- ================================================================
-     MOBILE, PWA & WINDOWS TILE
-================================================================ -->
-<meta name="theme-color" content="#fdf2f6" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#241019"  media="(prefers-color-scheme: dark)">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Saniya Farooqui">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="format-detection" content="telephone=no">
-<meta name="msapplication-TileColor" content="#b0386a">
-<meta name="msapplication-TileImage" content="/favicon-192.png">
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Saniya Farooqui | Web Developer in Vasai-Virar &amp; Mumbai">
+  <meta name="twitter:description" content="Full-Stack Web Developer &amp; Co-Founder of KisanX. Modern web apps, React, Node.js &amp; responsive UI/UX.">
+  <meta name="twitter:image" content="https://www.saniya.me/favicon-512.png">
 
-<!-- ================================================================
-     OPEN GRAPH — Facebook · LinkedIn · WhatsApp
-================================================================ -->
-<meta property="og:type"              content="profile">
-<meta property="profile:first_name"    content="Saniya">
-<meta property="profile:last_name"     content="Farooqui">
-<meta property="profile:username"      content="Saniya1207">
-<meta property="og:url"               content="https://www.saniya.me/">
-<meta property="og:site_name"         content="Saniya Farooqui — Portfolio">
-<meta property="og:title"             content="Saniya Farooqui | Full Stack Developer | Co-Founder of KisanX">
-<meta property="og:description"       content="Saniya Farooqui — Full Stack Web Developer in Mumbai and Co-Founder of KisanX. Explore Saniya Farooqui's portfolio featuring React, Node.js, PHP and MongoDB projects and freelance web development work.">
-<meta property="og:locale"            content="en_IN">
-<meta property="og:image"             content="https://www.saniya.me/og-image.jpg">
-<meta property="og:image:secure_url"  content="https://www.saniya.me/og-image.jpg">
-<meta property="og:image:type"        content="image/jpeg">
-<meta property="og:image:width"       content="1200">
-<meta property="og:image:height"      content="630">
-<meta property="og:image:alt"         content="Saniya Farooqui — Full-Stack Developer Portfolio">
+  <!-- Favicons & App Manifest -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+  <link rel="icon" type="image/svg+xml" href="/logo.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0d14">
 
-<!-- ================================================================
-     TWITTER / X CARD
-================================================================ -->
-<meta name="twitter:card"        content="summary_large_image">
-<meta name="twitter:site"        content="@saniyafarooqui">
-<meta name="twitter:creator"     content="@saniyafarooqui">
-<meta name="twitter:title"       content="Saniya Farooqui | Full Stack Developer | Co-Founder of KisanX">
-<meta name="twitter:description" content="Saniya Farooqui — Full Stack Web Developer in Mumbai and Co-Founder of KisanX. See her portfolio, KisanX work, and web development projects.">
-<meta name="twitter:image"       content="https://www.saniya.me/og-image.jpg">
-<meta name="twitter:image:alt"   content="Saniya Farooqui — Full-Stack Developer Portfolio">
-<meta name="twitter:label1"      content="Role">
-<meta name="twitter:data1"       content="Full-Stack Developer">
-<meta name="twitter:label2"      content="Location">
-<meta name="twitter:data2"       content="Mumbai, India">
+  <!-- Google Fonts: Plus Jakarta Sans, Outfit, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/style.css">
 
-<!-- ================================================================
-     STRUCTURED DATA — JSON-LD
-     Schema 1: ProfilePage + Person  (interlinked via @id)
-================================================================ -->
-<script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    "@id": "https://www.saniya.me/#webpage",
-    "url": "https://www.saniya.me/",
-    "name": "Saniya Farooqui — Full-Stack Developer Portfolio",
-    "description": "Portfolio of Saniya Farooqui, Full-Stack Developer specialising in React, PHP, Node.js and React Native.",
-    "datePublished": "2025-01-01T00:00:00+05:30",
-    "dateModified": "2026-06-14T00:00:00+05:30",
-    "inLanguage": "en-IN",
-    "isPartOf": { "@id": "https://www.saniya.me/#website" },
-    "about":      { "@id": "https://www.saniya.me/#person" },
-    "mainEntity": { "@id": "https://www.saniya.me/#person" }
-  },
+  <!-- ================================================================
+       STRUCTURED DATA (JSON-LD) SCHEMAS FOR GOOGLE RICH SNIPPETS
+  ================================================================ -->
+  <!-- 1. Person Schema -->
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -123,17 +67,20 @@
     "name": "Saniya Farooqui",
     "givenName": "Saniya",
     "familyName": "Farooqui",
-    "alternateName": ["Saniya Farooqui Developer", "Saniya Farooqui KisanX", "Saniya Farooqui Full Stack Developer", "Saniya Farooqui Mumbai", "Saniya1207", "Saniya Farooqui Co-Founder of KisanX"],
-    "jobTitle": "Full-Stack Developer | Co-Founder of KisanX",
-    "description": "Software Developer and Computer Engineering student at Mumbai University. Specialises in full-stack web development with React, PHP, MySQL, Node.js and React Native. Avishkar Research Awardee.",
+    "alternateName": [
+      "Saniya Farooqui Developer",
+      "Saniya Farooqui Web Developer",
+      "Saniya Farooqui KisanX",
+      "Saniya Farooqui Vasai Virar",
+      "Saniya Farooqui Mumbai",
+      "Saniya1207"
+    ],
+    "jobTitle": "Full-Stack Web Developer",
+    "description": "Full-Stack Web Developer and Co-Founder of KisanX based in Vasai-Virar and Mumbai. Specializing in React, Node.js, PHP, MySQL, and modern responsive UI/UX.",
     "url": "https://www.saniya.me/",
     "email": "saniya122400@gmail.com",
-    "image": {
-      "@type": "ImageObject",
-      "url": "https://www.saniya.me/og-image.jpg",
-      "width": 1200,
-      "height": 630
-    },
+    "telephone": "+91-7666886033",
+    "image": "https://www.saniya.me/favicon-512.png",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Virar",
@@ -141,1820 +88,912 @@
       "postalCode": "401303",
       "addressCountry": "IN"
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "professional",
-      "email": "saniya122400@gmail.com",
-      "availableLanguage": ["English", "Hindi"]
-    },
-    "sameAs": [
-      "https://github.com/Saniya1207",
-      "https://www.linkedin.com/in/saniya-farooqui-dev/",
-      "https://dev.to/saniya1207",
-      "https://www.saniya.me/"
-    ],
-    "knowsAbout": [
-      "Web Development", "React.js", "Node.js", "PHP", "MySQL",
-      "MongoDB", "React Native", "REST API Design",
-      "Full-Stack Development", "JavaScript", "Express.js"
-    ],
     "alumniOf": {
       "@type": "CollegeOrUniversity",
-      "name": "Patkar-Varde College",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Goregaon",
-        "addressRegion": "Maharashtra",
-        "addressCountry": "IN"
-      }
+      "name": "Patkar-Varde College, Mumbai University"
     },
-    "hasOccupation": {
-      "@type": "Occupation",
-      "name": "Full-Stack Web Developer",
-      "occupationLocation": { "@type": "City", "name": "Mumbai" },
-      "occupationalCategory": "15-1257.00",
-      "skills": "React.js, Node.js, PHP, MySQL, MongoDB, React Native, JavaScript, Express.js, REST APIs"
-    },
-    "award": "Avishkar Research Award — University of Mumbai"
+    "award": "Avishkar Inter-Collegiate Research Convention Recognition 2024-25",
+    "knowsAbout": [
+      "Web Development",
+      "React.js",
+      "JavaScript",
+      "Node.js",
+      "PHP",
+      "MySQL",
+      "MongoDB",
+      "React Native",
+      "Responsive Web Design",
+      "RESTful APIs",
+      "Search Engine Optimization (SEO)"
+    ],
+    "sameAs": [
+      "https://github.com/Saniya1207",
+      "https://www.linkedin.com/in/saniya-farooqui-dev/"
+    ]
   }
-]
-</script>
+  </script>
 
-<!-- Schema 2: WebSite (enables Google Sitelinks Searchbox) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://www.saniya.me/#website",
-  "url": "https://www.saniya.me/",
-  "name": "Saniya Farooqui Portfolio",
-  "description": "Official portfolio of Saniya Farooqui, Full-Stack Developer and Co-Founder of KisanX, from Mumbai, India.",
-  "inLanguage": "en-IN",
-  "publisher": { "@id": "https://www.saniya.me/#person" },
-  "author": { "@id": "https://www.saniya.me/#person" },
-  "copyrightYear": "2026",
-  "copyrightHolder": { "@id": "https://www.saniya.me/#person" },
-  "keywords": "Saniya Farooqui, full stack developer Mumbai, KisanX, co-founder KisanX, React developer, PHP developer, MERN stack developer Mumbai",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "https://www.saniya.me/?s={search_term_string}"
+  <!-- 2. LocalBusiness / ProfessionalService Schema (Boosts 'near me' & local rankings) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://www.saniya.me/#localbusiness",
+    "name": "Saniya Farooqui - Web Development & Freelance Services",
+    "image": "https://www.saniya.me/favicon-512.png",
+    "url": "https://www.saniya.me/",
+    "telephone": "+91-7666886033",
+    "email": "saniya122400@gmail.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Virar East",
+      "addressLocality": "Virar",
+      "addressRegion": "Maharashtra",
+      "postalCode": "401303",
+      "addressCountry": "IN"
     },
-    "query-input": "required name=search_term_string"
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 19.4663,
+      "longitude": 72.8127
+    },
+    "areaServed": [
+      "Vasai-Virar",
+      "Nallasopara",
+      "Virar",
+      "Vasai",
+      "Mumbai",
+      "Palghar",
+      "Maharashtra",
+      "India"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Web Development Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Custom Full-Stack Web Development",
+            "description": "Building custom, modern, high-speed websites and web applications using React, PHP, Node.js and MongoDB."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Responsive UI/UX & Frontend Development",
+            "description": "Pixel-perfect, mobile-friendly frontend development with clean animations and modern aesthetics."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Local SEO & Website Optimization",
+            "description": "On-page SEO, speed optimization, and structured schema implementation for high Google ranking."
+          }
+        }
+      ]
+    }
   }
-}
-</script>
+  </script>
 
-<!-- Schema 3: FAQPage (boosts FAQ rich results in Google) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is Saniya Farooqui open to internships?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes — Saniya is actively seeking software engineering internships and entry-level developer roles in Mumbai and remotely."
+  <!-- 3. FAQPage Schema for Voice Search & Google Search Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are you available for web development projects in Vasai-Virar and Nallasopara?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! Saniya Farooqui provides professional web development, UI/UX design, and freelance website development for clients and businesses in Vasai-Virar, Nallasopara, Mumbai, as well as remote clients worldwide."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What tech stack do you specialize in for building websites?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Core tech stack includes React.js, JavaScript (ES6+), Node.js, Express.js, PHP, MySQL, MongoDB, HTML5/CSS3, and React Native for mobile applications."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you open to software engineering internships or full-time developer roles?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Saniya is actively open to frontend/full-stack developer internships, junior developer roles, and freelance project collaborations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I contact Saniya Farooqui for a web project?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can reach out directly via WhatsApp at +91 7666886033, email at saniya122400@gmail.com, or through GitHub and LinkedIn."
+        }
       }
-    },
-    {
-      "@type": "Question",
-      "name": "What technologies does Saniya Farooqui work with?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Saniya works with React.js, Node.js, PHP, MySQL, MongoDB, React Native, JavaScript and Express.js for full-stack web and mobile development."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is KisanX?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "KisanX is a full-stack web and mobile platform for Indian farmers, built by Saniya Farooqui. It won the Avishkar Research Award from the University of Mumbai."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Where is Saniya Farooqui based?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Saniya is based in Virar, in the Mumbai Metropolitan Region, Maharashtra, India."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How can I contact Saniya Farooqui?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can reach Saniya at saniya122400@gmail.com or through the contact form on her portfolio at https://www.saniya.me/contact/"
-      }
-    }
-  ]
-}
-</script>
-
-<!-- Schema 4: KisanX as SoftwareApplication — ties the product to Saniya -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "@id": "https://www.saniya.me/#kisanx",
-  "name": "KisanX",
-  "alternateName": ["Kisan X", "KisanX App", "KisanX Marketplace"],
-  "description": "KisanX is a live D2C (Direct-to-Consumer) agricultural marketplace platform for Indian farmers. Built using PHP, MERN stack (MongoDB, Express.js, React.js, Node.js) and React Native for mobile. Selected at Avishkar Research Convention, University of Mumbai.",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Web, Android, iOS",
-  "url": "https://www.saniya.me/projects/kisanx/",
-  "author": {
-    "@id": "https://www.saniya.me/#person"
-  },
-  "creator": {
-    "@id": "https://www.saniya.me/#person"
-  },
-  "keywords": "KisanX, agricultural marketplace, D2C farmer platform, MERN stack, PHP, React Native, Mumbai",
-  "inLanguage": ["en", "hi"],
-  "isPartOf": {
-    "@id": "https://www.saniya.me/#webpage"
-  },
-  "award": "Selected at Avishkar Research Convention, University of Mumbai",
-  "programmingLanguage": ["JavaScript", "PHP", "React.js", "Node.js", "MongoDB", "React Native"],
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "INR"
+    ]
   }
-}
-</script>
-
-<!-- Schema 5: BreadcrumbList -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.saniya.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Projects",
-      "item": "https://www.saniya.me/projects/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "KisanX",
-      "item": "https://www.saniya.me/projects/kisanx/"
-    }
-  ]
-}
-</script>
-
-<!-- Schema 6: ItemList of projects (helps Google index project cards) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Projects by Saniya Farooqui",
-  "description": "Web and mobile projects built by Saniya Farooqui, Full-Stack Developer from Mumbai",
-  "url": "https://www.saniya.me/projects/",
-  "numberOfItems": 3,
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "item": {
-        "@type": "CreativeWork",
-        "name": "KisanX — D2C Agricultural Marketplace",
-        "description": "Full-stack web and mobile application connecting Indian farmers directly with consumers. Built with PHP, MERN stack and React Native. Avishkar Research Awardee.",
-        "url": "https://www.saniya.me/projects/kisanx/",
-        "author": { "@id": "https://www.saniya.me/#person" },
-        "creator": { "@id": "https://www.saniya.me/#person" },
-        "keywords": "KisanX, agricultural marketplace, D2C, farmer platform, PHP, MERN, React Native",
-        "award": "Avishkar Research Convention — University of Mumbai"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "item": {
-        "@type": "CreativeWork",
-        "name": "The Capital Home — Real Estate Website",
-        "description": "Responsive real estate listing website built with HTML, CSS and JavaScript.",
-        "url": "https://www.saniya.me/projects/the-capital-home/",
-        "author": { "@id": "https://www.saniya.me/#person" }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "item": {
-        "@type": "CreativeWork",
-        "name": "Vastu Properties — Real Estate Platform",
-        "description": "Property listing and inquiry platform built with HTML, CSS and JavaScript.",
-        "url": "https://www.saniya.me/projects/vastu-properties/",
-        "author": { "@id": "https://www.saniya.me/#person" }
-      }
-    }
-  ]
-}
-</script>
-
-<!-- ================================================================
-     CANONICAL & HREFLANG
-================================================================ -->
-<link rel="canonical" href="https://www.saniya.me/">
-<link rel="alternate" hreflang="en"      href="https://www.saniya.me/">
-<link rel="alternate" hreflang="en-in"   href="https://www.saniya.me/">
-<link rel="alternate" hreflang="x-default" href="https://www.saniya.me/">
-
-<!-- ================================================================
-     FAVICONS & MANIFEST
-================================================================ -->
-<link rel="icon"             type="image/png" sizes="32x32"   href="/favicon-32.png">
-<link rel="icon"             type="image/png" sizes="192x192" href="/favicon-192.png">
-<link rel="icon"             type="image/png" sizes="512x512" href="/favicon-512.png">
-<link rel="icon"             type="image/svg+xml"  href="/logo.svg">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
-<link rel="mask-icon"        href="/logo.svg" color="#3d1228">
-<link rel="shortcut icon"    type="image/png" href="/favicon-32.png">
-<link rel="manifest"         href="/site.webmanifest">
-
-<!-- ================================================================
-     GOOGLE ANALYTICS GA4
-================================================================ -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GHS85ETTRD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GHS85ETTRD', { send_page_view: true });
-</script>
-
-<!-- ================================================================
-     PERFORMANCE — RESOURCE HINTS
-     Order matters: dns-prefetch → preconnect → preload → stylesheet
-================================================================ -->
-<!-- DNS prefetch for every external origin (zero-cost hint) -->
-<link rel="dns-prefetch" href="https://fonts.googleapis.com">
-<link rel="dns-prefetch" href="https://fonts.gstatic.com">
-<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-<link rel="dns-prefetch" href="https://www.googletagmanager.com">
-<link rel="dns-prefetch" href="https://www.google-analytics.com">
-<!-- Preconnect for render-critical origins (opens TCP+TLS early) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-<!-- Preload LCP / above-fold assets (fetchpriority=high skips queue) -->
-<link rel="preload" as="image" href="/og-image.jpg" fetchpriority="high">
-<!-- Preload hero display font (Bebas Neue drives the giant hero name) -->
-<link rel="preload" as="font"
-      href="https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXooxW5rygbi49c.woff2"
-      type="font/woff2" crossorigin fetchpriority="high">
-<!-- Google Fonts stylesheet (display=swap already set — good) -->
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=Special+Elite&family=Oswald:wght@400;600;700&family=Source+Serif+4:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css">
+  </script>
 </head>
 <body>
 
-<nav id="mainNav">
-  <div class="nav-bar">
-    <a href="#home" class="nav-brand">
-      <img src="/logo.svg" alt="Saniya Farooqui Logo" width="44" height="44" style="border-radius:10px;display:block;">
-    </a>
-    <ul id="navLinks">
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#profile">Profile</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#journey">Journey</a></li>
-      <li><a href="#why-hire-me">Why Me</a></li>
-      <li><a href="#certifications">Certs</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#faq">FAQ</a></li>
-    </ul>
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" style="margin-left:10px;">
-      <span class="icon-moon">&#9789;</span><span class="icon-sun">&#9728;&#65039;</span>
-    </button>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="glow-orb-1"></div>
+    <div class="glow-orb-2"></div>
   </div>
-
-  <!-- Mobile dropdown menu -->
-  <div id="navOverlay">
-    
-    <div class="overlay-inner">
-      <ul class="overlay-links">
-        <li><a href="#home"            class="ov-link"><span>Home</span></a></li>
-        <li><a href="#profile"         class="ov-link"><span>Profile</span></a></li>
-        <li><a href="#skills"          class="ov-link"><span>Skills</span></a></li>
-        <li><a href="#projects"        class="ov-link"><span>Projects</span></a></li>
-        <li><a href="#experience"      class="ov-link"><span>Experience</span></a></li>
-        <li><a href="#journey"         class="ov-link"><span>Journey</span></a></li>
-        <li><a href="#why-hire-me"     class="ov-link"><span>Why Me</span></a></li>
-        <li><a href="#learning"        class="ov-link"><span>Learning</span></a></li>
-        <li><a href="#certifications"  class="ov-link"><span>Certifications</span></a></li>
-        <li><a href="#contact"         class="ov-link"><span>Contact</span></a></li>
-        <li><a href="#faq"             class="ov-link"><span>FAQ</span></a></li>
-      </ul>
-      <div class="ov-theme-row">
-        <span class="ov-theme-label">Theme</span>
-        <button class="theme-toggle" id="themeToggleOverlay" type="button" aria-label="Toggle dark mode">
-          <span class="icon-moon">&#9789;</span><span class="icon-sun">&#9728;&#65039;</span>
-        </button>
-      </div>
-      <div class="ov-socials">
-        <a href="https://github.com/Saniya1207" target="_blank" class="ov-social">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/saniya-farooqui-dev/" target="_blank" class="ov-social">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
-        </a>
-        <a href="https://wa.me/917666886033" target="_blank" class="ov-social">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          WhatsApp
-        </a>
-        <a href="mailto:saniya122400@gmail.com" class="ov-social">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          Email
-        </a>
-      </div>
-    </div>
-  </div>
-</nav>
-
-<section id="home">
-  <div class="grid-bg"></div>
-  <div class="hero-inner">
-    <div class="hero-sky"></div>
-
-    <div class="hero-left">
-      <h1 class="hero-name hero-name-anim" id="heroName">SANIYA<br>FAROOQUI</h1>
-      <p class="hero-title hero-title-anim">Full-Stack Web Developer, Mumbai &nbsp;·&nbsp; MERN Stack &nbsp;·&nbsp; React Native</p>
-      <p style="font-family:'Source Serif 4',serif;font-size:14px;line-height:1.75;color:var(--text-light);margin-top:18px;max-width:360px;font-weight:300;opacity:0;animation:titleSlide 0.8s cubic-bezier(0.22,1,0.36,1) 1.8s forwards;">Saniya Farooqui is a full-stack web developer based in Mumbai, building production-ready web &amp; mobile apps — from database to deployment.<br><strong style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1px;color:var(--dark);font-weight:600;">Co-Founder of KisanX &nbsp;·&nbsp; Presented at Avishkar &nbsp;·&nbsp; IIT Bombay Certified &nbsp;·&nbsp; Open to Internships</strong></p>
-      <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;opacity:0;animation:titleSlide 0.8s cubic-bezier(0.22,1,0.36,1) 2.1s forwards;">
-        <a href="#projects" class="card-btn primary" style="font-size:12px;letter-spacing:1.5px;">View Projects ↓</a>
-        <a href="/RESUME.pdf" class="card-btn" style="font-size:12px;letter-spacing:1.5px;" download>Download Resume ↓</a>
-        <a href="#contact" class="card-btn" style="font-size:12px;letter-spacing:1.5px;">Contact Me →</a>
-      </div>
-    </div>
-
-    <div class="hero-portrait reveal reveal-right">
-      <div class="portrait-placeholder">
-        <svg class="hero-graphic" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decorative illustration of a code editor window">
-          <defs>
-            <linearGradient id="heroGoldLine" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#fdedf3"/>
-              <stop offset="100%" stop-color="#e8a0bb"/>
-            </linearGradient>
-          </defs>
-
-          <!-- corner ornaments, echoing the logo -->
-          <g stroke="var(--dark)" stroke-width="3" stroke-linecap="round" opacity="0.55">
-            <path d="M70 90 V60 H100" fill="none"/>
-            <path d="M530 90 V60 H500" fill="none"/>
-            <path d="M70 710 V740 H100" fill="none"/>
-            <path d="M530 710 V740 H500" fill="none"/>
-          </g>
-
-          <!-- floating decorative tags -->
-          <g font-family="'Oswald', sans-serif" font-weight="600" fill="var(--dark)" opacity="0.5">
-            <text x="95" y="170" font-size="22" letter-spacing="1">&lt;/&gt;</text>
-            <text x="445" y="225" font-size="18" letter-spacing="1">{ }</text>
-            <text x="80" y="610" font-size="18" letter-spacing="1">=&gt;</text>
-            <text x="460" y="600" font-size="16" letter-spacing="1">API</text>
-          </g>
-
-          <!-- tilted code editor window (kept permanently dark, like a real code editor) -->
-          <g transform="translate(300 400) rotate(-4) translate(-220 -165)">
-            <rect x="0" y="0" width="440" height="330" rx="14" fill="#2a1020" opacity="0.92" stroke="#e8a0bb" stroke-width="2"/>
-            <!-- title bar -->
-            <rect x="0" y="0" width="440" height="36" rx="14" fill="#1f0c18"/>
-            <circle cx="22" cy="18" r="6" fill="#8b3a1a"/>
-            <circle cx="44" cy="18" r="6" fill="#e8a0bb"/>
-            <circle cx="66" cy="18" r="6" fill="#3a7a3a"/>
-            <text x="220" y="23" text-anchor="middle" font-family="'Oswald', sans-serif" font-size="11" letter-spacing="2" fill="#e8a0bb" opacity="0.7">KISANX.JSX</text>
-
-            <!-- code lines -->
-            <g fill="none" stroke-linecap="round">
-              <rect x="28" y="62"  width="150" height="9" rx="4" fill="#e8a0bb" opacity="0.9"/>
-              <rect x="28" y="86"  width="230" height="9" rx="4" fill="#fdedf3" opacity="0.75"/>
-              <rect x="52" y="110" width="190" height="9" rx="4" fill="#fdedf3" opacity="0.55"/>
-              <rect x="52" y="134" width="140" height="9" rx="4" fill="#3a7a3a" opacity="0.7"/>
-              <rect x="76" y="158" width="170" height="9" rx="4" fill="#fdedf3" opacity="0.45"/>
-              <rect x="76" y="182" width="110" height="9" rx="4" fill="#e8a0bb" opacity="0.8"/>
-              <rect x="28" y="214" width="200" height="9" rx="4" fill="#fdedf3" opacity="0.55"/>
-              <rect x="28" y="238" width="260" height="9" rx="4" fill="#fdedf3" opacity="0.35"/>
-              <rect x="52" y="262" width="120" height="9" rx="4" fill="#8b3a1a" opacity="0.7"/>
-              <rect x="28" y="294" width="60"  height="9" rx="4" fill="#e8a0bb" opacity="0.9"/>
-            </g>
-
-            <!-- blinking cursor -->
-            <rect x="190" y="294" width="3" height="11" fill="#fdedf3" opacity="0.9"/>
-          </g>
-
-          <!-- large monogram glyph, bottom right, echoing the brand mark -->
-          <text x="470" y="700" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="700" font-style="italic" fill="url(#heroGoldLine)" opacity="0.85">SF</text>
-        </svg>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="profile">
-  <div class="grid-bg" style="opacity:0.4"></div>
-  <div class="profile-inner">
-    <div class="profile-bio reveal reveal-left">
-      <h2 class="section-title">PROFESSIONAL<br>PROFILE</h2>
-      <div class="section-divider anim-draw"></div>
-      <p>Saniya Farooqui is a B.Sc. IT student at Mumbai University (Sem V) and a full-stack web developer in Mumbai who ships real products. Co-Founder of <strong style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.5px;">KisanX</strong> — a live agricultural marketplace built with PHP, MERN stack, and React Native. Selected at Avishkar Research Convention, Mumbai University.</p>
-      <p>Certified by <strong style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:0.5px;">IIT Bombay (5x)</strong> · Deloitte job simulations (Tech + Cybersecurity) via Forage · 7 external certifications. Actively seeking internship &amp; entry-level software engineering roles.</p>
-    </div>
-
-    <div class="profile-numbers reveal reveal-right">
-      <span class="by-numbers-label">Achievements at a glance</span>
-
-      <div class="stat-card">
-        <div class="stat-icon">🏆</div>
-        <div class="stat-info">
-          <div class="stat-label">Projects Shipped (Deployed)</div>
-          <div class="stat-bar" style="--fill: 60%"></div>
-        </div>
-        <div class="stat-value">3</div>
-      </div>
-
-      <div class="stat-card">
-        <div class="stat-icon">📜</div>
-        <div class="stat-info">
-          <div class="stat-label">Certifications Earned</div>
-          <div class="stat-bar" style="--fill: 60%"></div>
-        </div>
-        <div class="stat-value">7</div>
-      </div>
-
-      <div class="stat-card">
-        <div class="stat-icon">💻</div>
-        <div class="stat-info">
-          <div class="stat-label">Technologies Mastered</div>
-          <div class="stat-bar" style="--fill: 80%"></div>
-        </div>
-        <div class="stat-value">12</div>
-      </div>
-
-      <div class="stat-card">
-        <div class="stat-icon">🎓</div>
-        <div class="stat-info">
-          <div class="stat-label">SY GPA (B.Sc. IT)</div>
-          <div class="stat-bar" style="--fill: 83.0%"></div>
-        </div>
-        <div class="stat-value">8.30</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="grid-bg" style="opacity:0.35"></div>
-  <div style="max-width:1100px;margin:0 auto;padding-top:0" class="reveal">
-    <h2 class="section-title">TECHNICAL SKILLS</h2>
-    <div class="section-divider anim-draw"></div>
-    <p class="source-tag">FRONTEND · BACKEND · DATABASE · TOOLS · OTHER</p>
-  </div>
-
-  <div class="skills-grid reveal-stagger">
-    <div class="skill-card">
-      <div class="skill-icon" style="color:#e34f26;font-family:'Bebas Neue';font-size:13px;letter-spacing:0">HTML</div>
-      <div class="skill-name">HTML5</div>
-      <div class="skill-level">Frontend · Semantic Markup · Accessibility</div>
-      <div class="skill-bar-outer"><div class="skill-bar-inner" style="width:0" data-width="95%"></div></div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon" style="color:#264de4;font-family:'Bebas Neue';font-size:13px;letter-spacing:0">CSS</div>
-      <div class="skill-name">CSS3</div>
-      <div class="skill-level">Frontend · Responsive Design · Animations · Flexbox/Grid</div>
-      <div class="skill-bar-outer"><div class="skill-bar-inner" style="width:0" data-width="90%"></div></div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon" style="color:#f7df1e;font-family:'Bebas Neue';font-size:13px;letter-spacing:0">JS</div>
-      <div class="skill-name">JavaScript (ES6+)</div>
-      <div class="skill-level">Frontend · DOM · Async/Await · APIs</div>
-      <div class="skill-bar-outer"><div class="skill-bar-inner" style="width:0" data-width="85%"></div></div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon" style="color:#61dafb">⚛</div>
-      <div class="skill-name">React.js</div>
-      <div class="skill-level">Frontend · Hooks · State Management · Component Design</div>
-      <div class="skill-bar-outer"><div class="skill-bar-inner" style="width:0" data-width="88%"></div></div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon" style="color:#ff2d20;font-family:'Bebas Neue';font-size:14px;letter-spacing:0">PHP</div>
-      <div class="skill-name">PHP / MySQL</div>
-      <div class="skill-level">Backend · Server-side Logic · CRUD · Auth</div>
-      <div class="skill-bar-outer"><div class="skill-bar-inner" style="width:0" data-width="78%"></div></div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon" style="color:#6cc24a">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="#6cc24a"><path d="M12 1.85L2 7.27v9.46L12 22.15l10-5.42V7.27L12 1.85z"/></svg>
-      </div>
-      <div class="skill-name">Node.js</div>
-      <div class="skill-level">Backend · Express.js · REST APIs · Middleware</div>
-      <div class="skill-bar-outer"><div class="skill-bar-inner" style="width:0" data-width="82%"></div></div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon" style="color:#13aa52;font-family:'Bebas Neue';font-size:15px;letter-spacing:0">MDB</div>
-      <div class="skill-name">MongoDB</div>
-      <div class="skill-level">Database · NoSQL · Mongoose · Schema Design</div>
-      <div class="skill-bar-outer"><div class="skill-bar-inner" style="width:0" data-width="78%"></div></div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon" style="color:#e44d26;font-family:'Bebas Neue';font-size:13px;letter-spacing:0">GIT</div>
-      <div class="skill-name">Git & GitHub</div>
-      <div class="skill-level">Tools · Version Control · Branching · Collaboration</div>
-      <div class="skill-bar-outer"><div class="skill-bar-inner" style="width:0" data-width="82%"></div></div>
-    </div>
-  </div>
-
-  <div class="skills-infographic reveal reveal-scale">
-    <div class="infographic-stat">
-      <span class="infographic-pct" data-value="92"></span>
-      <span class="infographic-lbl">Frontend</span>
-    </div>
-    <div style="width:1px;height:50px;background:var(--dark);opacity:0.2"></div>
-    <div class="infographic-stat">
-      <span class="infographic-pct" data-value="85"></span>
-      <span class="infographic-lbl">Backend</span>
-    </div>
-    <div style="width:1px;height:50px;background:var(--dark);opacity:0.2"></div>
-    <div class="infographic-stat">
-      <span class="infographic-pct" data-value="80"></span>
-      <span class="infographic-lbl">Database</span>
-    </div>
-    <div style="width:1px;height:50px;background:var(--dark);opacity:0.2"></div>
-    <div class="infographic-stat">
-      <span class="infographic-pct" data-value="88"></span>
-      <span class="infographic-lbl">MERN Stack</span>
-    </div>
-  </div>
-</section>
-
-<section id="projects">
-  <div class="grid-bg" style="opacity:0.3"></div>
-
-  <div class="minor-projects-section">
-    <h2 class="minor-projects-title reveal">MINOR PROJECTS</h2>
-    <div class="section-divider anim-draw"></div>
-
-    <div class="minor-carousel">
-      <div class="minor-cards-track" id="minorTrack">
-        <div class="minor-card">
-          <div class="minor-card-img" style="background:linear-gradient(135deg, #5a7a5a 0%, #3a5a3a 100%)">
-            <div class="img-label">Live Website</div>
-            <svg width="100" height="80" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.6">
-              <polygon points="50,5 5,40 95,40" fill="#c8d8a8"/>
-              <rect x="20" y="40" width="60" height="35" fill="#e8e0c0"/>
-              <rect x="38" y="52" width="24" height="23" fill="#7a5a30"/>
-              <rect x="22" y="45" width="14" height="12" fill="#a0c8e0" stroke="#888" stroke-width="1"/>
-              <rect x="64" y="45" width="14" height="12" fill="#a0c8e0" stroke="#888" stroke-width="1"/>
-            </svg>
-          </div>
-          <div class="minor-card-body">
-            <div class="minor-card-name">The Capital Home Website</div>
-            <div class="minor-card-sub" style="margin-bottom:8px;">Real estate business needed a fast, professional digital presence — no CMS, no bloat. Built a mobile-first landing page with clear CTAs and zero dependencies. Live &amp; active.</div>
-            <div class="minor-card-sub" style="margin-bottom:8px;"><strong style="font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:1px;color:var(--dark)">STACK:</strong> HTML · CSS · JavaScript · Fully Responsive</div>
-            <div class="tech-stack">
-              <div class="tech-badge" style="background:#e34f26;color:#fff" title="HTML">H</div>
-              <div class="tech-badge" style="background:#264de4;color:#fff" title="CSS">C</div>
-              <div class="tech-badge" style="background:#f7df1e;color:#000" title="JS">JS</div>
-            </div>
-            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;">
-              <a href="https://anniix.github.io/capital-home/" class="card-btn" target="_blank">View Live Site ↗</a>
-              <a href="/projects/the-capital-home/" class="card-btn primary">Full Case Study →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="minor-card">
-          <div class="minor-card-img" style="background:linear-gradient(135deg, #8a7a5a 0%, #6a5a3a 100%)">
-            <div class="img-label">Live Demo ↗</div>
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.6">
-              <rect x="10" y="30" width="45" height="45" fill="#d4c090"/>
-              <polygon points="32,10 10,30 55,30" fill="#c09060"/>
-              <rect x="20" y="45" width="12" height="10" fill="#a0c8e0"/>
-              <rect x="36" y="45" width="12" height="10" fill="#a0c8e0"/>
-              <rect x="22" y="55" width="8" height="20" fill="#7a5a30"/>
-              <rect x="65" y="20" width="50" height="55" fill="#e8dfc0"/>
-              <polygon points="90,5 65,20 115,20" fill="#c09060"/>
-              <rect x="72" y="35" width="14" height="12" fill="#a0c8e0"/>
-              <rect x="92" y="35" width="14" height="12" fill="#a0c8e0"/>
-              <rect x="79" y="47" width="10" height="28" fill="#7a5a30"/>
-            </svg>
-          </div>
-          <div class="minor-card-body">
-            <div class="minor-card-name">Vastu Properties Website</div>
-            <div class="minor-card-sub" style="margin-bottom:8px;">Property business needed filterable listings — not a static brochure. Rebuilt as a React app with dynamic filtering, clean component architecture, and a layout that scales as inventory grows.</div>
-            <div class="minor-card-sub" style="margin-bottom:8px;"><strong style="font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:1px;color:var(--dark)">STACK:</strong> React · JavaScript · Dynamic Filtering · Responsive</div>
-            <div class="tech-stack">
-              <div class="tech-badge" style="background:#61dafb;color:#000" title="React">⚛</div>
-              <div class="tech-badge" style="background:#f7df1e;color:#000" title="JS">JS</div>
-            </div>
-            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;">
-              <a href="https://anniix.github.io/vastuproperties/" class="card-btn primary" target="_blank">Visit Live Site ↗</a>
-              <a href="/projects/vastu-properties/" class="card-btn">Full Case Study →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="minor-card">
-          <div class="minor-card-img" style="background:linear-gradient(135deg, #5a5a8a 0%, #3a3a6a 100%)">
-            <div class="img-label">This Site</div>
-            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.6">
-              <rect x="20" y="10" width="40" height="60" rx="6" fill="#d4d4f4"/>
-              <rect x="30" y="8" width="20" height="5" rx="2" fill="#888"/>
-              <rect x="25" y="22" width="30" height="8" rx="3" fill="#9898e8"/>
-              <rect x="25" y="34" width="20" height="4" rx="2" fill="#bbb"/>
-              <rect x="25" y="42" width="24" height="4" rx="2" fill="#bbb"/>
-            </svg>
-          </div>
-          <div class="minor-card-body">
-            <div class="minor-card-name">Developer Portfolio</div>
-            <div class="minor-card-sub" style="margin-bottom:8px;">Most developer portfolios are templated and forgettable. Built this from scratch — hand-coded animations, scroll reveals, 3D effects, orbit icons. No frameworks. Every line deliberate.</div>
-            <div class="minor-card-sub" style="margin-bottom:8px;"><strong style="font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:1px;color:var(--dark)">STACK:</strong> HTML · CSS · Vanilla JS · Zero Dependencies</div>
-            <div class="tech-stack">
-              <div class="tech-badge" style="background:#e34f26;color:#fff">H</div>
-              <div class="tech-badge" style="background:#264de4;color:#fff">C</div>
-              <div class="tech-badge" style="background:#f7df1e;color:#000">JS</div>
-            </div>
-            <a href="https://github.com/Saniya1207" class="card-btn" target="_blank">GitHub Profile ↗</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="carousel-nav">
-      <button class="carousel-btn prev" id="prevBtn" onclick="slideMinor(-1)">&#8592;</button>
-      <button class="carousel-btn next" id="nextBtn" onclick="slideMinor(1)">&#8594;</button>
-    </div>
-  </div>
-
-  <div class="major-projects-section reveal">
-    <h2 class="major-title">FEATURED PROJECT</h2>
-    <div class="section-divider anim-draw"></div>
-
-    <div style="display:flex;align-items:center;gap:16px;margin-bottom:8px;">
-      <div class="major-project-name" style="margin-bottom:0">KisanX</div>
-      <span style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:2px;color:var(--paper2);background:var(--accent2);padding:4px 12px;border-radius:4px;text-transform:uppercase;">🏆 Avishkar 2024–25</span>
-    </div>
-    <p style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:2px;color:var(--accent2);text-transform:uppercase;margin-bottom:12px;">Full-Stack Agricultural Marketplace · PHP · MySQL · MERN · React Native</p>
-    <p class="major-desc"><strong style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1px;color:var(--dark)">THE PROBLEM:</strong> Indian farmers lose income to middlemen — no direct buyer access, poor price discovery, no digital platform built for them.</p>
-    <p class="major-desc"><strong style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1px;color:var(--dark)">THE SOLUTION:</strong> KisanX — a full-stack Direct-to-Consumer marketplace. Web app (PHP/MySQL) + mobile app (MERN + React Native). JWT auth, cloud deployment on Render. Developer: architecture → API → UI → mobile → deployment.</p>
-    <p class="major-desc"><strong style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1px;color:var(--dark)">RECOGNITION:</strong> Presented at Avishkar Inter-Collegiate Research Convention, Mumbai University 2024–25.</p>
-    <a href="/projects/kisanx/" class="card-btn primary" style="margin-top:6px;display:inline-block;">Read the Full Case Study →</a>
-
-    <div class="major-phases">
-      <div class="phase-card phase-card-anim">
-        <div class="phase-header">Phase 1: Web Application</div>
-        <div class="phase-body">
-          <div class="web-mockup">
-            <div class="mockup-bar">
-              <div class="mockup-dot"></div>
-              <div class="mockup-dot"></div>
-              <div class="mockup-dot"></div>
-              <span style="font-family:'Oswald';font-size:10px;color:#888;margin-left:8px;flex:1;text-align:center">kisanx.com</span>
-            </div>
-            <div class="mockup-content">
-              <svg width="200" height="110" viewBox="0 0 200 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="200" height="110" fill="#c8b888"/>
-                <rect width="200" height="18" fill="#2a2a18"/>
-                <rect x="8" y="6" width="30" height="6" rx="2" fill="#a8c878"/>
-                <rect x="130" y="6" width="12" height="6" rx="2" fill="#888"/>
-                <rect x="146" y="6" width="12" height="6" rx="2" fill="#888"/>
-                <rect x="162" y="6" width="12" height="6" rx="2" fill="#888"/>
-                <rect x="178" y="6" width="14" height="6" rx="2" fill="#a8c878"/>
-                <rect x="8" y="24" width="85" height="40" rx="4" fill="rgba(255,255,255,0.3)"/>
-                <rect x="12" y="28" width="50" height="8" rx="2" fill="rgba(255,255,255,0.6)"/>
-                <rect x="12" y="40" width="70" height="4" rx="2" fill="rgba(255,255,255,0.4)"/>
-                <rect x="12" y="48" width="55" height="4" rx="2" fill="rgba(255,255,255,0.4)"/>
-                <rect x="12" y="56" width="28" height="6" rx="3" fill="#a8c878"/>
-                <rect x="105" y="22" width="88" height="46" rx="4" fill="rgba(255,255,255,0.2)"/>
-                <text x="149" y="50" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="18">🌾</text>
-              </svg>
-            </div>
-          </div>
-          <p style="font-size:12px;color:var(--text-light);line-height:1.6;margin-bottom:12px;font-family:'Source Serif 4',serif;font-weight:300;"><strong style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:1px;color:var(--dark)">Stack:</strong> PHP · MySQL · HTML/CSS/JS · Session Auth · Fully Responsive</p>
-          <div class="phase-btns">
-            <a href="https://github.com/Saniya1207/kisanX" target="_blank" class="card-btn primary" style="font-size:11px">⌥ GitHub Repo</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="phase-card phase-card-anim" >
-        <div class="phase-header">Phase 2: Mobile Application</div>
-        <div class="phase-body">
-          <div class="mobile-mockup">
-            <div class="phone-frame">
-              <div class="phone-notch"></div>
-              <div class="phone-screen">
-                <svg width="55" height="100" viewBox="0 0 55 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="55" height="8" fill="rgba(0,0,0,0.3)"/>
-                  <rect y="8" width="55" height="14" fill="rgba(255,255,255,0.15)"/>
-                  <rect x="4" y="26" width="47" height="22" rx="3" fill="rgba(255,255,255,0.2)"/>
-                  <text x="14" y="40" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="10">🌿</text>
-                  <rect y="86" width="55" height="14" fill="rgba(0,0,0,0.3)"/>
-                </svg>
-              </div>
-            </div>
-            <div class="phone-frame">
-              <div class="phone-notch"></div>
-              <div class="phone-screen" style="background:linear-gradient(135deg,#2d6a4f 0%,#1b4332 100%)">
-                <svg width="55" height="100" viewBox="0 0 55 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="8" y="44" width="6" height="10" rx="1" fill="#74c69d"/>
-                  <rect x="17" y="38" width="6" height="16" rx="1" fill="#52b788"/>
-                  <rect x="26" y="32" width="6" height="22" rx="1" fill="#40916c"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <p style="font-size:12px;color:var(--text-light);line-height:1.6;margin-bottom:12px;font-family:'Source Serif 4',serif;font-weight:300;"><strong style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:1px;color:var(--dark)">Stack:</strong> React Native (Expo) · Node.js · MongoDB · JWT Auth · Deployed on Render · Android</p>
-          <div class="phase-btns">
-            <a href="https://github.com/Saniya1207/kisanx-backend" target="_blank" class="card-btn primary" style="font-size:11px">⌥ Backend Repo</a>
-            <a href="https://github.com/Saniya1207/kisanx-frontend" target="_blank" class="card-btn" style="font-size:11px">⌥ Frontend Repo</a>
-            <a href="https://github.com/Anniix/aniket-portfolio/releases/download/v1.0/KisanX.apk" class="card-btn" style="font-size:11px">⬇ Download APK</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="experience">
-  <div class="grid-bg" style="opacity:0.35"></div>
-  <div style="max-width:1100px;margin:0 auto" class="reveal">
-    <h2 class="section-title">EXPERIENCE</h2>
-    <div class="section-divider anim-draw"></div>
-  </div>
-
-  <div class="experience-grid">
-    <div class="exp-column exp-col-anim">
-      <div class="exp-col-title">Education</div>
-
-      <div class="exp-item">
-        <div class="exp-item-title">🎓 B.Sc. Information Technology</div>
-        <div class="exp-item-sub">Patkar-Varde College, Mumbai University · Semester V (Current)</div>
-        <div class="exp-item-date">FY GPA: 8.73 &nbsp;·&nbsp; SY GPA: 8.30 &nbsp;·&nbsp; Consistent Top Performer</div>
-        <div class="exp-item-sub" style="margin-top:8px;font-size:12px;">Software Engineering · Data Structures · Web Technologies · Database Management · IT Security. Built 2 production projects, earned 7 external certifications, maintained strong GPA.</div>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-item-title">🏫 HSC — Commerce</div>
-        <div class="exp-item-sub">Kapol School and College, Maharashtra State Board</div>
-        <div class="exp-item-date">March 2024 &nbsp;·&nbsp; 86.17% &nbsp;·&nbsp; Best Personality Award</div>
-        <div class="exp-item-sub" style="margin-top:8px;font-size:12px;">Best Personality Award — leadership, communication, and team contribution. Skills that carry directly into professional settings.</div>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-item-title">📜 SSC</div>
-        <div class="exp-item-sub">Maharashtra State Board</div>
-        <div class="exp-item-date">March 2022 &nbsp;·&nbsp; 85.60%</div>
-      </div>
-    </div>
-
-    <div class="exp-column exp-col-anim">
-      <div class="exp-col-title">Research</div>
-
-      <div class="exp-item">
-        <div class="exp-item-title">📊 Avishkar Research Convention</div>
-        <div class="exp-item-sub">KisanX — Direct-to-Consumer Platform for Farmers. Designed, built, and presented a working prototype and research paper at Mumbai University's inter-collegiate research convention. Selected from multiple institutional entries.</div>
-        <div class="exp-item-date">Mumbai University &nbsp;·&nbsp; 2024–25</div>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-item-title">🔬 Agricultural Supply Chain Research</div>
-        <div class="exp-item-sub">Identified technology-driven solutions to supply chain inefficiencies in Indian agriculture. Research directly informed the design and feature set of KisanX.</div>
-        <div class="exp-item-date">2024 &nbsp;·&nbsp; Applied Research</div>
-      </div>
-    </div>
-
-    <div class="exp-column exp-col-anim">
-      <div class="exp-col-title">Job Simulations</div>
-
-      <div class="exp-item">
-        <div class="exp-item-title">💻 Technology Job Simulation</div>
-        <div class="exp-item-sub"><strong style="font-family:'Oswald';font-size:11px;letter-spacing:0.5px;">Role:</strong> Software Developer Intern (Simulated) &nbsp;·&nbsp; <strong style="font-family:'Oswald';font-size:11px;letter-spacing:0.5px;">Org:</strong> Deloitte via Forage</div>
-        <div class="exp-item-date">March 2026 &nbsp;·&nbsp; Verified Digital Credential</div>
-        <div class="exp-item-sub" style="margin-top:8px;font-size:12px;">Completed enterprise software development tasks per Deloitte standards — structured problem-solving, code review, and professional documentation.</div>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-item-title">🛡️ Cybersecurity Job Simulation</div>
-        <div class="exp-item-sub"><strong style="font-family:'Oswald';font-size:11px;letter-spacing:0.5px;">Role:</strong> Security Analyst (Simulated) &nbsp;·&nbsp; <strong style="font-family:'Oswald';font-size:11px;letter-spacing:0.5px;">Org:</strong> Deloitte via Forage</div>
-        <div class="exp-item-date">June 2025 &nbsp;·&nbsp; Verified Digital Credential</div>
-        <div class="exp-item-sub" style="margin-top:8px;font-size:12px;">Threat analysis, security assessments, and incident response in simulated enterprise environments. Applied directly in development via JWT auth, input validation, and secure API design.</div>
-      </div>
-
-      <div class="virtual-logos">
-        <div class="virtual-logo logo-deloitte">Deloitte.</div>
-        <div class="virtual-logo logo-forage">forage</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== JOURNEY SECTION ===== -->
-<section id="journey">
-  <div class="grid-bg" style="opacity:0.3"></div>
-  <div style="max-width:1100px; margin:0 auto; padding:100px 60px 80px;">
-    <h2 class="section-title reveal">MY JOURNEY</h2>
-    <div class="section-divider anim-draw"></div>
-    <p class="source-tag">THE PATH THAT SHAPED ME</p>
-
-    <div class="journey-timeline">
-
-      <div class="journey-item reveal">
-        <div class="journey-icon">💻</div>
-        <div class="journey-content">
-          <div class="journey-year">2024</div>
-          <h3 class="journey-heading">The Spark — First Line of Code</h3>
-          <p class="journey-desc">Started B.Sc. IT — curiosity turned discipline. Went from first HTML tag to building backends with PHP and MySQL in under a year.</p>
-          <span class="journey-badge">🎯 Foundation Built</span>
-        </div>
-      </div>
-
-      <div class="journey-item reveal">
-        <div class="journey-icon">🌾</div>
-        <div class="journey-content">
-          <div class="journey-year">2025</div>
-          <h3 class="journey-heading">KisanX — From Idea to Reality</h3>
-          <p class="journey-desc">Built KisanX end-to-end — database, backend APIs, web UI, and mobile app. Selected and presented at Avishkar Research Convention, Mumbai University.</p>
-          <span class="journey-badge">🏆 Avishkar 2024–25 · Research Convention</span>
-        </div>
-      </div>
-
-      <div class="journey-item reveal">
-        <div class="journey-icon">🔐</div>
-        <div class="journey-content">
-          <div class="journey-year">2025</div>
-          <h3 class="journey-heading">Industry Exposure — Deloitte Simulations</h3>
-          <p class="journey-desc">Two Deloitte simulations via Forage: Technology & Cybersecurity. Enterprise workflows, threat analysis, and professional delivery standards.</p>
-          <span class="journey-badge">Deloitte · Technology & Cybersecurity</span>
-        </div>
-      </div>
-
-      <div class="journey-item reveal">
-        <div class="journey-icon">📚</div>
-        <div class="journey-content">
-          <div class="journey-year">2025</div>
-          <h3 class="journey-heading">Certifications — Sharpening the Toolkit</h3>
-          <p class="journey-desc">IIT Bombay (5x) — Advanced C++, PHP & MySQL, R, HTML. Python for Cyber Security via CS4ALL/Erasmus+. 7 verifiable certifications total.</p>
-          <span class="journey-badge">IIT Bombay · CS4ALL · Erasmus+</span>
-        </div>
-      </div>
-
-      <div class="journey-item reveal">
-        <div class="journey-icon">🚀</div>
-        <div class="journey-content">
-          <div class="journey-year">2026 → Now</div>
-          <h3 class="journey-heading">Advanced Full-Stack & Software Engineering</h3>
-          <p class="journey-desc">Sem V. Deepening React, system design, and REST API patterns. Actively seeking internship & entry-level roles where I can ship real software.</p>
-          <span class="journey-badge">🎯 Open to Opportunities — 2026</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== WHY HIRE ME SECTION ===== -->
-<section id="why-hire-me" style="background:var(--paper);padding:100px 60px 80px;min-height:auto;position:relative;overflow:hidden;">
-  <div class="grid-bg" style="opacity:0.3"></div>
-  <div style="max-width:1100px;margin:0 auto;">
-    <h2 class="section-title reveal">WHY WORK WITH ME</h2>
-    <div class="section-divider anim-draw"></div>
-    <p class="source-tag">WHAT I BRING TO YOUR TEAM OR PROJECT</p>
-
-    <div class="brand-grid">
-
-      <div class="brand-card reveal">
-        <div class="brand-card-icon">⚡</div>
-        <h3 class="brand-card-title">Full-Stack Capability</h3>
-        <p class="brand-card-desc">React · Node.js · PHP · MongoDB · MySQL · React Native. One developer, end-to-end — no handoff delays, no context gaps.</p>
-      </div>
-
-      <div class="brand-card reveal">
-        <div class="brand-card-icon">✅</div>
-        <h3 class="brand-card-title">Clean Code Practices</h3>
-        <p class="brand-card-desc">Consistent naming, logical structure, clear separation of concerns. Code the next developer will actually thank you for.</p>
-      </div>
-
-      <div class="brand-card reveal">
-        <div class="brand-card-icon">📱</div>
-        <h3 class="brand-card-title">Responsive by Default</h3>
-        <p class="brand-card-desc">Mobile-first is the starting point, not a checkbox. Every interface — portfolio, KisanX, client sites — works on every screen.</p>
-      </div>
-
-      <div class="brand-card reveal">
-        <div class="brand-card-icon">🔄</div>
-        <h3 class="brand-card-title">Fast Learner</h3>
-        <p class="brand-card-desc">HTML to cross-platform mobile apps with JWT auth in under two years. New stack? Give me a week.</p>
-      </div>
-
-      <div class="brand-card reveal">
-        <div class="brand-card-icon">🧩</div>
-        <h3 class="brand-card-title">Full Ownership</h3>
-        <p class="brand-card-desc">KisanX — research, schema, APIs, UI, mobile, deployment. I know what ownership means: accountable for every decision, not just my slice.</p>
-      </div>
-
-      <div class="brand-card reveal">
-        <div class="brand-card-icon">🔍</div>
-        <h3 class="brand-card-title">Attention to Detail</h3>
-        <p class="brand-card-desc">Thoughtful error handling, consistent UI patterns, correct edge-case behaviour. The details are where good software becomes great.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== CURRENTLY LEARNING SECTION ===== -->
-<section id="learning" style="background:var(--bg2);padding:100px 20px 80px;min-height:auto;position:relative;overflow:hidden;">
-  <div class="grid-bg" style="opacity:0.3"></div>
-  <div style="max-width:1100px;margin:0 auto;">
-    <h2 class="section-title reveal">CURRENTLY LEARNING</h2>
-    <div class="section-divider anim-draw"></div>
-    <p class="source-tag">ALWAYS GROWING · ALWAYS BUILDING</p>
-
-    <div class="skills-grid reveal-stagger learning-grid" style="margin-top:32px;">
-
-      <div class="skill-card">
-        <div class="skill-icon" style="color:#f7df1e;font-family:'Bebas Neue';font-size:13px;letter-spacing:0">JS</div>
-        <div class="skill-name">Advanced JavaScript</div>
-        <div class="skill-level">Closures · Async/Await · Event Loop · Design Patterns</div>
-        <div class="skill-bar-outer"><div class="skill-bar-inner" style="width:0" data-width="70%"></div></div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon" style="color:#61dafb">⚛</div>
-        <div class="skill-name">React.js (Advanced)</div>
-        <div class="skill-level">Hooks · Context API · Performance Optimization · Testing</div>
-        <div class="skill-bar-outer"><div class="skill-bar-inner" style="width:0" data-width="65%"></div></div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon" style="color:#6cc24a;font-family:'Bebas Neue';font-size:12px;letter-spacing:0">API</div>
-        <div class="skill-name">REST API Design</div>
-        <div class="skill-level">Best Practices · Versioning · Auth · Documentation · Testing</div>
-        <div class="skill-bar-outer"><div class="skill-bar-inner" style="width:0" data-width="72%"></div></div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-icon" style="color:var(--accent2);font-family:'Bebas Neue';font-size:11px;letter-spacing:0">SYS</div>
-        <div class="skill-name">System Design</div>
-        <div class="skill-level">Scalability · Load Balancing · Caching · Database Design</div>
-        <div class="skill-bar-outer"><div class="skill-bar-inner" style="width:0" data-width="40%"></div></div>
-      </div>
-
-    </div>
-
-    <div class="skills-infographic reveal reveal-scale" style="margin-top:24px;">
-      <div class="infographic-stat">
-        <span style="font-family:'Bebas Neue',cursive;font-size:40px;display:block;color:var(--dark)">4+</span>
-        <span class="infographic-lbl">Active Learning Tracks</span>
-      </div>
-      <div style="width:1px;height:50px;background:var(--dark);opacity:0.2"></div>
-      <div class="infographic-stat">
-        <span style="font-family:'Bebas Neue',cursive;font-size:40px;display:block;color:var(--dark)">7+</span>
-        <span class="infographic-lbl">Certifications Earned</span>
-      </div>
-      <div style="width:1px;height:50px;background:var(--dark);opacity:0.2"></div>
-      <div class="infographic-stat">
-        <span style="font-family:'Bebas Neue',cursive;font-size:40px;display:block;color:var(--dark)">2</span>
-        <span class="infographic-lbl">Industry Simulations</span>
-      </div>
-      <div style="width:1px;height:50px;background:var(--dark);opacity:0.2"></div>
-      <div class="infographic-stat">
-        <span style="font-family:'Bebas Neue',cursive;font-size:40px;display:block;color:var(--dark)">∞</span>
-        <span class="infographic-lbl">Curiosity Remaining</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== BRAND SECTION ===== -->
-<section id="brand">
-  <div class="grid-bg" style="opacity:0.25"></div>
-  <div style="max-width:1100px; margin:0 auto; padding:100px 60px 80px;">
-    <h2 class="section-title reveal">THE BRAND BEHIND THE CODE</h2>
-    <div class="section-divider anim-draw"></div>
-    <p class="source-tag">WHO IS SANIYA FAROOQUI?</p>
-
-    <div class="brand-grid">
-
-      <div class="brand-card reveal">
-        <div class="brand-card-icon">🎯</div>
-        <h3 class="brand-card-title">Passion for Technology</h3>
-        <p class="brand-card-desc">I build software because it's genuinely interesting — understanding why systems fail and how to make them better drives every project.</p>
-      </div>
-
-      <div class="brand-card reveal">
-        <div class="brand-card-icon">🔨</div>
-        <h3 class="brand-card-title">Building Useful Software</h3>
-        <p class="brand-card-desc">KisanX was built to help farmers, not to show off tech skills. The best code makes someone's work easier or life better.</p>
-      </div>
-
-      <div class="brand-card reveal">
-        <div class="brand-card-icon">📚</div>
-        <h3 class="brand-card-title">Learning Mindset</h3>
-        <p class="brand-card-desc">HTML → MERN → React Native in two years. I follow where problems lead, not where comfort stays.</p>
-      </div>
-
-      <div class="brand-card reveal">
-        <div class="brand-card-icon">🚀</div>
-        <h3 class="brand-card-title">Career Goals</h3>
-        <p class="brand-card-desc">Software engineering role (web or mobile) where I can contribute to real systems, get mentored, and grow fast by doing the work.</p>
-      </div>
-
-    </div>
-
-    <div class="brand-statement reveal">
-      <span class="brand-quote-mark">"</span>
-      <p class="brand-quote">I'm not building a career — I'm building useful things. The career will follow.</p>
-      <span class="brand-author">— Saniya Farooqui</span>
-    </div>
-
-  </div>
-</section>
-
-<section id="certifications">
-  <div class="grid-bg" style="opacity:0.3"></div>
-  <div class="cert-inner">
-    <h2 class="section-title reveal">CERTIFICATIONS</h2>
-    <div class="section-divider anim-draw"></div>
-
-    <table class="cert-table reveal">
-      <thead>
-        <tr><th style="width:40px"></th>
-        <th>Credentials</th>
-        <th style="text-align:right">Date</th>
-      </thead>
-      <tbody>
-        <tr class="cert-row">
-          <td class="cert-icon-cell"><div class="cert-icon-box">🔐</div></td>
-          <td>
-            <div class="cert-name">Python for Cyber Security</div>
-            <div class="cert-type">Patkar-Varde College &nbsp;·&nbsp; CS4ALL / Erasmus+ Programme &nbsp;·&nbsp; Issued: Dec 2025</div>
-            <div class="cert-type" style="margin-top:4px;color:var(--accent2);">Skills: Python scripting · Cybersecurity fundamentals · Threat analysis · Secure coding practices</div>
-          </td>
-          <td class="cert-score">
-            <div class="score-badge">Oct–Dec 2025</div>
-          </td>
-        </tr>
-        <tr class="cert-row">
-          <td class="cert-icon-cell"><div class="cert-icon-box">📜</div></td>
-          <td>
-            <div class="cert-name">Advanced C++ Training</div>
-            <div class="cert-type">IIT Bombay — Spoken Tutorial &nbsp;·&nbsp; Issued: Mar 2025</div>
-            <div class="cert-type" style="margin-top:4px;color:var(--accent2);">Skills: OOP in C++ · Memory management · STL · Templates · File handling</div>
-          </td>
-          <td class="cert-score">
-            <div class="score-badge">Mar 2025</div>
-          </td>
-        </tr>
-        <tr class="cert-row">
-          <td class="cert-icon-cell"><div class="cert-icon-box">📊</div></td>
-          <td>
-            <div class="cert-name">R Programming Training</div>
-            <div class="cert-type">IIT Bombay — EduPyramids &nbsp;·&nbsp; Issued: Feb 2026</div>
-            <div class="cert-type" style="margin-top:4px;color:var(--accent2);">Skills: R syntax · Data analysis · Statistical computing · Data visualisation</div>
-          </td>
-          <td class="cert-score">
-            <div class="score-badge">Feb 2026</div>
-          </td>
-        </tr>
-        <tr class="cert-row">
-          <td class="cert-icon-cell"><div class="cert-icon-box">🗄️</div></td>
-          <td>
-            <div class="cert-name">PHP &amp; MySQL Training</div>
-            <div class="cert-type">IIT Bombay — EduPyramids &nbsp;·&nbsp; Issued: Sep 2025</div>
-            <div class="cert-type" style="margin-top:4px;color:var(--accent2);">Skills: PHP server-side scripting · MySQL CRUD · Session management · Form handling · Database security</div>
-          </td>
-          <td class="cert-score">
-            <div class="score-badge">Sep 2025</div>
-          </td>
-        </tr>
-        <tr class="cert-row">
-          <td class="cert-icon-cell"><div class="cert-icon-box">🌐</div></td>
-          <td>
-            <div class="cert-name">HTML Training</div>
-            <div class="cert-type">IIT Bombay — Spoken Tutorial &nbsp;·&nbsp; Issued: Oct 2024</div>
-            <div class="cert-type" style="margin-top:4px;color:var(--accent2);">Skills: Semantic HTML5 · Web standards · Accessibility · Forms · Document structure</div>
-          </td>
-          <td class="cert-score">
-            <div class="score-badge">Oct 2024</div>
-          </td>
-        </tr>
-        <tr class="cert-row">
-          <td class="cert-icon-cell"><div class="cert-icon-box">💼</div></td>
-          <td>
-            <div class="cert-name">Technology Job Simulation</div>
-            <div class="cert-type">Deloitte (via Forage) &nbsp;·&nbsp; Verified Digital Credential &nbsp;·&nbsp; Mar 2026</div>
-            <div class="cert-type" style="margin-top:4px;color:var(--accent2);">Skills: Enterprise software development · Structured problem-solving · Code review · Professional documentation</div>
-          </td>
-          <td class="cert-score">
-            <div class="score-badge">Mar 2026</div>
-          </td>
-        </tr>
-        <tr class="cert-row">
-          <td class="cert-icon-cell"><div class="cert-icon-box">🛡️</div></td>
-          <td>
-            <div class="cert-name">Cybersecurity Job Simulation</div>
-            <div class="cert-type">Deloitte (via Forage) &nbsp;·&nbsp; Verified Digital Credential &nbsp;·&nbsp; Jun 2025</div>
-            <div class="cert-type" style="margin-top:4px;color:var(--accent2);">Skills: Threat analysis · Security assessments · Vulnerability identification · Incident response thinking</div>
-          </td>
-          <td class="cert-score">
-            <div class="score-badge">Jun 2025</div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="workshops-title">Workshops &amp; Webinars</div>
-    <table class="cert-table">
-      <tbody>
-        <tr class="cert-row">
-          <td class="cert-icon-cell"><div class="cert-icon-box">🎯</div></td>
-          <td>
-            <div class="cert-name">Research in IT - AI Unleashed</div>
-            <div class="cert-type">RUSA-Sponsored International Webinar</div>
-          </td>
-          <td class="cert-score">
-            <div class="score-badge">Aug 2024</div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <p style="font-family:'Source Serif 4',serif;font-size:13px;color:var(--text-light);margin-top:24px;font-weight:300;"><a href="/certifications/" style="color:var(--accent2);text-decoration:underline;">View the full certifications page →</a></p>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="grid-bg" style="opacity:0.35"></div>
-  <div style="max-width:1100px;margin:0 auto" class="reveal">
-    <h2 class="section-title">ACHIEVEMENTS &amp; CONTACT</h2>
-    <div class="section-divider anim-draw"></div>
-    <p class="source-tag" style="margin-bottom:0">OPEN TO: INTERNSHIPS &nbsp;·&nbsp; FREELANCE PROJECTS &nbsp;·&nbsp; ENTRY-LEVEL ROLES &nbsp;·&nbsp; COLLABORATION</p>
-  </div>
-
-  <div class="contact-inner">
-    <div class="contact-reveal">
-      <div style="font-family:'Oswald';font-size:16px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--dark);margin-bottom:20px">
-        Achievements
-      </div>
-
-      <div class="soft-skills-grid reveal-stagger">
-        <div class="soft-skill-item">
-          <div class="soft-skill-icon">🏆</div>
-          <div class="soft-skill-name">Avishkar 2024–25</div>
-          <div class="soft-skill-desc">Presented KisanX at Mumbai University's inter-collegiate research convention — from problem statement to deployed product.</div>
-        </div>
-        <div class="soft-skill-item">
-          <div class="soft-skill-icon">🌾</div>
-          <div class="soft-skill-name">KisanX Platform</div>
-          <div class="soft-skill-desc">Full-stack agricultural marketplace — web (PHP/MySQL) + mobile (MERN + React Native). Developer, architecture to deployment.</div>
-        </div>
-        <div class="soft-skill-item">
-          <div class="soft-skill-icon">💼</div>
-          <div class="soft-skill-name">Deloitte Simulations</div>
-          <div class="soft-skill-desc">Technology & Cybersecurity simulations via Forage — verified credentials, enterprise workflows.</div>
-        </div>
-        <div class="soft-skill-item">
-          <div class="soft-skill-icon">🎓</div>
-          <div class="soft-skill-name">FY 8.73 | SY 8.30</div>
-          <div class="soft-skill-desc">Strong academic GPA across both years of B.Sc. IT while shipping real projects and earning certifications.</div>
-        </div>
-        <div class="soft-skill-item">
-          <div class="soft-skill-icon">🥇</div>
-          <div class="soft-skill-name">Best Personality Award</div>
-          <div class="soft-skill-desc">HSC recognition for leadership, communication, and positive team contribution.</div>
-        </div>
-        <div class="soft-skill-item">
-          <div class="soft-skill-icon">🏅</div>
-          <div class="soft-skill-name">IIT Bombay Certified</div>
-          <div class="soft-skill-desc">5 IIT Bombay certifications: C++, PHP & MySQL, R Programming, HTML, Python for Cyber Security (CS4ALL/Erasmus+).</div>
-        </div>
-      </div>
-
-      <div class="languages-section">
-        <div class="lang-title">Languages</div>
-        <div class="lang-tags">
-          <span class="lang-tag">English</span>
-          <span class="lang-tag">Hindi</span>
-          <span class="lang-tag">Marathi</span>
-        </div>
-      </div>
-
-      <div class="social-row" style="margin-top:24px">
-        <a class="social-btn" href="https://github.com/Saniya1207" title="GitHub">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-        </a>
-        <a class="social-btn" href="https://www.linkedin.com/in/saniya-farooqui-dev/" title="LinkedIn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-      </div>
-    </div><!-- end contact-reveal -->
-
-    <div class="contact-reveal" style="transition-delay:0.2s">
-      <div class="contact-form-title">GET IN TOUCH</div>
-      <p style="font-family:'Source Serif 4',serif;font-size:13px;line-height:1.75;color:var(--text-light);font-weight:300;margin-bottom:20px;">Internship · Freelance · Entry-level role · Collaboration — I'm open. I respond within 24 hours and take every opportunity seriously.</p>
-
-      <!-- Info Cards -->
-      <div class="contact-info-cards">
-        <div class="contact-info-card">
-          <span class="contact-info-icon">✉️</span>
-          <div>
-            <div class="contact-info-label">EMAIL</div>
-            <a href="mailto:saniya122400@gmail.com" class="contact-info-value">saniya122400@gmail.com</a>
-          </div>
-        </div>
-        <div class="contact-info-card">
-          <span class="contact-info-icon">📍</span>
-          <div>
-            <div class="contact-info-label">LOCATION</div>
-            <div class="contact-info-value">Virar, Mumbai, India</div>
-          </div>
-        </div>
-      </div>
-
-      <a href="https://wa.me/917666886033" class="download-btn" style="margin-top:10px;" target="_blank">
-        📲 MESSAGE ON WHATSAPP
+  <div class="grid-mesh" aria-hidden="true"></div>
+
+  <!-- ================================================================
+       HEADER & NAVIGATION
+  ================================================================ -->
+  <header class="header-nav" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Saniya Farooqui Home">
+        <div class="brand-badge">SF</div>
+        <span>Saniya Farooqui</span>
       </a>
-      <a href="/RESUME.pdf" class="download-btn">⬇ DOWNLOAD CV (PDF)</a>
-    </div>
-  </div>
-</section>
 
-<!-- ===== FAQ SECTION ===== -->
-<section id="faq">
-  <div class="grid-bg" style="opacity:0.3"></div>
-  <div style="max-width:800px; margin:0 auto; padding:100px 60px 80px;">
-    <h2 class="section-title reveal">FREQUENTLY ASKED</h2>
-    <div class="section-divider anim-draw"></div>
-    <p class="source-tag">QUESTIONS & ANSWERS</p>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#certifications" class="nav-link">Certs</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
 
-    <div class="faq-list">
-
-      <div class="faq-item reveal">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          <span>What technologies do you specialize in?</span>
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          <p>Core stack: MERN (MongoDB, Express, React, Node.js) + PHP/MySQL + React Native (Expo). Comfortable with JWT auth, REST API design, Git, and vanilla JS. Currently deepening advanced React and system design.</p>
-        </div>
-      </div>
-
-      <div class="faq-item reveal">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          <span>Are you available for internships or entry-level roles?</span>
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          <p>Yes — actively. Open to internships, entry-level roles, freelance, and collaboration. Deployed full-stack project, 7 verified certifications, Deloitte simulation experience. Can contribute from day one.</p>
-        </div>
-      </div>
-
-      <div class="faq-item reveal">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          <span>What makes you stand out from other candidates?</span>
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          <p>I've shipped production software. KisanX is fully deployed — web (PHP/MySQL) + mobile (MERN + React Native), built end-to-end as Developer. Avishkar awardee, 7 certifications, Deloitte simulations, GPA 8.73. Technical depth + professional awareness, ready from day one.</p>
-        </div>
-      </div>
-
-      <div class="faq-item reveal">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          <span>How can I contact you for opportunities?</span>
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          <p>WhatsApp at +91 7666886033, or email saniya122400@gmail.com. I respond within 24 hours. GitHub and LinkedIn are linked below.</p>
-        </div>
-      </div>
-
-      <div class="faq-item reveal">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          <span>What is your academic background?</span>
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          <p>B.Sc. IT, Patkar-Varde College, Mumbai University — Sem V. FY GPA: 8.73 · SY GPA: 8.30. HSC: 86.17% · SSC: 85.60%. 7 external certifications alongside academics. Full timeline on the <a href="/resume/" style="color:var(--accent2);">resume page</a>, more on my story on the <a href="/about/" style="color:var(--accent2);">About page</a>.</p>
-        </div>
-      </div>
-
-      <div class="faq-item reveal">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          <span>Do you have experience in cybersecurity or IT support?</span>
-          <span class="faq-arrow">+</span>
-        </button>
-        <div class="faq-answer">
-          <p>Yes — foundational and applied. Deloitte Cybersecurity Simulation (threat analysis, security assessments, vulnerability identification) + Python for Cyber Security (CS4ALL/Erasmus+). Applied in practice: JWT auth, bcrypt, input validation, parameterised queries, secure session management.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-grid"></div>
-  <div class="footer-glow"></div>
-
-  <div class="footer-inner">
-    <div class="footer-top">
-
-      <!-- Brand -->
-      <div class="footer-brand-block">
-      <div class="footer-name"><span>S</span>ANIYA<br><span>F</span>AROOQUI</div>
-      <div class="footer-tagline">Full-Stack Developer &nbsp;·&nbsp; MERN &nbsp;·&nbsp; React Native &nbsp;·&nbsp; Open to Opportunities</div>
-      </div>
-
-      <!-- Centre Monogram -->
-      <div class="footer-monogram">
-        <img src="/logo.svg" alt="Saniya Farooqui Logo" width="90" height="90" style="display:block;">
-      </div>
-
-      <!-- Social Links -->
-      <div class="footer-links-block">
-        <div class="footer-links-label">Connect with me</div>
-        <div class="footer-socials">
-          <a href="https://github.com/Saniya1207" target="_blank" class="footer-social-btn" title="GitHub">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/saniya-farooqui-dev/" target="_blank" class="footer-social-btn" title="LinkedIn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-          <a href="https://wa.me/917666886033" target="_blank" class="footer-social-btn" title="WhatsApp">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          </a>
-          <a href="mailto:saniya122400@gmail.com" class="footer-social-btn" title="Email">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          </a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Quick Nav -->
-    <nav class="footer-nav">
-      <a href="#home">Home</a>
-      <a href="/about/">About</a>
-      <a href="/projects/">Projects</a>
-      <a href="/blog/">Blog</a>
-      <a href="/resume/">Resume</a>
-      <a href="/certifications/">Certifications</a>
-      <a href="/contact/">Contact</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-
-    <!-- Bottom bar -->
-    <div class="footer-bottom">
-      <div class="footer-copy">© <span>2026</span> Saniya Farooqui — All rights reserved</div>
-      <div class="footer-status">
-        <span class="footer-dot"></span>
-        Open to opportunities
+      <div class="nav-actions">
+        <button class="btn-theme-toggle" type="button" aria-label="Toggle theme">☀️</button>
+        <a href="#contact" class="nav-cta">Hire Me ⚡</a>
+        <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Toggle mobile menu">☰</button>
       </div>
     </div>
 
-  </div>
-</footer>
-
-<script>
-
-/* =========================
-   HERO NAME LETTER SPLIT
-========================= */
-const text = heroName.innerHTML.replace("<br>", "\n");
-heroName.innerHTML = "";
-
-text.split("").forEach((char, i) => {
-  if (char === "\n") {
-    heroName.appendChild(document.createElement("br"));
-    return;
-  }
-
-  const span = document.createElement("span");
-
-  if (char === " ") {
-    span.classList.add("space");
-    span.innerHTML = "&nbsp;";
-  } else {
-    span.classList.add("letter");
-    span.textContent = char;
-    span.style.animationDelay = `${i * 0.05}s`;
-  }
-
-  heroName.appendChild(span);
-});
-// animation complete class
-setTimeout(() => {
-  heroName.classList.add("done");
-}, text.length * 50 + 500);
-
-/* =========================
-   SCROLL REVEAL + REANIMATION
-========================= */
-const revealElements = document.querySelectorAll(
-  ".reveal, .reveal-stagger, .skill-card, .exp-column, .phase-card, .contact-reveal, .section-divider"
-);
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-
-      // Animate stat bars (only the first time this section appears)
-      if (entry.target.classList.contains("profile-numbers") && !entry.target.dataset.barsAnimated) {
-        entry.target.dataset.barsAnimated = "true";
-        document.querySelectorAll(".stat-bar").forEach(bar => {
-          bar.classList.add("bar-animated");
-        });
-      }
-
-      animateNumbers();
-
-    } else {
-      entry.target.classList.remove("visible");
-      // Numbers/bars are left as they are — they animate once on first
-      // scroll-into-view and then stay at their final value.
-    }
-  });
-}, { threshold: 0.1});
-
-revealElements.forEach(el => observer.observe(el));
-
-
-/* =========================
-   NUMBER COUNT-UP (REAL)
-========================= */
-function animateNumbers() {
-  document.querySelectorAll(".stat-value, .infographic-pct").forEach(el => {
-    if (el.dataset.counted) return; // already animated once — leave it at its final value
-    const target = parseFloat(el.getAttribute("data-target") || el.innerText);
-    if (!el.getAttribute("data-target")) {
-      el.setAttribute("data-target", el.innerText); // original value save karo
-    }
-    el.dataset.counted = "true";
-    let count = 0;
-    const increment = target / 50;
-    const update = () => {
-      count += increment;
-      if (count < target) {
-        el.innerText = count.toFixed(1);
-        requestAnimationFrame(update);
-      } else {
-        el.innerText = target;
-      }
-    };
-    update();
-  });
-}
-
-
-/* =========================
-   ADVANCED CARD TILT
-========================= */
-document.querySelectorAll(".skill-card, .minor-card, .phase-card, .exp-column")
-.forEach(card => {
-
-  card.addEventListener("mousemove", (e) => {
-    const rect = card.getBoundingClientRect();
-
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    const rotateX = -(y / rect.height - 0.5) * 12;
-    const rotateY = (x / rect.width - 0.5) * 12;
-
-    card.style.transform =
-      `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
-  });
-
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "";
-  });
-
-});
-
-
-/* =========================
-   FLOATING RANDOM TECH ICONS
-========================= */
-const techIcons = document.querySelectorAll(".tech-icon");
-
-techIcons.forEach(icon => {
-
-  let x = 0;
-  let y = 0;
-
-  setInterval(() => {
-    x = Math.random() * 60 - 30;
-    y = Math.random() * 60 - 30;
-
-    icon.style.transform = `translate(${x}px, ${y}px)`;
-  }, 3000);
-
-});
-
-
-/* =========================
-   TITLE RE-ANIMATION
-========================= */
-const titles = document.querySelectorAll(".section-title");
-
-const titleObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const el = entry.target;
-
-      el.style.animation = "none";
-      void el.offsetWidth;
-      el.style.animation = "";
-    }
-  });
-}, { threshold: 0.5 });
-
-titles.forEach(t => titleObserver.observe(t));
-
-/* =========================
-   ORBIT TECH ICONS
-========================= */
-const icons = document.querySelectorAll(".tech-icon");
-
-// ellipse size (IMPORTANT)
-const radiusX = 180; // width (left-right)
-const radiusY = 240; // height (up-down)
-
-icons.forEach((icon, i) => {
-  let angle = (i / icons.length) * Math.PI * 2;
-
-  function animate() {
-    angle += 0.008;
-
-    const x = Math.cos(angle) * radiusX;
-    const y = Math.sin(angle) * radiusY;
-
-    icon.style.transform = `translate(${x}px, ${y}px)`;
-
-    requestAnimationFrame(animate);
-  }
-
-  animate();
-});
-
-const reveals = document.querySelectorAll(".reveal");
-
-function revealOnScroll() {
-  const windowHeight = window.innerHeight;
-
-  reveals.forEach((el) => {
-    const top = el.getBoundingClientRect().top;
-
-    if (top < windowHeight - 100) {
-      el.classList.add("visible");
-    } else {
-      el.classList.remove("visible"); // 👈 reanimation on scroll back
-    }
-  });
-}
-
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
-
-/* =========================
-   MAGNETIC EFFECT
-========================= */
-const magnets = document.querySelectorAll(".skill-card");
-
-magnets.forEach(el => {
-
-  el.addEventListener("mousemove", (e) => {
-    const rect = el.getBoundingClientRect();
-
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-
-    gsap.to(el, {
-      x: x * 0.2,
-      y: y * 0.2,
-      duration: 0.3
-    });
-  });
-
-  el.addEventListener("mouseleave", () => {
-    gsap.to(el, {
-      x: 0,
-      y: 0,
-      duration: 0.5,
-      ease: "elastic.out(1, 0.3)"
-    });
-  });
-
-});
-
-document.querySelectorAll(".infographic-pct").forEach(el => {
-  el.textContent = el.getAttribute("data-value");
-});
-
-const track = document.getElementById("minorTrack");
-const minorCarousel = track.parentElement; // the scrollable viewport
-
-function nudgeMinorCarousel(direction) {
-  const card = track.children[0];
-  if (!card) return;
-  const cardWidth = card.offsetWidth + 24; // card + gap
-  minorCarousel.scrollBy({ left: direction * cardWidth, behavior: "smooth" });
-}
-
-document.querySelector(".carousel-btn.next").addEventListener("click", () => {
-  nudgeMinorCarousel(1);
-});
-
-document.querySelector(".carousel-btn.prev").addEventListener("click", () => {
-  nudgeMinorCarousel(-1);
-});
-
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll("nav ul li a");
-const hamburger = document.getElementById("hamburger");
-
-const navOverlay = document.getElementById("navOverlay");
-const overlayClose = document.getElementById("overlayClose");
-
-function openMenu() {
-  navOverlay.style.display = "block";
-  hamburger.classList.add("open");
-  document.body.style.overflow = "hidden";
-}
-function closeMenu() {
-  navOverlay.style.display = "none";
-  hamburger.classList.remove("open");
-  document.body.style.overflow = "";
-}
-
-hamburger.addEventListener("click", () => {
-  navOverlay.style.display === "block" ? closeMenu() : openMenu();
-});
-document.querySelectorAll(".ov-link").forEach(l => l.addEventListener("click", closeMenu));
-
-/* ---- Dark mode toggle ---- */
-function setTheme(theme) {
-  if (theme === "dark") {
-    document.documentElement.setAttribute("data-theme", "dark");
-  } else {
-    document.documentElement.removeAttribute("data-theme");
-  }
-  try { localStorage.setItem("theme", theme); } catch (e) {}
-}
-function toggleTheme() {
-  const isDark = document.documentElement.getAttribute("data-theme") === "dark";
-  setTheme(isDark ? "light" : "dark");
-}
-["themeToggle", "themeToggleOverlay"].forEach(id => {
-  const btn = document.getElementById(id);
-  if (btn) btn.addEventListener("click", toggleTheme);
-});
-
-/* Follow the phone/OS theme live if no manual choice has been made yet */
-try {
-  if (!localStorage.getItem("theme") && window.matchMedia) {
-    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-      if (!localStorage.getItem("theme")) {
-        if (e.matches) {
-          document.documentElement.setAttribute("data-theme", "dark");
-        } else {
-          document.documentElement.removeAttribute("data-theme");
-        }
-      }
-    });
-  }
-} catch (e) {}
-
-window.addEventListener("scroll", () => {
-  let current = "";
-  sections.forEach(sec => {
-    if (window.scrollY >= sec.offsetTop - 80) {
-      current = sec.getAttribute("id");
-    }
-  });
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
-    }
-  });
-});
-function sendToWhatsApp() {
-    const name = document.getElementById("f-name").value.trim();
-    const email = document.getElementById("f-email").value.trim();
-    const message = document.getElementById("f-msg").value.trim();
-
-    if (!name) {
-        alert("Please enter your name.");
-        return;
-    }
-
-    const whatsappNumber = "917666886033";
-
-    const text =
-`Hello Saniya,
-
-👤 Name: ${name}
-📧 Email: ${email}
-
-💬 Message:
-${message}`;
-
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
-
-    window.open(url, "_blank");
-}
-
-const skillSection = document.querySelector("#skills");
-const skillBarObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    const bars = entry.target.querySelectorAll(".skill-bar-inner");
-    if (entry.isIntersecting && !entry.target.dataset.barsFilled) {
-      entry.target.dataset.barsFilled = "true";
-      bars.forEach(bar => {
-        bar.style.width = bar.dataset.width;
-      });
-    }
-    // No "else" reset — bars stay filled once they've animated in.
-  });
-}, { threshold: 0.2 });
-
-if (skillSection) skillBarObserver.observe(skillSection);
-
-/* =========================
-   ACHIEVEMENTS CARD ANIMATION
-========================= */
-const achCards = document.querySelectorAll(".soft-skill-item");
-
-const achObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      // Stagger delay — har card thodi der baad aaye
-      const cards = entry.target.parentElement.querySelectorAll(".soft-skill-item");
-      cards.forEach((card, i) => {
-        setTimeout(() => {
-          card.classList.add("ach-visible");
-        }, i * 120);
-      });
-    } else {
-      entry.target.classList.remove("ach-visible");
-    }
-  });
-}, { threshold: 0.2 });
-
-achCards.forEach(card => achObserver.observe(card));
-
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script>
-/* =========================
-   FAQ TOGGLE
-========================= */
-function toggleFaq(btn) {
-  const answer = btn.nextElementSibling;
-  const isOpen = answer.classList.contains("open");
-  // Close all
-  document.querySelectorAll(".faq-answer").forEach(a => a.classList.remove("open"));
-  document.querySelectorAll(".faq-question").forEach(b => b.classList.remove("active"));
-  // Open clicked if it was closed
-  if (!isOpen) {
-    answer.classList.add("open");
-    btn.classList.add("active");
-  }
-}
-</script>
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-list">
+        <li><a href="#hero" class="mobile-nav-link">🏠 Home</a></li>
+        <li><a href="#services" class="mobile-nav-link">🛠️ Services</a></li>
+        <li><a href="#skills" class="mobile-nav-link">💻 Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">🚀 Projects</a></li>
+        <li><a href="#experience" class="mobile-nav-link">🎓 Experience</a></li>
+        <li><a href="#certifications" class="mobile-nav-link">📜 Certifications</a></li>
+        <li><a href="#faq" class="mobile-nav-link">❓ FAQ</a></li>
+        <li><a href="#contact" class="mobile-nav-link">✉️ Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ================================================================
+       HERO SECTION
+  ================================================================ -->
+  <main>
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-content">
+            <div class="hero-badge-row">
+              <div class="status-badge">
+                <span class="status-dot"></span>
+                <span>Available for Projects &amp; Internships</span>
+              </div>
+              <div class="location-pill">
+                <span>📍</span>
+                <span>Vasai-Virar &amp; Mumbai, IN</span>
+              </div>
+            </div>
+
+            <h1 class="hero-title">
+              Hi, I'm <span class="gradient-text">Saniya Farooqui</span><br>
+              Full-Stack Web Developer.
+            </h1>
+
+            <p class="hero-subtitle">
+              Engineering modern, responsive web applications with clean code, seamless UI/UX, and robust architectures. Co-Founder of <strong>KisanX</strong> &amp; Avishkar Research Awardee.
+            </p>
+
+            <div class="hero-keywords-pill">
+              <span class="kw-badge">React.js</span>
+              <span class="kw-badge">Node.js</span>
+              <span class="kw-badge">PHP / MySQL</span>
+              <span class="kw-badge">MongoDB</span>
+              <span class="kw-badge">React Native</span>
+              <span class="kw-badge">Local SEO</span>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">View Featured Work ↓</a>
+              <a href="https://wa.me/917666886033" target="_blank" class="btn btn-whatsapp">Direct WhatsApp 💬</a>
+              <a href="/RESUME.pdf" download class="btn btn-secondary">Download CV (PDF) 📄</a>
+            </div>
+
+            <!-- Quick Metrics -->
+            <div class="hero-metrics">
+              <div class="metric-item">
+                <span class="metric-num" data-target="3">3+</span>
+                <span class="metric-label">Deployed Projects</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-num" data-target="7">7+</span>
+                <span class="metric-label">Industry Certifications</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-num" data-target="8.73">8.73</span>
+                <span class="metric-label">B.Sc. IT Top GPA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Developer Card Visual -->
+          <div class="hero-visual">
+            <div class="dev-card-glass">
+              <div class="dev-card-header">
+                <div class="window-dots">
+                  <span class="window-dot dot-red"></span>
+                  <span class="window-dot dot-yellow"></span>
+                  <span class="window-dot dot-green"></span>
+                </div>
+                <span class="window-file-name">developer.config.ts</span>
+              </div>
+
+              <div class="dev-profile-preview">
+                <div class="dev-avatar-ring">
+                  <div class="dev-avatar-inner">SF</div>
+                </div>
+                <div class="dev-info">
+                  <h3>Saniya Farooqui</h3>
+                  <p>Full-Stack Web Engineer</p>
+                </div>
+              </div>
+
+              <div class="code-snippet-box">
+                <div><span class="code-keyword">const</span> developer = {</div>
+                <div style="padding-left: 14px;"><span class="code-property">name</span>: <span class="code-string">'Saniya Farooqui'</span>,</div>
+                <div style="padding-left: 14px;"><span class="code-property">role</span>: <span class="code-string">'Full-Stack Developer'</span>,</div>
+                <div style="padding-left: 14px;"><span class="code-property">location</span>: <span class="code-string">'Vasai-Virar, Mumbai'</span>,</div>
+                <div style="padding-left: 14px;"><span class="code-property">startup</span>: <span class="code-string">'Co-Founder @ KisanX'</span>,</div>
+                <div style="padding-left: 14px;"><span class="code-property">skills</span>: [<span class="code-string">'React'</span>, <span class="code-string">'Node'</span>, <span class="code-string">'PHP'</span>, <span class="code-string">'SEO'</span>],</div>
+                <div style="padding-left: 14px;"><span class="code-property">status</span>: <span class="code-string">'Ready to ship code 🚀'</span></div>
+                <div>};</div>
+              </div>
+
+              <!-- Floating Badges -->
+              <div class="floating-tech-badge badge-top-right">
+                <span>⚛️</span>
+                <span>React &amp; MERN</span>
+              </div>
+              <div class="floating-tech-badge badge-bottom-left">
+                <span>🏆</span>
+                <span>Avishkar 2024-25</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         LOCAL SERVICES & EXPERTISE (SEO SECTION)
+    ================================================================ -->
+    <section id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Services &amp; Solutions</div>
+          <h2 class="section-title">What I Bring to Your Next Project</h2>
+          <p class="section-subtitle">Delivering high-performance, responsive websites and full-stack applications for businesses and startups in Vasai-Virar, Nallasopara, Mumbai, and globally.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon-wrap">🌐</div>
+            <h3>Full-Stack Web Apps</h3>
+            <p>End-to-end web applications crafted with React.js, Node.js, PHP, and MongoDB/MySQL. Scalable architectures from database to frontend.</p>
+            <span class="service-locations-tag">Fast • Secure • Scalable</span>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-wrap">📱</div>
+            <h3>Responsive UI/UX Design</h3>
+            <p>Mobile-first interfaces that look stunning on iPhones, Android devices, tablets, and desktop displays with smooth interactions.</p>
+            <span class="service-locations-tag">100% Mobile Friendly</span>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-wrap">🚀</div>
+            <h3>Local SEO &amp; Speed Optimization</h3>
+            <p>Engineered with structured data (JSON-LD), semantic markup, and Core Web Vitals optimization to rank on Google search and local packs.</p>
+            <span class="service-locations-tag">Vasai-Virar &amp; Mumbai Ranking</span>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon-wrap">⚡</div>
+            <h3>API &amp; Database Design</h3>
+            <p>Secure REST APIs with JWT authentication, clean database schemas, and seamless cloud deployments on Render and Vercel.</p>
+            <span class="service-locations-tag">Clean Architecture</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         TECH STACK MATRIX
+    ================================================================ -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Technical Arsenal</div>
+          <h2 class="section-title">Technologies &amp; Frameworks</h2>
+          <p class="section-subtitle">A comprehensive toolkit spanning modern frontend development, backend logic, databases, and development workflows.</p>
+        </div>
+
+        <div class="stack-categories">
+          <button class="stack-tab active" data-filter="all" type="button">All Technologies</button>
+          <button class="stack-tab" data-filter="frontend" type="button">Frontend</button>
+          <button class="stack-tab" data-filter="backend" type="button">Backend &amp; DB</button>
+          <button class="stack-tab" data-filter="mobile" type="button">Mobile &amp; Tools</button>
+        </div>
+
+        <div class="skills-cards-grid">
+          <div class="skill-pill-card" data-category="frontend">
+            <div class="skill-pill-icon">⚛️</div>
+            <div class="skill-pill-info">
+              <h4>React.js</h4>
+              <span>Frontend • Hooks • State</span>
+            </div>
+          </div>
+
+          <div class="skill-pill-card" data-category="frontend">
+            <div class="skill-pill-icon">⚡</div>
+            <div class="skill-pill-info">
+              <h4>JavaScript (ES6+)</h4>
+              <span>Async/Await • DOM • APIs</span>
+            </div>
+          </div>
+
+          <div class="skill-pill-card" data-category="frontend">
+            <div class="skill-pill-icon">🎨</div>
+            <div class="skill-pill-info">
+              <h4>HTML5 &amp; CSS3</h4>
+              <span>Semantic • Flexbox • Grid</span>
+            </div>
+          </div>
+
+          <div class="skill-pill-card" data-category="backend">
+            <div class="skill-pill-icon">🟢</div>
+            <div class="skill-pill-info">
+              <h4>Node.js &amp; Express</h4>
+              <span>REST APIs • Middleware</span>
+            </div>
+          </div>
+
+          <div class="skill-pill-card" data-category="backend">
+            <div class="skill-pill-icon">🐘</div>
+            <div class="skill-pill-info">
+              <h4>PHP &amp; MySQL</h4>
+              <span>Server-side • Relational DB</span>
+            </div>
+          </div>
+
+          <div class="skill-pill-card" data-category="backend">
+            <div class="skill-pill-icon">🍃</div>
+            <div class="skill-pill-info">
+              <h4>MongoDB</h4>
+              <span>NoSQL • Mongoose Schemas</span>
+            </div>
+          </div>
+
+          <div class="skill-pill-card" data-category="mobile">
+            <div class="skill-pill-icon">📱</div>
+            <div class="skill-pill-info">
+              <h4>React Native</h4>
+              <span>Expo • Mobile UI • Android</span>
+            </div>
+          </div>
+
+          <div class="skill-pill-card" data-category="mobile">
+            <div class="skill-pill-icon">🐙</div>
+            <div class="skill-pill-info">
+              <h4>Git &amp; GitHub</h4>
+              <span>Version Control • CI/CD</span>
+            </div>
+          </div>
+
+          <div class="skill-pill-card" data-category="backend">
+            <div class="skill-pill-icon">🔐</div>
+            <div class="skill-pill-info">
+              <h4>JWT &amp; Auth</h4>
+              <span>Security • Sessions • Tokens</span>
+            </div>
+          </div>
+
+          <div class="skill-pill-card" data-category="frontend">
+            <div class="skill-pill-icon">🔍</div>
+            <div class="skill-pill-info">
+              <h4>SEO &amp; Schema</h4>
+              <span>JSON-LD • Web Vitals</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         FEATURED PROJECTS SHOWCASE
+    ================================================================ -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Featured Work</div>
+          <h2 class="section-title">Projects &amp; Case Studies</h2>
+          <p class="section-subtitle">Real-world web applications and live client portals engineered from concept to deployment.</p>
+        </div>
+
+        <!-- Major Featured Project: KisanX -->
+        <article class="featured-project-card">
+          <div class="featured-project-grid">
+            <div class="project-info">
+              <div class="project-award-badge">
+                <span>🏆</span>
+                <span>Avishkar Research Convention Recognition 2024-25</span>
+              </div>
+              <h3 class="project-heading">KisanX — Agri Marketplace</h3>
+              <div class="project-tagline">Direct-to-Consumer Farmer Marketplace • Web &amp; Mobile Platform</div>
+              
+              <p class="project-desc">
+                An innovative dual-platform solution addressing supply chain inefficiencies for Indian farmers. Engineered end-to-end by Saniya Farooqui: database schema, REST API backend, web application, and cross-platform mobile app.
+              </p>
+
+              <div class="project-specs-list">
+                <div class="spec-item">
+                  <span class="spec-bullet">✓</span>
+                  <span><strong>Web App:</strong> PHP, MySQL, Session Authentication, Responsive UI</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-bullet">✓</span>
+                  <span><strong>Mobile App:</strong> React Native (Expo), Node.js, MongoDB, JWT Auth</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-bullet">✓</span>
+                  <span><strong>Deployment:</strong> Cloud backend hosted on Render, live Android APK build</span>
+                </div>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">JWT</span>
+              </div>
+
+              <div class="project-actions-row">
+                <a href="https://github.com/Saniya1207/kisanX" target="_blank" class="btn btn-primary btn-sm">GitHub Web Repo ↗</a>
+                <a href="https://github.com/Saniya1207/kisanx-backend" target="_blank" class="btn btn-secondary btn-sm">Backend Repo ↗</a>
+                <a href="https://github.com/Anniix/aniket-portfolio/releases/download/v1.0/KisanX.apk" class="btn btn-secondary btn-sm" download>Download APK 📲</a>
+              </div>
+            </div>
+
+            <!-- Interactive Visual Preview -->
+            <div class="dev-card-glass" style="margin: 0 auto; width: 100%;">
+              <div class="dev-card-header">
+                <div class="window-dots">
+                  <span class="window-dot dot-red"></span>
+                  <span class="window-dot dot-yellow"></span>
+                  <span class="window-dot dot-green"></span>
+                </div>
+                <span class="window-file-name">kisanx.app.tsx</span>
+              </div>
+              <div class="code-snippet-box">
+                <span class="code-keyword">import</span> { MarketPlace, FarmerAuth } <span class="code-keyword">from</span> <span class="code-string">'@kisanx/core'</span>;<br><br>
+                <span class="code-keyword">export default function</span> <span class="code-property">KisanX</span>() {<br>
+                &nbsp;&nbsp;<span class="code-keyword">return</span> (<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="code-property">MarketPlace</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">directPricing</span>={<span class="code-keyword">true</span>}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">zeroMiddlemen</span>={<span class="code-keyword">true</span>}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">verifiedFarmers</span>={<span class="code-number">100</span>}%<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;/&gt;<br>
+                &nbsp;&nbsp;);<br>
+                }
+              </div>
+              <div style="margin-top: 16px; font-size: 0.85rem; color: var(--accent-emerald); font-weight: 600;">
+                🌱 Direct Farmer-to-Consumer Connectivity
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Secondary Projects Grid -->
+        <div class="projects-grid">
+          <!-- The Capital Home -->
+          <article class="project-sub-card">
+            <div>
+              <div class="project-award-badge" style="background:rgba(14,165,233,0.15); border-color:rgba(14,165,233,0.3); color:var(--accent-cyan);">
+                <span>🏢</span>
+                <span>Live Client Project</span>
+              </div>
+              <h3>The Capital Home</h3>
+              <p>
+                A high-speed, mobile-first real estate business web portal built with zero bloated dependencies. Features optimized CTAs, lightning load times, and clean UI for property discovery.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Responsive</span>
+              </div>
+            </div>
+            <div class="project-actions-row" style="margin-top: 20px;">
+              <a href="https://anniix.github.io/capital-home/" target="_blank" class="btn btn-primary btn-sm">Visit Live Website ↗</a>
+            </div>
+          </article>
+
+          <!-- Vastu Properties -->
+          <article class="project-sub-card">
+            <div>
+              <div class="project-award-badge" style="background:rgba(99,102,241,0.15); border-color:rgba(99,102,241,0.3); color:var(--accent-indigo);">
+                <span>🏠</span>
+                <span>React Application</span>
+              </div>
+              <h3>Vastu Properties</h3>
+              <p>
+                A dynamic property marketplace built in React.js. Features real-time client-side listing filters, dynamic inventory components, and responsive grid layouts.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Dynamic Filtering</span>
+              </div>
+            </div>
+            <div class="project-actions-row" style="margin-top: 20px;">
+              <a href="https://anniix.github.io/vastuproperties/" target="_blank" class="btn btn-primary btn-sm">Visit Live Website ↗</a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================
+         EXPERIENCE & EDUCATION TIMELINE
+    ================================================================ -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Trajectory</div>
+          <h2 class="section-title">Education &amp; Experience</h2>
+          <p class="section-subtitle">Academic excellence, research conventions, and industry job simulation credentials.</p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Item 1: B.Sc. IT -->
+          <div class="timeline-block">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3>B.Sc. in Information Technology</h3>
+                <span class="timeline-date">2023 – Present (Sem V)</span>
+              </div>
+              <div class="timeline-org">Patkar-Varde College, Mumbai University</div>
+              <p class="timeline-desc">
+                Academic track record: <strong>FY GPA: 8.73 | SY GPA: 8.30</strong>. Specializing in Software Engineering, Database Systems, Web Technologies, and Data Structures while building production-grade software applications.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2: Avishkar Research -->
+          <div class="timeline-block">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3>Avishkar Research Convention Selection</h3>
+                <span class="timeline-date">2024 – 2025</span>
+              </div>
+              <div class="timeline-org">Mumbai University Inter-Collegiate Convention</div>
+              <p class="timeline-desc">
+                Selected from institutional entries to present the KisanX Direct-to-Consumer platform prototype and research methodology tackling supply chain bottlenecks in Indian agriculture.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3: Deloitte Job Simulations -->
+          <div class="timeline-block">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3>Deloitte Technology &amp; Cybersecurity Simulations</h3>
+                <span class="timeline-date">2025 – 2026</span>
+              </div>
+              <div class="timeline-org">Deloitte via Forage</div>
+              <p class="timeline-desc">
+                Completed industry simulations in enterprise software engineering standards, threat modeling, code reviews, vulnerability assessment, and professional technical documentation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         VERIFIABLE CERTIFICATIONS SHOWCASE
+    ================================================================ -->
+    <section id="certifications">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Verified Credentials</div>
+          <h2 class="section-title">Certifications &amp; Training</h2>
+          <p class="section-subtitle">Verified programs completed from prestigious institutions including IIT Bombay and Deloitte.</p>
+        </div>
+
+        <div class="certs-grid">
+          <div class="cert-card">
+            <div class="cert-badge-icon">🔐</div>
+            <div class="cert-details">
+              <h4>Python for Cyber Security</h4>
+              <div class="cert-issuer">CS4ALL / Erasmus+ Programme</div>
+              <div class="cert-meta">Issued Dec 2025 • Threat Analysis &amp; Scripting</div>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-badge-icon">📜</div>
+            <div class="cert-details">
+              <h4>Advanced C++ Training</h4>
+              <div class="cert-issuer">IIT Bombay (Spoken Tutorial)</div>
+              <div class="cert-meta">Issued Mar 2025 • OOP, Memory &amp; STL</div>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-badge-icon">🗄️</div>
+            <div class="cert-details">
+              <h4>PHP &amp; MySQL Training</h4>
+              <div class="cert-issuer">IIT Bombay (EduPyramids)</div>
+              <div class="cert-meta">Issued Sep 2025 • CRUD, Auth &amp; DB Security</div>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-badge-icon">🌐</div>
+            <div class="cert-details">
+              <h4>HTML5 Semantic Training</h4>
+              <div class="cert-issuer">IIT Bombay (Spoken Tutorial)</div>
+              <div class="cert-meta">Issued Oct 2024 • Accessibility &amp; Standards</div>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-badge-icon">💼</div>
+            <div class="cert-details">
+              <h4>Deloitte Tech Simulation</h4>
+              <div class="cert-issuer">Deloitte via Forage</div>
+              <div class="cert-meta">Issued Mar 2026 • Enterprise Development</div>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-badge-icon">📊</div>
+            <div class="cert-details">
+              <h4>R Programming Training</h4>
+              <div class="cert-issuer">IIT Bombay (EduPyramids)</div>
+              <div class="cert-meta">Issued Feb 2026 • Data Analysis &amp; Stats</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         LOCAL SEO FAQ ACCORDION
+    ================================================================ -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Common Queries</div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Answers regarding web development services, location availability, and project timelines.</p>
+        </div>
+
+        <div class="faq-wrap">
+          <div class="faq-accordion-item active">
+            <button class="faq-btn" type="button">
+              <span>Are you available for web development in Vasai-Virar &amp; Nallasopara?</span>
+              <span class="faq-icon-arrow">▼</span>
+            </button>
+            <div class="faq-content" style="max-height: 200px;">
+              <p>Yes! I provide custom web development, frontend UI/UX design, and full-stack website solutions for clients in Vasai-Virar, Nallasopara, Palghar, and Mumbai Metropolitan Region, as well as remote freelance work globally.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-btn" type="button">
+              <span>What technologies do you use to build websites?</span>
+              <span class="faq-icon-arrow">▼</span>
+            </button>
+            <div class="faq-content">
+              <p>My core development stack comprises React.js, modern JavaScript (ES6+), Node.js, Express, PHP, MySQL, MongoDB, and React Native. Every project is built mobile-responsive, high-speed, and SEO-optimized.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-btn" type="button">
+              <span>How do you optimize websites for Google search ranking?</span>
+              <span class="faq-icon-arrow">▼</span>
+            </button>
+            <div class="faq-content">
+              <p>Every website I develop includes semantic HTML5 structure, schema.org JSON-LD structured data (Person, LocalBusiness, FAQ), lightning-fast asset loading for Core Web Vitals, Open Graph previews, and local keyword integration.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-btn" type="button">
+              <span>Are you open to software developer internships or full-time roles?</span>
+              <span class="faq-icon-arrow">▼</span>
+            </button>
+            <div class="faq-content">
+              <p>Absolutely! I am actively looking for software developer internships and entry-level full-stack/frontend positions where I can contribute to production software, collaborate with high-performance teams, and build impactful digital products.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         CONTACT & INSTANT WHATSAPP HUB
+    ================================================================ -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Get in Touch</div>
+          <h2 class="section-title">Let's Build Something Great Together</h2>
+          <p class="section-subtitle">Have a website project, freelance inquiry, or internship opportunity? Send a direct message below.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Direct Channels -->
+          <div class="contact-info-card">
+            <h3>Direct Contact</h3>
+            <p>I respond promptly within 24 hours. Feel free to connect via WhatsApp, email, or social profiles.</p>
+
+            <div class="contact-channels-list">
+              <a href="https://wa.me/917666886033" target="_blank" class="channel-item">
+                <div class="channel-icon">💬</div>
+                <div class="channel-text">
+                  <h4>WhatsApp Instant Chat</h4>
+                  <span>+91 7666886033</span>
+                </div>
+              </a>
+
+              <a href="mailto:saniya122400@gmail.com" class="channel-item">
+                <div class="channel-icon">✉️</div>
+                <div class="channel-text">
+                  <h4>Email Inbox</h4>
+                  <span>saniya122400@gmail.com</span>
+                </div>
+              </a>
+
+              <div class="channel-item">
+                <div class="channel-icon">📍</div>
+                <div class="channel-text">
+                  <h4>Location</h4>
+                  <span>Virar, Vasai-Virar, Mumbai, India</span>
+                </div>
+              </div>
+
+              <a href="https://github.com/Saniya1207" target="_blank" class="channel-item">
+                <div class="channel-icon">🐙</div>
+                <div class="channel-text">
+                  <h4>GitHub Profile</h4>
+                  <span>github.com/Saniya1207</span>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/saniya-farooqui-dev/" target="_blank" class="channel-item">
+                <div class="channel-icon">💼</div>
+                <div class="channel-text">
+                  <h4>LinkedIn Profile</h4>
+                  <span>linkedin.com/in/saniya-farooqui-dev</span>
+                </div>
+              </a>
+            </div>
+
+            <a href="/RESUME.pdf" download class="btn btn-secondary" style="width: 100%;">Download Resume (PDF) 📄</a>
+          </div>
+
+          <!-- Right: WhatsApp Instant Generator Form -->
+          <div class="whatsapp-form-card">
+            <h3 style="font-size: 1.4rem; margin-bottom: 8px;">Send Instant Message</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 24px;">Fill this quick form to automatically open WhatsApp with your pre-formatted project message.</p>
+
+            <form onsubmit="return sendWhatsAppMessage(event)">
+              <div class="form-group">
+                <label for="wa-name" class="form-label">Your Name *</label>
+                <input type="text" id="wa-name" class="form-input" placeholder="e.g. Rahul Sharma" required>
+              </div>
+
+              <div class="form-group">
+                <label for="wa-email" class="form-label">Your Email (Optional)</label>
+                <input type="email" id="wa-email" class="form-input" placeholder="e.g. rahul@example.com">
+              </div>
+
+              <div class="form-group">
+                <label for="wa-service" class="form-label">Service / Opportunity</label>
+                <select id="wa-service" class="form-input">
+                  <option value="Web Development Project">Full-Stack Web Development</option>
+                  <option value="Frontend UI/UX Design">Frontend / UI/UX Design</option>
+                  <option value="Internship / Job Opportunity">Internship / Job Role</option>
+                  <option value="Freelance Consultation">Freelance Consultation</option>
+                  <option value="Other Inquiry">Other Inquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="wa-msg" class="form-label">Your Message *</label>
+                <textarea id="wa-msg" class="form-textarea" placeholder="Tell me about your project or opportunity..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-whatsapp" style="width: 100%;">
+                <span>Send to WhatsApp</span>
+                <span>💬</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ================================================================
+       FOOTER
+  ================================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-row">
+        <div class="footer-brand">
+          <div class="brand-badge">SF</div>
+          <span>Saniya Farooqui</span>
+        </div>
+
+        <ul class="footer-links">
+          <li><a href="#hero" class="footer-link">Home</a></li>
+          <li><a href="#services" class="footer-link">Services</a></li>
+          <li><a href="#skills" class="footer-link">Skills</a></li>
+          <li><a href="#projects" class="footer-link">Projects</a></li>
+          <li><a href="#experience" class="footer-link">Experience</a></li>
+          <li><a href="#certifications" class="footer-link">Certifications</a></li>
+          <li><a href="#faq" class="footer-link">FAQ</a></li>
+          <li><a href="#contact" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>
+          © 2026 Saniya Farooqui. All rights reserved.
+        </div>
+        <div class="footer-geo-tags">
+          Serving: Vasai-Virar • Nallasopara • Mumbai • Worldwide
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Script -->
+  <script src="/assets/js/site.js"></script>
 </body>
 </html>
