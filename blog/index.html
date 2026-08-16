@@ -120,7 +120,7 @@
     <ul id="navLinks">
       <li><a href="/">Home</a></li>
       <li><a href="/about/">About</a></li>
-      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/#projects">Projects</a></li>
       <li><a href="/blog/">Blog</a></li>
       <li><a href="/resume/">Resume</a></li>
       <li><a href="/certifications/">Certifications</a></li>
@@ -139,7 +139,7 @@
       <ul class="overlay-links">
         <li><a href="/" class="ov-link"><span>Home</span></a></li>
         <li><a href="/about/" class="ov-link"><span>About</span></a></li>
-        <li><a href="/projects/" class="ov-link"><span>Projects</span></a></li>
+        <li><a href="/#projects" class="ov-link"><span>Projects</span></a></li>
         <li><a href="/blog/" class="ov-link"><span>Blog</span></a></li>
         <li><a href="/resume/" class="ov-link"><span>Resume</span></a></li>
         <li><a href="/certifications/" class="ov-link"><span>Certifications</span></a></li>
@@ -183,49 +183,89 @@
 </div>
 <section class="page-head">
   <div class="grid-bg" style="opacity:0.3"></div>
-  <p class="page-kicker">Developer Notes</p>
-  <h1>Blog</h1>
-  <p class="page-sub">Notes on building KisanX, choosing between PHP and MERN, securing a React Native app, and what two years of a B.Sc. IT degree actually look like in practice.</p>
+  <p class="page-kicker">ENGINEERING &amp; ARCHITECTURE NOTES</p>
+  <h1>DEVELOPER BLOG</h1>
+  <p class="page-sub">In-depth technical writeups on taking KisanX from PHP to production MERN/React Native, JWT authentication, B2B e-commerce architecture, and real-world full-stack engineering.</p>
 </section>
 
 <section class="subpage-section">
   <div class="subpage-inner wide reveal">
-    <div class="card-grid">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:24px;">
 
-      <a href="/blog/how-i-built-kisanx/" class="entity-card reveal">
-        <div class="entity-eyebrow">Case Study</div>
-        <h3>How I Built KisanX Using MERN Stack and React Native</h3>
-        <p>The decisions, trade-offs, and rebuilds behind taking KisanX from a PHP prototype to a production MERN + React Native app.</p>
-        <span class="entity-cta">Read article &rarr;</span>
-      </a>
+      <article class="blog-card-elevated reveal">
+        <div class="blog-card-meta">
+          <span class="blog-tag-pill">Case Study · Avishkar</span>
+          <span class="blog-read-time">⏱ 7 min read</span>
+        </div>
+        <h3 class="blog-card-heading">
+          <a href="/blog/how-i-built-kisanx/">How I Built KisanX Using MERN Stack and React Native</a>
+        </h3>
+        <p class="blog-card-excerpt">The complete technical decisions, architecture trade-offs, and database schema behind taking KisanX from an initial PHP prototype to a production MERN + React Native mobile ecosystem presented at Mumbai University's Avishkar convention.</p>
+        <div class="blog-card-footer">
+          <span class="blog-author">By Saniya Farooqui</span>
+          <a href="/blog/how-i-built-kisanx/" class="blog-link-arrow">Read Article →</a>
+        </div>
+      </article>
 
-      <a href="/blog/full-stack-journey/" class="entity-card reveal">
-        <div class="entity-eyebrow">Personal</div>
-        <h3>My Journey as a B.Sc IT Student and Full Stack Developer</h3>
-        <p>Balancing a B.Sc. IT degree at Mumbai University with shipping real projects, certifications, and a research convention.</p>
-        <span class="entity-cta">Read article &rarr;</span>
-      </a>
+      <article class="blog-card-elevated reveal" style="transition-delay:0.1s">
+        <div class="blog-card-meta">
+          <span class="blog-tag-pill">Architecture</span>
+          <span class="blog-read-time">⏱ 5 min read</span>
+        </div>
+        <h3 class="blog-card-heading">
+          <a href="/blog/php-vs-mern/">PHP vs MERN Stack: Lessons From Building Real Projects</a>
+        </h3>
+        <p class="blog-card-excerpt">What actually changes in architecture, state management, session handling, and API design when you transition from server-rendered PHP/MySQL to decoupled MERN single-page applications.</p>
+        <div class="blog-card-footer">
+          <span class="blog-author">By Saniya Farooqui</span>
+          <a href="/blog/php-vs-mern/" class="blog-link-arrow">Read Article →</a>
+        </div>
+      </article>
 
-      <a href="/blog/php-vs-mern/" class="entity-card reveal">
-        <div class="entity-eyebrow">Technical</div>
-        <h3>PHP vs MERN Stack: Lessons From Building Real Projects</h3>
-        <p>What actually changes &mdash; architecture, auth, deployment &mdash; when you move a real project from PHP/MySQL to the MERN stack.</p>
-        <span class="entity-cta">Read article &rarr;</span>
-      </a>
+      <article class="blog-card-elevated reveal" style="transition-delay:0.15s">
+        <div class="blog-card-meta">
+          <span class="blog-tag-pill">Mobile &amp; Security</span>
+          <span class="blog-read-time">⏱ 6 min read</span>
+        </div>
+        <h3 class="blog-card-heading">
+          <a href="/blog/react-native-jwt-otp/">React Native JWT Authentication with OTP Verification</a>
+        </h3>
+        <p class="blog-card-excerpt">A production blueprint for handling secure token storage via Expo SecureStore, automatic token refreshing, and SMS OTP verification flows in React Native mobile apps.</p>
+        <div class="blog-card-footer">
+          <span class="blog-author">By Saniya Farooqui</span>
+          <a href="/blog/react-native-jwt-otp/" class="blog-link-arrow">Read Article →</a>
+        </div>
+      </article>
 
-      <a href="/blog/top-fullstack-projects/" class="entity-card reveal">
-        <div class="entity-eyebrow">Portfolio</div>
-        <h3>Top Full Stack Projects Built by Saniya Farooqui</h3>
-        <p>A walkthrough of KisanX, The Capital Home, and Vastu Properties &mdash; what each one taught me about choosing the right stack.</p>
-        <span class="entity-cta">Read article &rarr;</span>
-      </a>
+      <article class="blog-card-elevated reveal" style="transition-delay:0.2s">
+        <div class="blog-card-meta">
+          <span class="blog-tag-pill">Engineering Review</span>
+          <span class="blog-read-time">⏱ 6 min read</span>
+        </div>
+        <h3 class="blog-card-heading">
+          <a href="/blog/top-fullstack-projects/">Top Full Stack Projects Built by Saniya Farooqui</a>
+        </h3>
+        <p class="blog-card-excerpt">An architectural walkthrough of KisanX, Nidhi Pharmaceuticals, The Capital Home, and Vastu Properties — what each commercial and research project taught me about choosing the right stack.</p>
+        <div class="blog-card-footer">
+          <span class="blog-author">By Saniya Farooqui</span>
+          <a href="/blog/top-fullstack-projects/" class="blog-link-arrow">Read Article →</a>
+        </div>
+      </article>
 
-      <a href="/blog/react-native-jwt-otp/" class="entity-card reveal">
-        <div class="entity-eyebrow">Technical</div>
-        <h3>React Native JWT Authentication with OTP Verification</h3>
-        <p>How KisanX's mobile app handles secure sign-up and login using JWT tokens and OTP verification, end to end.</p>
-        <span class="entity-cta">Read article &rarr;</span>
-      </a>
+      <article class="blog-card-elevated reveal" style="transition-delay:0.25s">
+        <div class="blog-card-meta">
+          <span class="blog-tag-pill">Career &amp; Growth</span>
+          <span class="blog-read-time">⏱ 4 min read</span>
+        </div>
+        <h3 class="blog-card-heading">
+          <a href="/blog/full-stack-journey/">My Journey as a B.Sc IT Student and Full Stack Developer</a>
+        </h3>
+        <p class="blog-card-excerpt">Balancing academic excellence (FY GPA 8.73, SY GPA 8.30) with shipping real production code, 5 IIT Bombay certifications, client projects, and university research conventions.</p>
+        <div class="blog-card-footer">
+          <span class="blog-author">By Saniya Farooqui</span>
+          <a href="/blog/full-stack-journey/" class="blog-link-arrow">Read Article →</a>
+        </div>
+      </article>
 
     </div>
   </div>
@@ -271,7 +311,7 @@
     <nav class="footer-nav">
       <a href="/">Home</a>
       <a href="/about/">About</a>
-      <a href="/projects/">Projects</a>
+      <a href="/#projects">Projects</a>
       <a href="/blog/">Blog</a>
       <a href="/resume/">Resume</a>
       <a href="/certifications/">Certifications</a>
