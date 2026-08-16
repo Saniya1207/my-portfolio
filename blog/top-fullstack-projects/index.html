@@ -117,33 +117,36 @@
     <a href="/" class="nav-brand">
       <img src="/logo.svg" alt="Saniya Farooqui Logo" width="44" height="44" style="border-radius:10px;display:block;">
     </a>
-    <ul id="navLinks">
+    <ul id="navLinks" class="nav-links-desktop">
       <li><a href="/">Home</a></li>
-      <li><a href="/about/">About</a></li>
-      <li><a href="/projects/">Projects</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/resume/">Resume</a></li>
-      <li><a href="/certifications/">Certifications</a></li>
-      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/#profile">About</a></li>
+      <li><a href="/#skills">Skills</a></li>
+      <li><a href="/#projects">Projects</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+      <li><a href="/#experience">Experience</a></li>
+      <li><a href="/#certifications">Certifications</a></li>
+      <li><a href="/#contact">Contact</a></li>
     </ul>
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" style="margin-left:10px;">
-      <span class="icon-moon">&#9789;</span><span class="icon-sun">&#9728;&#65039;</span>
-    </button>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-right-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <span class="icon-moon">&#9789;</span><span class="icon-sun">&#9728;&#65039;</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 
   <div id="navOverlay">
     <div class="overlay-inner">
       <ul class="overlay-links">
-        <li><a href="/" class="ov-link"><span>Home</span></a></li>
-        <li><a href="/about/" class="ov-link"><span>About</span></a></li>
-        <li><a href="/projects/" class="ov-link"><span>Projects</span></a></li>
-        <li><a href="/blog/" class="ov-link"><span>Blog</span></a></li>
-        <li><a href="/resume/" class="ov-link"><span>Resume</span></a></li>
-        <li><a href="/certifications/" class="ov-link"><span>Certifications</span></a></li>
-        <li><a href="/contact/" class="ov-link"><span>Contact</span></a></li>
+        <li><a href="/"                class="ov-link"><span class="ov-num">01</span><span>Home</span></a></li>
+        <li><a href="/#profile"         class="ov-link"><span class="ov-num">02</span><span>About &amp; Profile</span></a></li>
+        <li><a href="/#skills"          class="ov-link"><span class="ov-num">03</span><span>Skills &amp; Stack</span></a></li>
+        <li><a href="/#projects"        class="ov-link"><span class="ov-num">04</span><span>Projects &amp; Work</span></a></li>
+        <li><a href="/blog/"           class="ov-link active"><span class="ov-num">05</span><span>Blog Articles</span></a></li>
+        <li><a href="/#certifications"  class="ov-link"><span class="ov-num">06</span><span>Certifications</span></a></li>
+        <li><a href="/#contact"         class="ov-link"><span class="ov-num">07</span><span>Contact &amp; Hire</span></a></li>
       </ul>
       <div class="ov-theme-row">
         <span class="ov-theme-label">Theme</span>
@@ -279,15 +282,20 @@
 
     </div>
 
-    <nav class="footer-nav">
+    <!-- Quick Nav -->
+    <div class="footer-nav">
       <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/projects/">Projects</a>
+      <a href="/#profile">About</a>
+      <a href="/#skills">Skills</a>
+      <a href="/#projects">Projects</a>
       <a href="/blog/">Blog</a>
-      <a href="/resume/">Resume</a>
-      <a href="/certifications/">Certifications</a>
-      <a href="/contact/">Contact</a>
-    </nav>
+      <a href="/#experience">Experience</a>
+      <a href="/#journey">Journey</a>
+      <a href="/#why-hire-me">Why Me</a>
+      <a href="/#certifications">Certifications</a>
+      <a href="/#contact">Contact</a>
+      <a href="/#faq">FAQ</a>
+    </div>
 
     <div class="footer-bottom">
       <div class="footer-copy">&copy; <span>2026</span> Saniya Farooqui &mdash; All rights reserved</div>
