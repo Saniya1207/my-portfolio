@@ -24,6 +24,13 @@
   </url>
 
   <url>
+    <loc>https://www.saniya.me/blog/how-we-built-instantsellmart/</loc>
+    <lastmod>2026-11-20T14:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://www.saniya.me/blog/how-i-built-kisanx/</loc>
     <lastmod>2026-08-16T16:00:00+05:30</lastmod>
     <changefreq>monthly</changefreq>

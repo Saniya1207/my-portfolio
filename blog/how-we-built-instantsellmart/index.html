@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How We Built InstantSellMart: High-Performance Appliance Resale & Doorstep Logistics | Saniya Farooqui</title>
+<meta name="description" content="Inside the engineering of InstantSellMart (instantsellmart.com): building a high-speed reverse-commerce engine with PHP 8.2, MySQL, RazorpayX instant payouts, Google Analytics 4 telemetry, and doorstep logistics.">
+<meta name="author" content="Saniya Farooqui">
+<link rel="canonical" href="https://www.saniya.me/blog/how-we-built-instantsellmart/">
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="How We Built InstantSellMart: High-Performance Appliance Resale & Doorstep Logistics">
+<meta property="og:description" content="Technical case study of InstantSellMart — architecting a scalable reverse-commerce backend, algorithmic condition evaluation, RazorpayX fintech automation, and GA4 telemetry with Aniket Dubey.">
+<meta property="og:url" content="https://www.saniya.me/blog/how-we-built-instantsellmart/">
+<meta property="og:site_name" content="Saniya Farooqui Portfolio">
+<meta property="article:published_time" content="2026-11-01T10:00:00+05:30">
+<meta property="article:author" content="Saniya Farooqui">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How We Built InstantSellMart: High-Performance Appliance Resale & Doorstep Logistics">
+<meta name="twitter:description" content="Deep dive into the PHP 8.2 backend, RazorpayX instant payouts, and GA4 telemetry powering Mumbai's premier used appliance resale platform.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<link rel="icon" type="image/svg+xml" href="/logo.svg">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#fdf2f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#241019" media="(prefers-color-scheme: dark)">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GHS85ETTRD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GHS85ETTRD', { send_page_view: true });
+</script>
+</head>
+<body>
+
+<nav id="mainNav">
+  <div class="nav-bar">
+    <a href="/" class="nav-brand">
+      <img src="/logo.svg" alt="Saniya Farooqui Logo" width="44" height="44" style="border-radius:10px;display:block;">
+    </a>
+    <ul id="navLinks" class="nav-links-desktop">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#profile">About</a></li>
+      <li><a href="/#skills">Skills</a></li>
+      <li><a href="/#projects">Projects</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+      <li><a href="/#experience">Experience</a></li>
+      <li><a href="/#certifications">Certifications</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <span class="icon-moon">&#9789;</span><span class="icon-sun">&#9728;&#65039;</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div id="navOverlay">
+    <div class="overlay-inner">
+      <ul class="overlay-links">
+        <li><a href="/" class="ov-link"><span class="ov-num">01</span><span>Home</span></a></li>
+        <li><a href="/#profile" class="ov-link"><span class="ov-num">02</span><span>About &amp; Profile</span></a></li>
+        <li><a href="/#skills" class="ov-link"><span class="ov-num">03</span><span>Skills &amp; Stack</span></a></li>
+        <li><a href="/#projects" class="ov-link"><span class="ov-num">04</span><span>Projects &amp; Work</span></a></li>
+        <li><a href="/blog/" class="ov-link active"><span class="ov-num">05</span><span>Blog Articles</span></a></li>
+        <li><a href="/#certifications" class="ov-link"><span class="ov-num">06</span><span>Certifications</span></a></li>
+        <li><a href="/#contact" class="ov-link"><span class="ov-num">07</span><span>Contact &amp; Hire</span></a></li>
+      </ul>
+      <div class="ov-theme-row">
+        <span class="ov-theme-label">Theme</span>
+        <button class="theme-toggle" id="themeToggleOverlay" type="button" aria-label="Toggle dark mode">
+          <span class="icon-moon">&#9789;</span><span class="icon-sun">&#9728;&#65039;</span>
+        </button>
+      </div>
+
+      <div class="ov-socials">
+        <a href="https://github.com/Saniya1207" target="_blank" class="ov-social">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/saniya-farooqui-dev/" target="_blank" class="ov-social">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://wa.me/917666886033" target="_blank" class="ov-social">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp
+        </a>
+        <a href="mailto:saniya122400@gmail.com" class="ov-social">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          Email
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="breadcrumb-bar">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li aria-current="page">How We Built InstantSellMart</li>
+  </ol>
+</div>
+
+<section class="page-head" style="padding-bottom:30px;">
+  <div class="grid-bg" style="opacity:0.3"></div>
+  <p class="page-kicker">Case Study &middot; Production Reverse-Commerce Platform</p>
+  <h1>How We Built InstantSellMart: High-Performance Appliance Resale &amp; Doorstep Logistics</h1>
+  <p class="post-meta" style="margin-top:18px;">
+    By Saniya Farooqui &nbsp;&middot;&nbsp; Co-Founded with Aniket Dubey &nbsp;&middot;&nbsp; November 2026 &nbsp;&middot;&nbsp; 8 min read
+  </p>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;">
+    <a href="https://www.instantsellmart.com" target="_blank" rel="noopener" class="card-btn primary" style="font-size:11px;">Visit Live Site ↗ (instantsellmart.com)</a>
+    <a href="https://github.com/Saniya1207/InstantSellMart" target="_blank" rel="noopener" class="card-btn" style="font-size:11px;">⌥ GitHub Repository ↗</a>
+  </div>
+</section>
+
+<section class="subpage-section">
+  <div class="subpage-inner article-body reveal">
+    <div class="toc-box">
+      <div class="toc-label">In This Architecture Breakdown</div>
+      <ol>
+        <li><a href="#the-problem">The Reverse-Commerce Problem in Mumbai</a></li>
+        <li><a href="#the-platform">What InstantSellMart Solves</a></li>
+        <li><a href="#backend-architecture">Backend Architecture &amp; Database Design</a></li>
+        <li><a href="#algorithmic-pricing">Algorithmic Valuation &amp; Condition Engine</a></li>
+        <li><a href="#fintech-razorpayx">Fintech: RazorpayX Payouts &amp; Webhook Security</a></li>
+        <li><a href="#analytics-seo">Google Business &amp; GA4 Telemetry Infrastructure</a></li>
+        <li><a href="#ux-branding">Navigation UX, Bottom Bar &amp; Brand Color System</a></li>
+        <li><a href="#production-lessons">Key Production Takeaways &amp; Engineering Lessons</a></li>
+      </ol>
+    </div>
+
+    <h2 id="the-problem">1. The Reverse-Commerce Problem in Mumbai</h2>
+    <p>Selling used heavy home appliances — particularly <strong>Air Conditioners, Refrigerators, and Washing Machines</strong> — in a dense metropolis like Mumbai is notoriously painful. Traditional avenues like OLX or local scrap dealers (kabadiwalas) introduce friction at every single step:</p>
+    <ul>
+      <li><strong>Aggressive Lowballing:</strong> Sellers receive arbitrary, drastically discounted bids with zero transparency on how the price was derived.</li>
+      <li><strong>Uninstallation Hazards:</strong> Safely unmounting a split AC requires technical expertise to pump down the refrigerant gas without environmental leakage or compressor damage. Washing machines require plumbing isolation. Sellers are frequently asked to unmount heavy machines themselves.</li>
+      <li><strong>Security &amp; Logistics Bottlenecks:</strong> Inviting unverified strangers home, coordinating transport through Mumbai's congested traffic, and waiting days for pickup.</li>
+      <li><strong>Payment Scams:</strong> Fake UPI QR codes, delayed bank transfers, and "I will pay after loading" excuses.</li>
+    </ul>
+
+    <h2 id="the-platform">2. What InstantSellMart Solves</h2>
+    <p>My partner <strong>Aniket Dubey</strong> and I co-founded <a href="https://www.instantsellmart.com" target="_blank" rel="noopener"><strong>InstantSellMart</strong></a> (<code>instantsellmart.com</code>) to turn this chaotic offline trade into a predictable, frictionless digital experience. We built the platform on a foundational triple guarantee:</p>
+    <div style="background:var(--paper2);border:1px solid rgba(61,18,40,0.1);border-radius:12px;padding:20px 24px;margin:24px 0;">
+      <p style="margin:0 0 10px;font-family:'Oswald',sans-serif;font-size:16px;letter-spacing:1px;color:var(--dark);"><strong>THE CORE GUARANTEE:</strong></p>
+      <ul style="margin:0;padding-left:20px;line-height:1.8;color:var(--text);">
+        <li>⚡ <strong>2-Hour Doorstep Pickup:</strong> Rapid turnaround across Western, Central, and Harbour Mumbai.</li>
+        <li>🔧 <strong>Free Professional Uninstallation:</strong> Certified technicians safely dismount ACs and decouple appliances at zero extra cost to the seller.</li>
+        <li>💳 <strong>100% Cashless Digital Payouts:</strong> Instant, guaranteed disbursal directly to the seller's Bank Account or UPI ID via RazorpayX before the appliance leaves the door.</li>
+      </ul>
+    </div>
+
+    <h2 id="backend-architecture">3. Backend Architecture &amp; Database Design</h2>
+    <p>While Aniket focused heavily on field operations, vendor onboarding, and customer acquisition, my primary responsibility was architecting and writing the complete <strong>Backend Engine, Database Schemas, Security Layers, and API Contracts</strong>.</p>
+    <p>We selected <strong>PHP 8.2</strong> running on a hardened Linux Apache stack, backed by <strong>MySQL (InnoDB)</strong>. Instead of bloated frameworks with heavy cold-starts, we crafted an ultra-fast, zero-bloat modular architecture:</p>
+    <ul>
+      <li><code>customer/</code>: Isolated customer-facing progressive web app controllers, booking flows, and self-hosted assets.</li>
+      <li><code>vendor-panel/</code>: Mobile-first pickup management, doorstep verification checklists, and route status updates for logistics partners.</li>
+      <li><code>admin/</code>: Real-time control tower monitoring inbound requests, pricing adjustments, territory pin-code coverage, and payout logs.</li>
+      <li><code>includes/</code>: Shared core service classes including <code>Database.php</code>, <code>EmailService.php</code>, <code>RateLimiter.php</code>, and <code>Auth.php</code>.</li>
+    </ul>
+
+    <h3>Database Schema &amp; Performance Indexes</h3>
+    <p>High-volume order updates and concurrent status polling can quickly degrade relational databases if indexing is neglected. I authored the database migration scripts (such as <code>019_add_performance_indexes.sql</code>), creating composite covering indexes across critical operational tables:</p>
+    <pre><code>-- Composite indexes engineered for instantaneous dashboard and tracking lookups
+CREATE INDEX idx_orders_customer_status ON orders(customer_id, status);
+CREATE INDEX idx_orders_vendor_status   ON orders(vendor_id, status);
+CREATE INDEX idx_orders_created_at      ON orders(created_at);
+CREATE INDEX idx_customers_email_phone  ON customers(email, phone);
+CREATE INDEX idx_audit_log_created      ON audit_log(created_at);
+CREATE INDEX idx_rate_limits_reset      ON rate_limits(ip_address, action, reset_at);</code></pre>
+    <p>To eliminate race conditions during concurrent vendor updates, critical state transitions use atomic database transactions with row-level locks (<code>SELECT ... FOR UPDATE</code>), ensuring an order cannot be processed twice or assigned to competing logistics vendors.</p>
+
+    <h2 id="algorithmic-pricing">4. Algorithmic Valuation &amp; Condition Engine</h2>
+    <p>The centerpiece of InstantSellMart's customer experience is our <strong>Instant Algorithmic Valuation Engine</strong>. Customers don't want to fill out 20 text fields or wait hours for a quotation. They want a fair, binding price in under 60 seconds.</p>
+    <p>I structured a 4-dimensional assessment matrix for every appliance category:</p>
+    <ol>
+      <li><strong>Appliance Domain &amp; Sub-type:</strong> Split AC vs Window AC; Top Load vs Front Load vs Semi-Automatic; Single Door vs Double Door vs Side-by-Side.</li>
+      <li><strong>Brand Tiering:</strong> Tier 1 (Daikin, Voltas, LG, Samsung) vs Tier 2 (Whirlpool, Godrej, Haier) vs Tier 3 (Lloyd, Onida, generic brands), mapped against market resale liquidity.</li>
+      <li><strong>Functional Performance:</strong> Compressor cooling efficiency, drum spinning balance, motor noise, and electrical integrity.</li>
+      <li><strong>Physical Wear &amp; Age:</strong> Year of manufacture, rust severity, dents, and missing accessories (e.g. AC remote, inlet pipes).</li>
+    </ol>
+    <p>The calculation evaluates condition weights in real-time, displaying a transparent price breakdown with zero hidden deductions. When the logistics agent arrives at the doorstep, they perform an identical 4-point verification on their vendor tablet; if the appliance matches the customer's survey, the payout is triggered instantly.</p>
+
+    <h2 id="fintech-razorpayx">5. Fintech: RazorpayX Payouts &amp; Webhook Security</h2>
+    <p>A major friction point in reverse-commerce is payment trust. To eliminate cash handling hazards and fake screenshot fraud, I engineered an automated digital disbursement pipeline powered by <strong>RazorpayX Payout Links API</strong>.</p>
+    <p>When the vendor confirms doorstep pickup, the backend executes an authenticated <code>POST /v1/payout-links</code> call, creating a dedicated payment session bound to the order ID. The seller enters their UPI ID or bank account number, and funds are disbursed via IMPS in seconds.</p>
+
+    <h3>Cryptographic Security &amp; Webhook Ingress</h3>
+    <p>Never trust client-side return redirects for payment confirmations. The only source of truth is signed webhook callbacks from the payment gateway:</p>
+    <ul>
+      <li><strong>HMAC-SHA256 Signature Verification:</strong> Every inbound webhook payload is checked against <code>RAZORPAY_WEBHOOK_SECRET</code>. Any tampered or unsigned payload is dropped immediately with a <code>401 Unauthorized</code>.</li>
+      <li><strong>Fail-Closed Rate Limiter:</strong> Security-sensitive authentication and payout endpoints fail closed if database availability drops, preventing brute-force attacks during network anomalies.</li>
+      <li><strong>Automated Transactional Email Ingress:</strong> Built a custom SMTP socket engine (<code>EmailService.php</code>) featuring branded HTML receipt emails, displaying order summaries, appliance details, and transaction reference numbers.</li>
+    </ul>
+
+    <h2 id="analytics-seo">6. Google Business &amp; GA4 Telemetry Infrastructure</h2>
+    <p>A great web application is useless without discovery and user behaviour tracking. One of my key contributions was establishing the entire <strong>Google Business &amp; Analytics Infrastructure</strong> for InstantSellMart:</p>
+    <ul>
+      <li><strong>Google Business Profile Architecture:</strong> Optimized business categories, service areas covering 50+ Mumbai pin codes, high-resolution branding assets, and customer review response channels.</li>
+      <li><strong>Google Analytics 4 (GA4) Event Funnel:</strong> Implemented comprehensive custom event tracking across the quote-to-payout journey:
+        <ul>
+          <li><code>category_selected</code>: Tracking which appliance types drive the highest traffic.</li>
+          <li><code>condition_assessed</code>: Measuring drop-off rates during the 4-step survey.</li>
+          <li><code>quote_generated</code>: Analyzing offer acceptance ratios.</li>
+          <li><code>booking_completed</code>: Measuring conversion by locality (Andheri, Borivali, Thane, Bandra).</li>
+          <li><code>payout_processed</code>: Final transaction success telemetry.</li>
+        </ul>
+      </li>
+      <li><strong>Structured Schema Markup:</strong> Authored JSON-LD microdata for <code>LocalBusiness</code>, <code>Service</code>, and <code>FAQPage</code>, enabling rich search snippets and star ratings on Google Search.</li>
+    </ul>
+
+    <h2 id="ux-branding">7. Navigation UX, Bottom Bar &amp; Brand Color System</h2>
+    <p>Because over 85% of used-appliance sellers visit via smartphones, desktop-first navigation simply doesn't work. I spearheaded the <strong>Mobile-First Navigation Architecture and Brand Color Palette</strong>:</p>
+    <ul>
+      <li><strong>Persistent Mobile Bottom Bar:</strong> Designed an ergonomic thumb-zone navigation bar featuring instant 1-tap shortcuts to <em>Home</em>, <em>Sell Appliance</em>, <em>Track Request</em>, and <em>WhatsApp Help</em>.</li>
+      <li><strong>Energetic &amp; Trustworthy Color Palette:</strong> Chose a commanding navy blue (symbolizing institutional security, financial safety, and professionalism) paired with warm energetic amber accents (representing rapid dispatch, warmth, and vitality).</li>
+      <li><strong>Zero-Bloat PWA Offline Shell:</strong> Integrated a Service Worker (<code>sw.js</code>) caching critical shell assets, allowing users to view their active booking details even during intermittent Mumbai local train network drops.</li>
+    </ul>
+
+    <h2 id="production-lessons">8. Key Production Takeaways &amp; Engineering Lessons</h2>
+    <p>Building InstantSellMart alongside Aniket taught me profound engineering lessons that classroom projects never could:</p>
+    <ol>
+      <li><strong>Field Reality Dictates Code:</strong> An algorithm that assumes pristine appliance photos fails when a customer uploads a blurry photo taken inside a dimly lit kitchen. We built graceful fallbacks, optional manual overrides, and clear customer instructions.</li>
+      <li><strong>Fintech Requires Defensive Programming:</strong> When real money moves through automated APIs, idempotency keys, atomic row locks, and strict audit logging are not optional luxuries — they are existential necessities.</li>
+      <li><strong>Speed &amp; Zero Bloat Win:</strong> By choosing clean, native PHP 8.2 and targeted JavaScript modules rather than heavy SPA frameworks, our mobile page load times clock in under 1.2 seconds on 4G connections.</li>
+    </ol>
+    <p>InstantSellMart is live and actively serving customers across Mumbai at <a href="https://www.instantsellmart.com" target="_blank" rel="noopener"><strong>www.instantsellmart.com</strong></a>, and the codebase is available for review on GitHub at <a href="https://github.com/Saniya1207/InstantSellMart" target="_blank" rel="noopener"><strong>Saniya1207/InstantSellMart</strong></a>.</p>
+
+    <div class="related-rail">
+      <div class="related-label">Related Reading</div>
+      <ul>
+        <li><a href="/blog/how-i-built-kisanx/">How I Built KisanX Using MERN Stack &amp; React Native &rarr;</a></li>
+        <li><a href="/blog/php-vs-mern/">PHP vs MERN Stack: Lessons From Building Real Projects &rarr;</a></li>
+        <li><a href="/blog/top-fullstack-projects/">Top Full Stack Projects Built by Saniya Farooqui &rarr;</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid"></div>
+  <div class="footer-glow"></div>
+
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand-block">
+        <div class="footer-name"><span>S</span>ANIYA<br><span>F</span>AROOQUI</div>
+        <div class="footer-tagline">Full-Stack Developer &nbsp;&middot;&nbsp; PHP &nbsp;&middot;&nbsp; MERN &nbsp;&middot;&nbsp; React Native &nbsp;&middot;&nbsp; Open to Opportunities</div>
+      </div>
+
+      <div class="footer-monogram">
+        <img src="/logo.svg" alt="Saniya Farooqui Logo" width="90" height="90" style="display:block;">
+      </div>
+
+      <div class="footer-links-block">
+        <div class="footer-heading">Connect</div>
+        <div class="footer-socials">
+          <a href="https://github.com/Saniya1207" target="_blank" class="footer-social-btn" title="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/saniya-farooqui-dev/" target="_blank" class="footer-social-btn" title="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://wa.me/917666886033" target="_blank" class="footer-social-btn" title="WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </a>
+          <a href="mailto:saniya122400@gmail.com" class="footer-social-btn" title="Email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Nav -->
+    <div class="footer-nav">
+      <a href="/">Home</a>
+      <a href="/#profile">About</a>
+      <a href="/#skills">Skills</a>
+      <a href="/#projects">Projects</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#journey">Journey</a>
+      <a href="/#why-hire-me">Why Me</a>
+      <a href="/#certifications">Certifications</a>
+      <a href="/#contact">Contact</a>
+      <a href="/#faq">FAQ</a>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; <span>2026</span> Saniya Farooqui &mdash; All rights reserved</div>
+      <div class="footer-status">
+        <span class="footer-dot"></span>
+        <span>Open to Opportunities</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
