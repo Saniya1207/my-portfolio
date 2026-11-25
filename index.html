@@ -613,61 +613,512 @@
 
     <div class="hero-portrait reveal reveal-right">
       <div class="portrait-placeholder">
-        <svg class="hero-graphic" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decorative illustration of a code editor window">
-          <defs>
-            <linearGradient id="heroGoldLine" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#fdedf3"/>
-              <stop offset="100%" stop-color="#e8a0bb"/>
-            </linearGradient>
-          </defs>
+        <svg class="hero-graphic" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive developer code editor illustration">
+  <defs>
+    <linearGradient id="heroGoldLine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdedf3"/>
+      <stop offset="100%" stop-color="#e8a0bb"/>
+    </linearGradient>
 
-          <!-- corner ornaments, echoing the logo -->
-          <g stroke="var(--dark)" stroke-width="3" stroke-linecap="round" opacity="0.55">
-            <path d="M70 90 V60 H100" fill="none"/>
-            <path d="M530 90 V60 H500" fill="none"/>
-            <path d="M70 710 V740 H100" fill="none"/>
-            <path d="M530 710 V740 H500" fill="none"/>
-          </g>
+    <linearGradient id="editorWindowBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e0c18"/>
+      <stop offset="50%" stop-color="#150711"/>
+      <stop offset="100%" stop-color="#0d030a"/>
+    </linearGradient>
 
-          <!-- floating decorative tags -->
-          <g font-family="'Oswald', sans-serif" font-weight="600" fill="var(--dark)" opacity="0.5">
-            <text x="95" y="170" font-size="22" letter-spacing="1">&lt;/&gt;</text>
-            <text x="445" y="225" font-size="18" letter-spacing="1">{ }</text>
-            <text x="80" y="610" font-size="18" letter-spacing="1">=&gt;</text>
-            <text x="460" y="600" font-size="16" letter-spacing="1">API</text>
-          </g>
+    <linearGradient id="editorBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#c084fc" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.7"/>
+    </linearGradient>
 
-          <!-- tilted code editor window (kept permanently dark, like a real code editor) -->
-          <g transform="translate(300 400) rotate(-4) translate(-220 -165)">
-            <rect x="0" y="0" width="440" height="330" rx="14" fill="#2a1020" opacity="0.92" stroke="#e8a0bb" stroke-width="2"/>
-            <!-- title bar -->
-            <rect x="0" y="0" width="440" height="36" rx="14" fill="#1f0c18"/>
-            <circle cx="22" cy="18" r="6" fill="#8b3a1a"/>
-            <circle cx="44" cy="18" r="6" fill="#e8a0bb"/>
-            <circle cx="66" cy="18" r="6" fill="#3a7a3a"/>
-            <text x="220" y="23" text-anchor="middle" font-family="'Oswald', sans-serif" font-size="11" letter-spacing="2" fill="#e8a0bb" opacity="0.7">KISANX.JSX</text>
+    <linearGradient id="tabActiveBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a1222"/>
+      <stop offset="100%" stop-color="#1e0c18"/>
+    </linearGradient>
 
-            <!-- code lines -->
-            <g fill="none" stroke-linecap="round">
-              <rect x="28" y="62"  width="150" height="9" rx="4" fill="#e8a0bb" opacity="0.9"/>
-              <rect x="28" y="86"  width="230" height="9" rx="4" fill="#fdedf3" opacity="0.75"/>
-              <rect x="52" y="110" width="190" height="9" rx="4" fill="#fdedf3" opacity="0.55"/>
-              <rect x="52" y="134" width="140" height="9" rx="4" fill="#3a7a3a" opacity="0.7"/>
-              <rect x="76" y="158" width="170" height="9" rx="4" fill="#fdedf3" opacity="0.45"/>
-              <rect x="76" y="182" width="110" height="9" rx="4" fill="#e8a0bb" opacity="0.8"/>
-              <rect x="28" y="214" width="200" height="9" rx="4" fill="#fdedf3" opacity="0.55"/>
-              <rect x="28" y="238" width="260" height="9" rx="4" fill="#fdedf3" opacity="0.35"/>
-              <rect x="52" y="262" width="120" height="9" rx="4" fill="#8b3a1a" opacity="0.7"/>
-              <rect x="28" y="294" width="60"  height="9" rx="4" fill="#e8a0bb" opacity="0.9"/>
-            </g>
+    <filter id="heroWindowShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#3d1228" flood-opacity="0.55"/>
+    </filter>
 
-            <!-- blinking cursor -->
-            <rect x="190" y="294" width="3" height="11" fill="#fdedf3" opacity="0.9"/>
-          </g>
+    <filter id="badgeGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
 
-          <!-- large monogram glyph, bottom right, echoing the brand mark -->
-          <text x="470" y="700" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="700" font-style="italic" fill="url(#heroGoldLine)" opacity="0.85">SF</text>
-        </svg>
+  <!-- Ambient geometric grid / corner ornaments -->
+  <g stroke="var(--dark)" stroke-width="2.5" stroke-linecap="round" opacity="0.45">
+    <path d="M60 80 V50 H90" fill="none"/>
+    <path d="M540 80 V50 H510" fill="none"/>
+    <path d="M60 720 V750 H90" fill="none"/>
+    <path d="M540 720 V750 H510" fill="none"/>
+  </g>
+
+  <!-- Floating decorative developer tags -->
+  <g font-family="'Oswald', sans-serif" font-weight="600" fill="var(--dark)" opacity="0.4">
+    <text x="85" y="160" font-size="20" letter-spacing="1">&lt;/&gt;</text>
+    <text x="480" y="195" font-size="18" letter-spacing="1">{ }</text>
+    <text x="65" y="640" font-size="18" letter-spacing="1">=&gt;</text>
+    <text x="490" y="650" font-size="16" letter-spacing="1">API</text>
+  </g>
+
+  <!-- MAIN TILTED CODE EDITOR WINDOW -->
+  <g transform="translate(300 405) rotate(-2.5) scale(1.12) translate(-225 -175)" filter="url(#heroWindowShadow)">
+    <!-- Outer Window Frame -->
+    <rect x="0" y="0" width="450" height="350" rx="14" fill="url(#editorWindowBg)" stroke="url(#editorBorderGrad)" stroke-width="1.8"/>
+
+    <!-- Window Header / Titlebar -->
+    <rect x="0" y="0" width="450" height="38" rx="14" fill="#14060f"/>
+    <rect x="0" y="24" width="450" height="14" fill="#14060f"/>
+    <line x1="0" y1="38" x2="450" y2="38" stroke="rgba(244,114,182,0.15)" stroke-width="1"/>
+
+    <!-- Window Traffic Light Controls -->
+    <circle cx="20" cy="19" r="5.5" fill="#ff5f56"/>
+    <circle cx="36" cy="19" r="5.5" fill="#ffbd2e"/>
+    <circle cx="52" cy="19" r="5.5" fill="#27c93f"/>
+
+    <!-- ==================== TABS ==================== -->
+    <!-- Tab 1: KisanX (Active by default) -->
+    <g id="tabBtnKisanX" transform="translate(68, 6)" style="cursor:pointer; pointer-events:all;" onclick="switchHeroTab('kisanx')">
+      <rect id="tabBgKisanX" width="118" height="32" rx="6" fill="url(#tabActiveBg)" stroke="rgba(244,114,182,0.4)" stroke-width="1" pointer-events="all"/>
+      <rect id="tabLineKisanX" x="0" y="30" width="118" height="2" fill="#f472b6"/>
+      <text id="tabTextKisanX" x="14" y="20" font-family="'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="10" font-weight="600" fill="#fdedf3" pointer-events="none">🌾 KisanX.tsx</text>
+    </g>
+
+    <!-- Tab 2: InstantSellMart (PHP) -->
+    <g id="tabBtnSellMart" transform="translate(192, 6)" style="cursor:pointer; pointer-events:all;" onclick="switchHeroTab('sellmart')">
+      <rect id="tabBgSellMart" width="124" height="32" rx="6" fill="rgba(255,255,255,0.001)" stroke="transparent" stroke-width="1" pointer-events="all"/>
+      <rect id="tabLineSellMart" x="0" y="30" width="124" height="2" fill="transparent"/>
+      <text id="tabTextSellMart" x="12" y="20" font-family="'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="10" fill="#e8a0bb" opacity="0.65" pointer-events="none">⚡ SellMart.php</text>
+    </g>
+
+    <!-- Tab 3: Nidhi Pharmaceuticals (JS/PHP) -->
+    <g id="tabBtnPharma" transform="translate(322, 6)" style="cursor:pointer; pointer-events:all;" onclick="switchHeroTab('pharma')">
+      <rect id="tabBgPharma" width="120" height="32" rx="6" fill="rgba(255,255,255,0.001)" stroke="transparent" stroke-width="1" pointer-events="all"/>
+      <rect id="tabLinePharma" x="0" y="30" width="120" height="2" fill="transparent"/>
+      <text id="tabTextPharma" x="12" y="20" font-family="'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="10" fill="#e8a0bb" opacity="0.55" pointer-events="none">💊 Pharma.js</text>
+    </g>
+
+    <!-- Gutter line -->
+    <line x1="38" y1="38" x2="38" y2="326" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+    <!-- Gutter line numbers -->
+    <g font-family="'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="9.5" fill="#e8a0bb" opacity="0.32" text-anchor="end">
+      <text x="30" y="62">1</text>
+      <text x="30" y="84">2</text>
+      <text x="30" y="106">3</text>
+      <text x="30" y="128">4</text>
+      <text x="30" y="150">5</text>
+      <text x="30" y="172">6</text>
+      <text x="30" y="194">7</text>
+      <text x="30" y="216">8</text>
+      <text x="30" y="238">9</text>
+      <text x="30" y="260">10</text>
+      <text x="30" y="282">11</text>
+      <text x="30" y="304">12</text>
+    </g>
+
+    <!-- ==================== CODE SNIPPET 1: KISANX.TSX ==================== -->
+    <g id="codeKisanX" font-family="'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="10" letter-spacing="0.2">
+      <!-- Line 1 -->
+      <text x="48" y="62">
+        <tspan fill="#f472b6" font-weight="600">import</tspan>
+        <tspan fill="#fdf2f8"> { </tspan>
+        <tspan fill="#38bdf8">useState</tspan>
+        <tspan fill="#fdf2f8">, </tspan>
+        <tspan fill="#38bdf8">useEffect</tspan>
+        <tspan fill="#fdf2f8"> } </tspan>
+        <tspan fill="#f472b6" font-weight="600">from</tspan>
+        <tspan fill="#4ade80"> 'react'</tspan>
+        <tspan fill="#fdf2f8">;</tspan>
+      </text>
+
+      <!-- Line 2 -->
+      <text x="48" y="84">
+        <tspan fill="#f472b6" font-weight="600">import</tspan>
+        <tspan fill="#fdf2f8"> { </tspan>
+        <tspan fill="#38bdf8">View</tspan>
+        <tspan fill="#fdf2f8">, </tspan>
+        <tspan fill="#38bdf8">Text</tspan>
+        <tspan fill="#fdf2f8">, </tspan>
+        <tspan fill="#38bdf8">TouchableOpacity</tspan>
+        <tspan fill="#fdf2f8"> } </tspan>
+        <tspan fill="#f472b6" font-weight="600">from</tspan>
+        <tspan fill="#4ade80"> 'react-native'</tspan>
+        <tspan fill="#fdf2f8">;</tspan>
+      </text>
+
+      <!-- Line 3 -->
+      <text x="48" y="106" fill="#c084fc" font-style="italic" opacity="0.85">
+        // 🌾 KisanX: Direct Farmer Marketplace
+      </text>
+
+      <!-- Line 4 -->
+      <text x="48" y="128">
+        <tspan fill="#f472b6" font-weight="600">export const</tspan>
+        <tspan fill="#38bdf8"> ProduceCard</tspan>
+        <tspan fill="#f43f5e"> = </tspan>
+        <tspan fill="#fdf2f8">({ </tspan>
+        <tspan fill="#fbbf24">crop</tspan>
+        <tspan fill="#fdf2f8">, </tspan>
+        <tspan fill="#fbbf24">farmer</tspan>
+        <tspan fill="#fdf2f8"> }) =&gt; {</tspan>
+      </text>
+
+      <!-- Line 5 -->
+      <text x="64" y="150">
+        <tspan fill="#f472b6" font-weight="600">const</tspan>
+        <tspan fill="#fdf2f8"> [</tspan>
+        <tspan fill="#fbbf24">cartQty</tspan>
+        <tspan fill="#fdf2f8">, </tspan>
+        <tspan fill="#38bdf8">setCartQty</tspan>
+        <tspan fill="#fdf2f8">] = </tspan>
+        <tspan fill="#38bdf8">useState</tspan>
+        <tspan fill="#fdf2f8">(</tspan>
+        <tspan fill="#fbbf24">1</tspan>
+        <tspan fill="#fdf2f8">);</tspan>
+      </text>
+
+      <!-- Line 6 -->
+      <text x="64" y="172">
+        <tspan fill="#f472b6" font-weight="600">const</tspan>
+        <tspan fill="#38bdf8"> handleDirectOrder</tspan>
+        <tspan fill="#f43f5e"> = </tspan>
+        <tspan fill="#f472b6" font-weight="600">async</tspan>
+        <tspan fill="#fdf2f8"> () =&gt; {</tspan>
+      </text>
+
+      <!-- Line 7 -->
+      <text x="80" y="194">
+        <tspan fill="#f472b6" font-weight="600">await</tspan>
+        <tspan fill="#38bdf8"> api</tspan>
+        <tspan fill="#fdf2f8">.</tspan>
+        <tspan fill="#38bdf8">post</tspan>
+        <tspan fill="#fdf2f8">(</tspan>
+        <tspan fill="#4ade80">'/api/orders/direct'</tspan>
+        <tspan fill="#fdf2f8">, {</tspan>
+      </text>
+
+      <!-- Line 8 -->
+      <text x="96" y="216">
+        <tspan fill="#fbbf24">cropId</tspan>
+        <tspan fill="#fdf2f8">: crop.</tspan>
+        <tspan fill="#fbbf24">_id</tspan>
+        <tspan fill="#fdf2f8">, </tspan>
+        <tspan fill="#fbbf24">farmerUPI</tspan>
+        <tspan fill="#fdf2f8">: farmer.</tspan>
+        <tspan fill="#fbbf24">vpa</tspan>
+      </text>
+
+      <!-- Line 9 -->
+      <text x="80" y="238" fill="#fdf2f8">});</text>
+
+      <!-- Line 10 -->
+      <text x="64" y="260">
+        <tspan fill="#fdf2f8">};</tspan>
+      </text>
+
+      <!-- Line 11 -->
+      <text x="64" y="282">
+        <tspan fill="#f472b6" font-weight="600">return</tspan>
+        <tspan fill="#fdf2f8"> &lt;</tspan>
+        <tspan fill="#38bdf8">MarketView</tspan>
+        <tspan fill="#fbbf24"> crop</tspan>
+        <tspan fill="#fdf2f8">={crop} </tspan>
+        <tspan fill="#fbbf24">onBuy</tspan>
+        <tspan fill="#fdf2f8">={handleDirectOrder} /&gt;;</tspan>
+      </text>
+
+      <!-- Line 12 -->
+      <text x="48" y="304" fill="#fdf2f8">};</text>
+      <rect x="66" y="293" width="7" height="13" fill="#f472b6" rx="1">
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- ==================== CODE SNIPPET 2: SELLMART.PHP ==================== -->
+    <g id="codeSellMart" font-family="'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="10" letter-spacing="0.2" style="display:none;">
+      <!-- Line 1 -->
+      <text x="48" y="62">
+        <tspan fill="#f43f5e" font-weight="600">&lt;?php</tspan>
+        <tspan fill="#f472b6"> declare</tspan>
+        <tspan fill="#fdf2f8">(strict_types=1);</tspan>
+      </text>
+
+      <!-- Line 2 -->
+      <text x="48" y="84">
+        <tspan fill="#f472b6" font-weight="600">namespace</tspan>
+        <tspan fill="#38bdf8"> InstantSellMart\Fintech</tspan>
+        <tspan fill="#fdf2f8">;</tspan>
+      </text>
+
+      <!-- Line 3 -->
+      <text x="48" y="106" fill="#c084fc" font-style="italic" opacity="0.85">
+        // ⚡ RazorpayX Instant Doorstep IMPS/UPI Payout
+      </text>
+
+      <!-- Line 4 -->
+      <text x="48" y="128">
+        <tspan fill="#f472b6" font-weight="600">final class</tspan>
+        <tspan fill="#38bdf8"> PayoutEngine</tspan>
+        <tspan fill="#fdf2f8"> {</tspan>
+      </text>
+
+      <!-- Line 5 -->
+      <text x="64" y="150">
+        <tspan fill="#f472b6" font-weight="600">public function</tspan>
+        <tspan fill="#38bdf8"> disburse</tspan>
+        <tspan fill="#fdf2f8">(Order $order): </tspan>
+        <tspan fill="#fbbf24">array</tspan>
+        <tspan fill="#fdf2f8"> {</tspan>
+      </text>
+
+      <!-- Line 6 -->
+      <text x="80" y="172">
+        <tspan fill="#fbbf24">$payout</tspan>
+        <tspan fill="#fdf2f8"> = </tspan>
+        <tspan fill="#fbbf24">$this</tspan>
+        <tspan fill="#fdf2f8">-&gt;</tspan>
+        <tspan fill="#38bdf8">razorpayx</tspan>
+        <tspan fill="#fdf2f8">-&gt;</tspan>
+        <tspan fill="#38bdf8">payouts</tspan>
+        <tspan fill="#fdf2f8">-&gt;</tspan>
+        <tspan fill="#38bdf8">create</tspan>
+        <tspan fill="#fdf2f8">([</tspan>
+      </text>
+
+      <!-- Line 7 -->
+      <text x="96" y="194">
+        <tspan fill="#4ade80">'account_number'</tspan>
+        <tspan fill="#fdf2f8"> =&gt; </tspan>
+        <tspan fill="#fbbf24">$order</tspan>
+        <tspan fill="#fdf2f8">-&gt;</tspan>
+        <tspan fill="#fbbf24">vendorUPI</tspan>
+        <tspan fill="#fdf2f8">,</tspan>
+      </text>
+
+      <!-- Line 8 -->
+      <text x="96" y="216">
+        <tspan fill="#4ade80">'amount'</tspan>
+        <tspan fill="#fdf2f8"> =&gt; </tspan>
+        <tspan fill="#fbbf24">$order</tspan>
+        <tspan fill="#fdf2f8">-&gt;</tspan>
+        <tspan fill="#fbbf24">valuation</tspan>
+        <tspan fill="#fdf2f8"> * 100,</tspan>
+      </text>
+
+      <!-- Line 9 -->
+      <text x="96" y="238">
+        <tspan fill="#4ade80">'mode'</tspan>
+        <tspan fill="#fdf2f8"> =&gt; </tspan>
+        <tspan fill="#4ade80">'UPI'</tspan>
+        <tspan fill="#fdf2f8">, </tspan>
+        <tspan fill="#4ade80">'purpose'</tspan>
+        <tspan fill="#fdf2f8"> =&gt; </tspan>
+        <tspan fill="#4ade80">'payout'</tspan>
+      </text>
+
+      <!-- Line 10 -->
+      <text x="80" y="260">
+        <tspan fill="#fdf2f8">]);</tspan>
+      </text>
+
+      <!-- Line 11 -->
+      <text x="80" y="282">
+        <tspan fill="#f472b6" font-weight="600">return</tspan>
+        <tspan fill="#fdf2f8"> [</tspan>
+        <tspan fill="#4ade80">'status'</tspan>
+        <tspan fill="#fdf2f8"> =&gt; </tspan>
+        <tspan fill="#4ade80">'disbursed'</tspan>
+        <tspan fill="#fdf2f8">, </tspan>
+        <tspan fill="#4ade80">'verified'</tspan>
+        <tspan fill="#fdf2f8"> =&gt; </tspan>
+        <tspan fill="#f472b6">true</tspan>
+        <tspan fill="#fdf2f8">];</tspan>
+      </text>
+
+      <!-- Line 12 -->
+      <text x="64" y="304" fill="#fdf2f8">}</text>
+      <text x="48" y="324" fill="#fdf2f8">}</text>
+      <rect x="58" y="313" width="7" height="13" fill="#f472b6" rx="1">
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- ==================== CODE SNIPPET 3: PHARMA.JS ==================== -->
+    <g id="codePharma" font-family="'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="10" letter-spacing="0.2" style="display:none;">
+      <!-- Line 1 -->
+      <text x="48" y="62">
+        <tspan fill="#f472b6" font-weight="600">import</tspan>
+        <tspan fill="#fdf2f8"> { </tspan>
+        <tspan fill="#38bdf8">db</tspan>
+        <tspan fill="#fdf2f8"> } </tspan>
+        <tspan fill="#f472b6" font-weight="600">from</tspan>
+        <tspan fill="#4ade80"> './firebase.config.js'</tspan>
+        <tspan fill="#fdf2f8">;</tspan>
+      </text>
+
+      <!-- Line 2 -->
+      <text x="48" y="84">
+        <tspan fill="#f472b6" font-weight="600">import</tspan>
+        <tspan fill="#fdf2f8"> { </tspan>
+        <tspan fill="#38bdf8">doc</tspan>
+        <tspan fill="#fdf2f8">, </tspan>
+        <tspan fill="#38bdf8">updateDoc</tspan>
+        <tspan fill="#fdf2f8">, </tspan>
+        <tspan fill="#38bdf8">increment</tspan>
+        <tspan fill="#fdf2f8"> } </tspan>
+        <tspan fill="#f472b6" font-weight="600">from</tspan>
+        <tspan fill="#4ade80"> 'firebase/firestore'</tspan>
+        <tspan fill="#fdf2f8">;</tspan>
+      </text>
+
+      <!-- Line 3 -->
+      <text x="48" y="106" fill="#c084fc" font-style="italic" opacity="0.85">
+        // 💊 Proportional Pill Tier Pricing (30-500 Units)
+      </text>
+
+      <!-- Line 4 -->
+      <text x="48" y="128">
+        <tspan fill="#f472b6" font-weight="600">export function</tspan>
+        <tspan fill="#38bdf8"> calculateTierPrice</tspan>
+        <tspan fill="#fdf2f8">(</tspan>
+        <tspan fill="#fbbf24">units</tspan>
+        <tspan fill="#fdf2f8">, </tspan>
+        <tspan fill="#fbbf24">baseRate</tspan>
+        <tspan fill="#fdf2f8">) {</tspan>
+      </text>
+
+      <!-- Line 5 -->
+      <text x="64" y="150">
+        <tspan fill="#f472b6" font-weight="600">const</tspan>
+        <tspan fill="#fbbf24"> disc</tspan>
+        <tspan fill="#f43f5e"> = </tspan>
+        <tspan fill="#fbbf24">units</tspan>
+        <tspan fill="#fdf2f8"> &gt;= </tspan>
+        <tspan fill="#fbbf24">500</tspan>
+        <tspan fill="#fdf2f8"> ? </tspan>
+        <tspan fill="#fbbf24">0.35</tspan>
+        <tspan fill="#fdf2f8"> : (</tspan>
+        <tspan fill="#fbbf24">units</tspan>
+        <tspan fill="#fdf2f8"> &gt;= </tspan>
+        <tspan fill="#fbbf24">100</tspan>
+        <tspan fill="#fdf2f8"> ? </tspan>
+        <tspan fill="#fbbf24">0.20</tspan>
+        <tspan fill="#fdf2f8"> : </tspan>
+        <tspan fill="#fbbf24">0.05</tspan>
+        <tspan fill="#fdf2f8">);</tspan>
+      </text>
+
+      <!-- Line 6 -->
+      <text x="64" y="172">
+        <tspan fill="#f472b6" font-weight="600">return</tspan>
+        <tspan fill="#38bdf8"> Math</tspan>
+        <tspan fill="#fdf2f8">.</tspan>
+        <tspan fill="#38bdf8">round</tspan>
+        <tspan fill="#fdf2f8">(</tspan>
+        <tspan fill="#fbbf24">units</tspan>
+        <tspan fill="#fdf2f8"> * </tspan>
+        <tspan fill="#fbbf24">baseRate</tspan>
+        <tspan fill="#fdf2f8"> * (</tspan>
+        <tspan fill="#fbbf24">1</tspan>
+        <tspan fill="#fdf2f8"> - </tspan>
+        <tspan fill="#fbbf24">disc</tspan>
+        <tspan fill="#fdf2f8">));</tspan>
+      </text>
+
+      <!-- Line 7 -->
+      <text x="48" y="194" fill="#fdf2f8">}</text>
+
+      <!-- Line 8 -->
+      <text x="48" y="216" fill="#c084fc" font-style="italic" opacity="0.85">
+        // 🔒 Atomic Firestore Inventory Decrement
+      </text>
+
+      <!-- Line 9 -->
+      <text x="48" y="238">
+        <tspan fill="#f472b6" font-weight="600">export async function</tspan>
+        <tspan fill="#38bdf8"> decrementStock</tspan>
+        <tspan fill="#fdf2f8">(</tspan>
+        <tspan fill="#fbbf24">id</tspan>
+        <tspan fill="#fdf2f8">, </tspan>
+        <tspan fill="#fbbf24">qty</tspan>
+        <tspan fill="#fdf2f8">) {</tspan>
+      </text>
+
+      <!-- Line 10 -->
+      <text x="64" y="260">
+        <tspan fill="#f472b6" font-weight="600">const</tspan>
+        <tspan fill="#fbbf24"> ref</tspan>
+        <tspan fill="#fdf2f8"> = </tspan>
+        <tspan fill="#38bdf8">doc</tspan>
+        <tspan fill="#fdf2f8">(</tspan>
+        <tspan fill="#38bdf8">db</tspan>
+        <tspan fill="#fdf2f8">, </tspan>
+        <tspan fill="#4ade80">'products'</tspan>
+        <tspan fill="#fdf2f8">, </tspan>
+        <tspan fill="#fbbf24">id</tspan>
+        <tspan fill="#fdf2f8">);</tspan>
+      </text>
+
+      <!-- Line 11 -->
+      <text x="64" y="282">
+        <tspan fill="#f472b6" font-weight="600">await</tspan>
+        <tspan fill="#38bdf8"> updateDoc</tspan>
+        <tspan fill="#fdf2f8">(</tspan>
+        <tspan fill="#fbbf24">ref</tspan>
+        <tspan fill="#fdf2f8">, { </tspan>
+        <tspan fill="#fbbf24">stock</tspan>
+        <tspan fill="#fdf2f8">: </tspan>
+        <tspan fill="#38bdf8">increment</tspan>
+        <tspan fill="#fdf2f8">(-</tspan>
+        <tspan fill="#fbbf24">qty</tspan>
+        <tspan fill="#fdf2f8">) });</tspan>
+      </text>
+
+      <!-- Line 12 -->
+      <text x="48" y="304" fill="#fdf2f8">}</text>
+      <rect x="62" y="293" width="7" height="13" fill="#f472b6" rx="1">
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Bottom Editor Status Bar -->
+    <rect x="0" y="326" width="450" height="24" rx="0" fill="#11050d"/>
+    <rect x="0" y="336" width="450" height="14" rx="14" fill="#11050d"/>
+    <line x1="0" y1="326" x2="450" y2="326" stroke="rgba(244,114,182,0.12)" stroke-width="1"/>
+    
+    <g font-family="'Fira Code', 'JetBrains Mono', Consolas, monospace" font-size="8.5" fill="#e8a0bb" opacity="0.75">
+      <text id="heroStatusLeft" x="14" y="342">🌿 main*  ·  TypeScript React  ·  UTF-8</text>
+      <text id="heroStatusRight" x="436" y="342" text-anchor="end" fill="#4ade80">✓ 0 Errors  ·  100% Tests</text>
+    </g>
+  </g>
+
+  <!-- FLOATING BADGES (Rendered ON TOP of window, in foreground) -->
+  <!-- Floating Tech Badge 1: Top Right (Now at y=155, fully clear of the window!) -->
+  <g id="heroBadge1" transform="translate(345, 130) scale(1.06) rotate(4)" filter="url(#badgeGlow)">
+    <rect width="185" height="34" rx="17" fill="#190713" stroke="#38bdf8" stroke-width="1.6" opacity="0.95"/>
+    <circle cx="20" cy="17" r="4.5" fill="#38bdf8"/>
+    <text id="heroBadge1Text" x="32" y="21.5" font-family="'Oswald', sans-serif" font-size="10.5" font-weight="600" letter-spacing="1" fill="#bae6fd">⚡ RAZORPAYX FINTECH</text>
+  </g>
+
+  <!-- Floating Tech Badge 2: Bottom Left -->
+  <g id="heroBadge2" transform="translate(42, 630) scale(1.06) rotate(-4)" filter="url(#badgeGlow)">
+    <rect width="180" height="34" rx="17" fill="#190713" stroke="#4ade80" stroke-width="1.6" opacity="0.95"/>
+    <circle cx="20" cy="17" r="4.5" fill="#4ade80"/>
+    <text id="heroBadge2Text" x="32" y="21.5" font-family="'Oswald', sans-serif" font-size="10.5" font-weight="600" letter-spacing="1" fill="#dcfce7">🌾 KISANX · D2C AGRI</text>
+  </g>
+
+  <!-- Floating Tech Badge 3: Bottom Right -->
+  <g id="heroBadge3" transform="translate(350, 642) scale(1.06) rotate(3)" filter="url(#badgeGlow)">
+    <rect width="190" height="34" rx="17" fill="#190713" stroke="#f472b6" stroke-width="1.6" opacity="0.95"/>
+    <circle cx="20" cy="17" r="4.5" fill="#f472b6"/>
+    <text id="heroBadge3Text" x="32" y="21.5" font-family="'Oswald', sans-serif" font-size="10.5" font-weight="600" letter-spacing="1" fill="#fce7f3">🔒 HMAC-SHA256 VERIFIED</text>
+  </g>
+
+  <!-- Large monogram glyph, bottom right, echoing the brand mark -->
+  <text x="470" y="720" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="700" font-style="italic" fill="url(#heroGoldLine)" opacity="0.75">SF</text>
+</svg>
       </div>
     </div>
   </div>
@@ -834,7 +1285,7 @@
       <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px;">
         <div class="major-project-name" style="margin-bottom:0;font-size:26px;">InstantSellMart</div>
         <span class="project-badge-pill">💼 Client Paid Project</span>
-        <span class="project-badge-pill" style="background:rgba(217,70,130,0.15);color:var(--accent2);border:1px solid rgba(217,70,130,0.25);">Co-Founded &amp; Built with Aniket Dubey</span>
+        <span class="project-badge-pill" style="background:rgba(217,70,130,0.15);color:var(--accent2);border:1px solid rgba(217,70,130,0.25);">Co-Built with partner <a href="https://aniketdubey.in" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;font-weight:600;">Aniket Dubey</a></span>
       </div>
       <p style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:2px;color:var(--accent2);text-transform:uppercase;margin-bottom:12px;">High-Performance Appliance Resale &amp; Doorstep Logistics Platform &middot; PHP 8.2 &middot; MySQL &middot; RazorpayX &middot; PWA</p>
       
@@ -940,13 +1391,14 @@
       <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px;">
         <div class="major-project-name" style="margin-bottom:0;font-size:26px;">Nidhi Pharmaceuticals</div>
         <span class="project-badge-pill">💼 Client Paid Project</span>
+        <span class="project-badge-pill" style="background:rgba(217,70,130,0.15);color:var(--accent2);border:1px solid rgba(217,70,130,0.25);">Co-Built with partner <a href="https://aniketdubey.in" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;font-weight:600;">Aniket Dubey</a></span>
         <span class="project-badge-pill" style="background:rgba(37,99,235,0.15);color:#2563eb;border:1px solid rgba(37,99,235,0.25);">Commercial Client Deployment</span>
       </div>
       <p style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:2px;color:var(--accent2);text-transform:uppercase;margin-bottom:12px;">High-Performance International Medicine Marketplace &amp; Administration Portal &middot; Firebase &middot; Firestore &middot; Security.js</p>
 
       <p class="major-desc" style="max-width:850px;margin-bottom:12px;"><strong style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1px;color:var(--dark)">THE PROBLEM:</strong> Commercial pharmaceutical distribution requires stringent compliance, verified active formulation catalogs across 20+ specialized medical domains, dynamic tiered volume pricing (30 to 500 units), and real-time inventory decrement without overselling or administrative latency.</p>
 
-      <p class="major-desc" style="max-width:850px;margin-bottom:12px;"><strong style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1px;color:var(--dark)">THE SOLUTION:</strong> Nidhi Pharmaceutical (<a href="https://nidhipharmaceutical.com/" target="_blank" rel="noopener" style="color:var(--accent2);font-weight:600;text-decoration:underline;">nidhipharmaceutical.com</a>) — a full-fledged international medicine marketplace built with partner. Engineered on a serverless Google Firebase architecture delivering high speed, automated global SSL encryption, NoSQL database reactivity, dual-channel checkout (Direct Web Cart &amp; 1-Click WhatsApp Express), real-time order tracking (<code>track.html</code>), and an administrative control portal (<code>/admin</code>).</p>
+      <p class="major-desc" style="max-width:850px;margin-bottom:12px;"><strong style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1px;color:var(--dark)">THE SOLUTION:</strong> Nidhi Pharmaceutical (<a href="https://nidhipharmaceutical.com/" target="_blank" rel="noopener" style="color:var(--accent2);font-weight:600;text-decoration:underline;">nidhipharmaceutical.com</a>) — a full-fledged international medicine marketplace co-built with partner <a href="https://aniketdubey.in" target="_blank" rel="noopener" style="color:var(--accent2);font-weight:600;text-decoration:underline;">Aniket Dubey</a>. Engineered on a serverless Google Firebase architecture delivering high speed, automated global SSL encryption, NoSQL database reactivity, dual-channel checkout (Direct Web Cart &amp; 1-Click WhatsApp Express), real-time order tracking (<code>track.html</code>), and an administrative control portal (<code>/admin</code>).</p>
 
       <p class="major-desc" style="max-width:850px;margin-bottom:18px;"><strong style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1px;color:var(--dark)">MY CORE CONTRIBUTIONS:</strong> Designed Cloud Firestore collections (<code>products</code>, <code>orders</code>, <code>users</code>, <code>callbackRequests</code>), implemented proportional tiered pricing logic, built custom <code>security.js</code> Anti-XSS and sliding-window rate limiters, created Google Apps Script automated email webhook dispatches, and engineered the mobile-responsive mega-navigation across 20+ medicine categories.</p>
 
@@ -1045,13 +1497,14 @@
       <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px;">
         <div class="major-project-name" style="margin-bottom:0;font-size:26px;">KisanX</div>
         <span class="project-badge-pill" style="background:var(--accent2);color:var(--paper2);">🏆 Avishkar 2024–25 Flagship</span>
+        <span class="project-badge-pill" style="background:rgba(217,70,130,0.15);color:var(--accent2);border:1px solid rgba(217,70,130,0.25);">Co-Founded &amp; Built with partner <a href="https://aniketdubey.in" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;font-weight:600;">Aniket Dubey</a></span>
         <span class="project-badge-pill" style="background:rgba(45,106,79,0.15);color:#2d6a4f;border:1px solid rgba(45,106,79,0.25);">Mumbai University Selected</span>
       </div>
       <p style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:2px;color:var(--accent2);text-transform:uppercase;margin-bottom:12px;">Full-Stack Agricultural Direct-to-Consumer Marketplace &middot; PHP &middot; MySQL &middot; MERN &middot; React Native</p>
       
       <p class="major-desc" style="max-width:850px;margin-bottom:12px;"><strong style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1px;color:var(--dark)">THE PROBLEM:</strong> Indian farmers lose income to middlemen — no direct buyer access, poor price discovery, no digital platform built for them.</p>
       
-      <p class="major-desc" style="max-width:850px;margin-bottom:12px;"><strong style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1px;color:var(--dark)">THE SOLUTION:</strong> KisanX — a full-stack Direct-to-Consumer marketplace. Web app (PHP/MySQL) + mobile app (MERN + React Native). JWT auth, cloud deployment on Render. Developer: architecture → API → UI → mobile → deployment.</p>
+      <p class="major-desc" style="max-width:850px;margin-bottom:12px;"><strong style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1px;color:var(--dark)">THE SOLUTION:</strong> KisanX — a full-stack Direct-to-Consumer marketplace co-founded and built with partner <a href="https://aniketdubey.in" target="_blank" rel="noopener" style="color:var(--accent2);font-weight:600;text-decoration:underline;">Aniket Dubey</a>. Web app (PHP/MySQL) + mobile app (MERN + React Native). JWT auth, cloud deployment on Render. Developer: architecture → API → UI → mobile → deployment.</p>
       
       <p class="major-desc" style="max-width:850px;margin-bottom:18px;"><strong style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1px;color:var(--dark)">RECOGNITION:</strong> Presented and selected at the Avishkar Inter-Collegiate Research Convention, Mumbai University 2024–25 in Agriculture &amp; Animal Husbandry.</p>
 
@@ -1069,25 +1522,36 @@
                 <div class="mockup-dot"></div>
                 <div class="mockup-dot"></div>
                 <div class="mockup-dot"></div>
-                <span style="font-family:'Oswald',sans-serif;font-size:10px;color:var(--text-light);letter-spacing:1px;background:rgba(0,0,0,0.05);padding:2px 10px;border-radius:10px;margin-left:8px;flex:1;text-align:center;">kisanx.com</span>
+                <span style="font-family:'Oswald',sans-serif;font-size:10px;color:var(--text-light);letter-spacing:1px;background:rgba(0,0,0,0.05);padding:2px 10px;border-radius:10px;margin-left:8px;flex:1;text-align:center;">kisanx.onrender.com / marketplace</span>
               </div>
-              <div class="mockup-content">
-                <svg width="200" height="110" viewBox="0 0 200 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="200" height="110" fill="#c8b888"/>
-                  <rect width="200" height="18" fill="#2a2a18"/>
-                  <rect x="8" y="6" width="30" height="6" rx="2" fill="#a8c878"/>
-                  <rect x="130" y="6" width="12" height="6" rx="2" fill="#888"/>
-                  <rect x="146" y="6" width="12" height="6" rx="2" fill="#888"/>
-                  <rect x="162" y="6" width="12" height="6" rx="2" fill="#888"/>
-                  <rect x="178" y="6" width="14" height="6" rx="2" fill="#a8c878"/>
-                  <rect x="8" y="24" width="85" height="40" rx="4" fill="rgba(255,255,255,0.3)"/>
-                  <rect x="12" y="28" width="50" height="8" rx="2" fill="rgba(255,255,255,0.6)"/>
-                  <rect x="12" y="40" width="70" height="4" rx="2" fill="rgba(255,255,255,0.4)"/>
-                  <rect x="12" y="48" width="55" height="4" rx="2" fill="rgba(255,255,255,0.4)"/>
-                  <rect x="12" y="56" width="28" height="6" rx="3" fill="#a8c878"/>
-                  <rect x="105" y="22" width="88" height="46" rx="4" fill="rgba(255,255,255,0.2)"/>
-                  <text x="149" y="50" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="18">🌾</text>
-                </svg>
+              <div class="mockup-content" style="background:linear-gradient(135deg, #1b4332 0%, #081c15 100%);padding:12px 14px;display:flex;flex-direction:column;gap:8px;width:100%;box-sizing:border-box;">
+                <div style="display:flex;justify-content:space-between;align-items:center;">
+                  <span style="font-family:'Oswald',sans-serif;font-size:12px;color:#74c69d;letter-spacing:1px;font-weight:700;">🌾 KISANX AGROMART</span>
+                  <span style="font-family:'Oswald',sans-serif;font-size:9px;color:#d8f3dc;background:rgba(116,198,157,0.2);border:1px solid rgba(116,198,157,0.35);padding:2px 8px;border-radius:4px;">🚜 DIRECT-FROM-FARM</span>
+                </div>
+                <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:6px;">
+                  <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:6px 4px;text-align:center;">
+                    <span style="font-size:14px;display:block;">🌾</span>
+                    <div style="font-family:'Oswald',sans-serif;font-size:9px;color:#e2e8f0;margin-top:2px;">Sharbati Wheat</div>
+                    <div style="font-size:8px;color:#74c69d;font-weight:600;">₹42/kg · Fresh</div>
+                  </div>
+                  <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:6px 4px;text-align:center;">
+                    <span style="font-size:14px;display:block;">🥭</span>
+                    <div style="font-family:'Oswald',sans-serif;font-size:9px;color:#e2e8f0;margin-top:2px;">Alphonso Mango</div>
+                    <div style="font-size:8px;color:#74c69d;font-weight:600;">₹650/doz · Farm</div>
+                  </div>
+                  <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:6px 4px;text-align:center;">
+                    <span style="font-size:14px;display:block;">🌻</span>
+                    <div style="font-family:'Oswald',sans-serif;font-size:9px;color:#e2e8f0;margin-top:2px;">Mustard Oil</div>
+                    <div style="font-size:8px;color:#74c69d;font-weight:600;">₹180/L · Pure</div>
+                  </div>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,0.3);padding:4px 8px;border-radius:4px;border:1px solid rgba(255,255,255,0.08);">
+                  <span style="font-size:9px;color:#95d5b2;display:flex;align-items:center;gap:4px;">
+                    <span style="color:#52b788;">●</span> Zero Middlemen &middot; Fair Farmer Pricing
+                  </span>
+                  <span style="font-size:9px;color:#d8f3dc;font-weight:600;">🛒 Live Cart</span>
+                </div>
               </div>
             </div>
             <p style="font-size:12px;color:var(--text-light);line-height:1.6;margin-bottom:12px;font-family:'Source Serif 4',serif;font-weight:300;"><strong style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:1px;color:var(--dark)">Stack:</strong> PHP · MySQL · HTML/CSS/JS · Session Auth · Fully Responsive</p>
@@ -2382,6 +2846,125 @@ achCards.forEach(card => achObserver.observe(card));
 /* =========================
    FAQ TOGGLE
 ========================= */
+
+/* ================================================================
+   HERO CODE EDITOR MULTI-TAB SWITCHER
+================================================================ */
+window.switchHeroTab = function(tabName) {
+  var codeK = document.getElementById('codeKisanX');
+  var codeS = document.getElementById('codeSellMart');
+  var codeP = document.getElementById('codePharma');
+
+  if (codeK) codeK.style.display = (tabName === 'kisanx') ? 'inline' : 'none';
+  if (codeS) codeS.style.display = (tabName === 'sellmart') ? 'inline' : 'none';
+  if (codeP) codeP.style.display = (tabName === 'pharma') ? 'inline' : 'none';
+
+  var tabs = {
+    kisanx: {
+      bgId: 'tabBgKisanX', lineId: 'tabLineKisanX', textId: 'tabTextKisanX', color: '#f472b6',
+      statusL: '🌿 main*  ·  TypeScript React  ·  UTF-8',
+      statusR: '✓ 0 Errors  ·  100% Tests', statusRColor: '#4ade80',
+      badge1: '⚡ RAZORPAYX FINTECH', badge1Color: '#38bdf8',
+      badge2: '🌾 KISANX · D2C AGRI', badge2Color: '#4ade80',
+      badge3: '🔒 HMAC-SHA256 VERIFIED', badge3Color: '#f472b6'
+    },
+    sellmart: {
+      bgId: 'tabBgSellMart', lineId: 'tabLineSellMart', textId: 'tabTextSellMart', color: '#f97316',
+      statusL: '⚡ production  ·  PHP 8.2 & MySQL  ·  UTF-8',
+      statusR: '✓ 200 OK  ·  Live Webhook', statusRColor: '#4ade80',
+      badge1: '⚡ 2-HR DOORSTEP PICKUP', badge1Color: '#f97316',
+      badge2: '💳 RAZORPAYX INSTANT PAYOUT', badge2Color: '#38bdf8',
+      badge3: '🔒 HMAC-SHA256 SIGNED', badge3Color: '#4ade80'
+    },
+    pharma: {
+      bgId: 'tabBgPharma', lineId: 'tabLinePharma', textId: 'tabTextPharma', color: '#38bdf8',
+      statusL: '💊 live-catalog  ·  ES6+ & Firestore  ·  UTF-8',
+      statusR: '✓ Synced  ·  Security.js Active', statusRColor: '#38bdf8',
+      badge1: '💊 20+ MEDICAL DOMAINS', badge1Color: '#38bdf8',
+      badge2: '📦 ATOMIC STOCK DECREMENT', badge2Color: '#4ade80',
+      badge3: '⚡ 1-CLICK WHATSAPP EXPRESS', badge3Color: '#25d366'
+    }
+  };
+
+  ['kisanx', 'sellmart', 'pharma'].forEach(function(k) {
+    var item = tabs[k];
+    var bg = document.getElementById(item.bgId);
+    var line = document.getElementById(item.lineId);
+    var text = document.getElementById(item.textId);
+
+    if (k === tabName) {
+      if (bg) {
+        bg.setAttribute('fill', 'url(#tabActiveBg)');
+        bg.setAttribute('stroke', 'rgba(244,114,182,0.4)');
+      }
+      if (line) line.setAttribute('fill', item.color);
+      if (text) {
+        text.setAttribute('opacity', '1');
+        text.setAttribute('font-weight', '600');
+        text.setAttribute('fill', '#fdedf3');
+      }
+    } else {
+      if (bg) {
+        bg.setAttribute('fill', 'rgba(255,255,255,0.001)');
+        bg.setAttribute('stroke', 'transparent');
+      }
+      if (line) line.setAttribute('fill', 'transparent');
+      if (text) {
+        text.setAttribute('opacity', '0.6');
+        text.setAttribute('font-weight', '400');
+        text.setAttribute('fill', '#e8a0bb');
+      }
+    }
+  });
+
+  var sL = document.getElementById('heroStatusLeft');
+  var sR = document.getElementById('heroStatusRight');
+  var target = tabs[tabName];
+  if (sL && target) sL.textContent = target.statusL;
+  if (sR && target) {
+    sR.textContent = target.statusR;
+    sR.setAttribute('fill', target.statusRColor);
+  }
+
+  var b1 = document.getElementById('heroBadge1Text');
+  var b2 = document.getElementById('heroBadge2Text');
+  var b3 = document.getElementById('heroBadge3Text');
+  if (b1 && target) {
+    b1.textContent = target.badge1;
+    b1.setAttribute('fill', target.badge1Color);
+  }
+  if (b2 && target) {
+    b2.textContent = target.badge2;
+    b2.setAttribute('fill', target.badge2Color);
+  }
+  if (b3 && target) {
+    b3.textContent = target.badge3;
+    b3.setAttribute('fill', target.badge3Color);
+  }
+};
+
+// Also attach event listeners directly on DOM ready
+document.addEventListener('DOMContentLoaded', function() {
+  var mapping = {
+    'tabBtnKisanX': 'kisanx',
+    'tabBtnSellMart': 'sellmart',
+    'tabBtnPharma': 'pharma'
+  };
+  Object.keys(mapping).forEach(function(btnId) {
+    var el = document.getElementById(btnId);
+    if (el) {
+      el.addEventListener('click', function(e) {
+        e.stopPropagation();
+        window.switchHeroTab(mapping[btnId]);
+      });
+      el.addEventListener('touchend', function(e) {
+        e.stopPropagation();
+        window.switchHeroTab(mapping[btnId]);
+      }, {passive: false});
+    }
+  });
+});
+
 function toggleFaq(btn) {
   const answer = btn.nextElementSibling;
   const isOpen = answer.classList.contains("open");

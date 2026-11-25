@@ -198,3 +198,100 @@
     });
   }
 })();
+
+
+  // ==========================================
+  // Interactive Hero Code Editor Tabs Switcher
+  // ==========================================
+  window.switchHeroTab = function(tabName) {
+    var codeK = document.getElementById('codeKisanX');
+    var codeS = document.getElementById('codeSellMart');
+    var codeP = document.getElementById('codePharma');
+
+    if (codeK) codeK.style.display = (tabName === 'kisanx') ? 'inline' : 'none';
+    if (codeS) codeS.style.display = (tabName === 'sellmart') ? 'inline' : 'none';
+    if (codeP) codeP.style.display = (tabName === 'pharma') ? 'inline' : 'none';
+
+    var tabs = {
+      kisanx: {
+        bgId: 'tabBgKisanX', lineId: 'tabLineKisanX', textId: 'tabTextKisanX', color: '#f472b6',
+        statusL: '🌿 main*  ·  TypeScript React  ·  UTF-8',
+        statusR: '✓ 0 Errors  ·  100% Tests', statusRColor: '#4ade80',
+        badge1: '⚡ RAZORPAYX FINTECH', badge1Color: '#38bdf8',
+        badge2: '🌾 KISANX · D2C AGRI', badge2Color: '#4ade80',
+        badge3: '🔒 HMAC-SHA256 VERIFIED', badge3Color: '#f472b6'
+      },
+      sellmart: {
+        bgId: 'tabBgSellMart', lineId: 'tabLineSellMart', textId: 'tabTextSellMart', color: '#f97316',
+        statusL: '⚡ production  ·  PHP 8.2 & MySQL  ·  UTF-8',
+        statusR: '✓ 200 OK  ·  Live Webhook', statusRColor: '#4ade80',
+        badge1: '⚡ 2-HR DOORSTEP PICKUP', badge1Color: '#f97316',
+        badge2: '💳 RAZORPAYX INSTANT PAYOUT', badge2Color: '#38bdf8',
+        badge3: '🔒 HMAC-SHA256 SIGNED', badge3Color: '#4ade80'
+      },
+      pharma: {
+        bgId: 'tabBgPharma', lineId: 'tabLinePharma', textId: 'tabTextPharma', color: '#38bdf8',
+        statusL: '💊 live-catalog  ·  ES6+ & Firestore  ·  UTF-8',
+        statusR: '✓ Synced  ·  Security.js Active', statusRColor: '#38bdf8',
+        badge1: '💊 20+ MEDICAL DOMAINS', badge1Color: '#38bdf8',
+        badge2: '📦 ATOMIC STOCK DECREMENT', badge2Color: '#4ade80',
+        badge3: '⚡ 1-CLICK WHATSAPP EXPRESS', badge3Color: '#25d366'
+      }
+    };
+
+    ['kisanx', 'sellmart', 'pharma'].forEach(function(k) {
+      var item = tabs[k];
+      var bg = document.getElementById(item.bgId);
+      var line = document.getElementById(item.lineId);
+      var text = document.getElementById(item.textId);
+
+      if (k === tabName) {
+        if (bg) {
+          bg.setAttribute('fill', 'url(#tabActiveBg)');
+          bg.setAttribute('stroke', 'rgba(244,114,182,0.4)');
+        }
+        if (line) line.setAttribute('fill', item.color);
+        if (text) {
+          text.setAttribute('opacity', '1');
+          text.setAttribute('font-weight', '600');
+          text.setAttribute('fill', '#fdedf3');
+        }
+      } else {
+        if (bg) {
+          bg.setAttribute('fill', 'transparent');
+          bg.setAttribute('stroke', 'transparent');
+        }
+        if (line) line.setAttribute('fill', 'transparent');
+        if (text) {
+          text.setAttribute('opacity', '0.6');
+          text.setAttribute('font-weight', '400');
+          text.setAttribute('fill', '#e8a0bb');
+        }
+      }
+    });
+
+    var sL = document.getElementById('heroStatusLeft');
+    var sR = document.getElementById('heroStatusRight');
+    var target = tabs[tabName];
+    if (sL && target) sL.textContent = target.statusL;
+    if (sR && target) {
+      sR.textContent = target.statusR;
+      sR.setAttribute('fill', target.statusRColor);
+    }
+
+    var b1 = document.getElementById('heroBadge1Text');
+    var b2 = document.getElementById('heroBadge2Text');
+    var b3 = document.getElementById('heroBadge3Text');
+    if (b1 && target) {
+      b1.textContent = target.badge1;
+      b1.setAttribute('fill', target.badge1Color);
+    }
+    if (b2 && target) {
+      b2.textContent = target.badge2;
+      b2.setAttribute('fill', target.badge2Color);
+    }
+    if (b3 && target) {
+      b3.textContent = target.badge3;
+      b3.setAttribute('fill', target.badge3Color);
+    }
+  };

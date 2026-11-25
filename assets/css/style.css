@@ -2391,19 +2391,32 @@
       gap: 20px;
     }
 
-    /* Image block — shown on top */
+    /* Text block — shown first on mobile (Headline, Title, Bio, Buttons) */
+    .hero-left {
+      order: 1;
+      flex: 0 0 auto;
+      width: 100%;
+      text-align: center;
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Code editor window — positioned directly below Contact Me button and above Professional Profile */
     .hero-portrait {
       display: flex;
       position: relative;
-      width: 72%;
-      max-width: 240px;
-      height: 260px;
-      order: 1;
+      width: 95%;
+      max-width: 380px;
+      height: 420px;
+      order: 2;
       right: auto;
       bottom: auto;
-      border-radius: 18px;
+      border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 16px 48px rgba(26,26,14,0.2);
+      margin: 24px auto 12px;
+      box-shadow: 0 24px 60px rgba(61, 18, 40, 0.32), 0 0 35px rgba(232, 160, 187, 0.25);
     }
 
     .portrait-placeholder {
@@ -2412,18 +2425,6 @@
       width: 100%;
       height: 100%;
       overflow: hidden;
-    }
-
-    /* Text block — below image */
-    .hero-left {
-      order: 2;
-      flex: 0 0 auto;
-      width: 100%;
-      text-align: center;
-      padding: 0 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     .hero-name {
@@ -2513,7 +2514,7 @@
       width: 100% !important;
       padding: 20px 16px !important;
     }
-    .hero-portrait { max-width: 200px; height: 220px; }
+    .hero-portrait { width: 100%; max-width: 355px; height: 410px; }
     .hero-inner { padding: 80px 16px 30px; gap: 16px; }
     .skills-grid { grid-template-columns: repeat(2, 1fr); }
     .section-title { font-size: 36px; }
