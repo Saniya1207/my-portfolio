@@ -2403,19 +2403,19 @@
       align-items: center;
     }
 
-    /* Code editor window — positioned directly below Contact Me button and above Professional Profile */
+    /* Code editor window — prominent, bold & framed by 4 corners below Contact Me button */
     .hero-portrait {
       display: flex;
       position: relative;
       width: 95%;
-      max-width: 380px;
-      height: 420px;
+      max-width: 360px;
+      height: 480px;
       order: 2;
       right: auto;
       bottom: auto;
       border-radius: 20px;
       overflow: hidden;
-      margin: 24px auto 12px;
+      margin: 22px auto 14px;
       box-shadow: 0 24px 60px rgba(61, 18, 40, 0.32), 0 0 35px rgba(232, 160, 187, 0.25);
     }
 
@@ -2514,7 +2514,7 @@
       width: 100% !important;
       padding: 20px 16px !important;
     }
-    .hero-portrait { width: 100%; max-width: 355px; height: 410px; }
+    .hero-portrait { width: 96%; max-width: 340px; height: 460px; }
     .hero-inner { padding: 80px 16px 30px; gap: 16px; }
     .skills-grid { grid-template-columns: repeat(2, 1fr); }
     .section-title { font-size: 36px; }
