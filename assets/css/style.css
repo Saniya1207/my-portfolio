@@ -225,15 +225,17 @@
     width: 55%;
     height: 100%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
   }
 
   .portrait-placeholder {
     width: 100%;
-    height: 90%;
+    max-width: 640px;
+    height: auto;
+    aspect-ratio: 560 / 500;
     background: linear-gradient(135deg, #f0b8cd 0%, #d98aa8 60%, #b8527a 100%);
-    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(6% 0%, 100% 0%, 100% 100%, 0% 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -241,6 +243,8 @@
     font-size: 18px;
     letter-spacing: 2px;
     color: rgba(255,255,255,0.4);
+    border-radius: 24px;
+    box-shadow: -15px 25px 60px rgba(61, 18, 40, 0.35);
   }
 
   .tech-icon {
@@ -430,6 +434,8 @@
   }
 
   .skill-card {
+    transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.25s ease;
+    will-change: transform;
     background: var(--paper2);
     border: 2px solid var(--dark);
     border-radius: 12px;
@@ -1700,8 +1706,13 @@
   }
 
   @keyframes titleSlide {
-    from { opacity: 0; transform: translateX(-40px); clip-path: inset(0 100% 0 0); }
-    to   { opacity: 1; transform: translateX(0); clip-path: inset(0 0% 0 0); }
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes heroTextReveal {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
 
   .hero-name-anim .letter {
@@ -1720,25 +1731,35 @@
   }
 
   .hero-title-anim {
-    opacity: 0;
-    animation: titleSlide 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.4s forwards;
+    opacity: 1;
+    animation: heroTextReveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
   }
 
-  /* ===== PROFILE PIC / PORTRAIT ANIMATION ===== */
+  .hero-bio {
+    animation: heroTextReveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+  }
+
+  .hero-cta-btns {
+    animation: heroTextReveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+  }
+
+  /* ===== PROFILE PIC / PORTRAIT ANIMATION (Composited GPU Only) ===== */
   @keyframes portraitReveal {
-    0%   { opacity: 0; transform: translateX(80px) skewX(-5deg); clip-path: inset(0 100% 0 0); }
-    60%  { clip-path: inset(0 0% 0 0); }
-    100% { opacity: 1; transform: translateX(0) skewX(0deg); clip-path: inset(0 0% 0 0); }
+    0%   { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
   }
 
   @keyframes portraitFloat {
     0%, 100% { transform: translateY(0px); }
-    50%       { transform: translateY(-10px); }
+    50%       { transform: translateY(-8px); }
   }
 
   .hero-portrait {
-    animation: portraitReveal 1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s both,
-               portraitFloat 5s ease-in-out 2s infinite;
+    animation: portraitReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
+  }
+
+  .portrait-placeholder {
+    animation: portraitFloat 6s ease-in-out 1.2s infinite;
   }
 
   @keyframes skyDrift {
@@ -1951,13 +1972,11 @@
 
   /* NUMBER ANIMATIONS */
   @keyframes numberPulse {
-    0%, 100% { 
+    0%, 100% {
       transform: scale(1);
-      text-shadow: 0 0 0 rgba(194, 72, 122, 0);
     }
-    50% { 
-      transform: scale(1.1);
-      text-shadow: 0 0 15px rgba(194, 72, 122, 0.6);
+    50% {
+      transform: scale(1.05);
     }
   }
 
@@ -2031,13 +2050,11 @@
   @keyframes titleBlurFocus {
     from {
       opacity: 0;
-      filter: blur(10px);
-      transform: scale(0.9);
+      transform: translateY(14px) scale(0.96);
     }
     to {
       opacity: 1;
-      filter: blur(0);
-      transform: scale(1);
+      transform: translateY(0) scale(1);
     }
   }
 
@@ -2408,8 +2425,9 @@
       display: flex;
       position: relative;
       width: 95%;
-      max-width: 360px;
-      height: 480px;
+      max-width: 440px;
+      height: auto;
+      aspect-ratio: 560 / 500;
       order: 2;
       right: auto;
       bottom: auto;
@@ -2417,11 +2435,14 @@
       overflow: hidden;
       margin: 22px auto 14px;
       box-shadow: 0 24px 60px rgba(61, 18, 40, 0.32), 0 0 35px rgba(232, 160, 187, 0.25);
+      opacity: 1 !important;
+      transform: none !important;
+      animation: none !important;
     }
 
     .portrait-placeholder {
       clip-path: none;
-      border-radius: 0;
+      border-radius: 20px;
       width: 100%;
       height: 100%;
       overflow: hidden;
@@ -2514,7 +2535,7 @@
       width: 100% !important;
       padding: 20px 16px !important;
     }
-    .hero-portrait { width: 96%; max-width: 340px; height: 460px; }
+    .hero-portrait { width: 96%; max-width: 380px; height: auto; aspect-ratio: 560 / 500; }
     .hero-inner { padding: 80px 16px 30px; gap: 16px; }
     .skills-grid { grid-template-columns: repeat(2, 1fr); }
     .section-title { font-size: 36px; }
