@@ -1,78 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- ============================================================
-       HOMEPAGE
-       ============================================================ -->
+  <!-- HOMEPAGE -->
   <url>
     <loc>https://www.saniya.me/</loc>
-    <lastmod>2026-08-16T16:00:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-11-25</lastmod>
   </url>
 
-  <!-- ============================================================
-       BLOG & ARTICLES
-       ============================================================ -->
+  <!-- BLOG -->
   <url>
     <loc>https://www.saniya.me/blog/</loc>
-    <lastmod>2026-08-16T16:00:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-11-20</lastmod>
   </url>
-
   <url>
     <loc>https://www.saniya.me/blog/how-we-built-instantsellmart/</loc>
-    <lastmod>2026-11-20T14:00:00+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-11-20</lastmod>
   </url>
-
   <url>
     <loc>https://www.saniya.me/blog/how-i-built-kisanx/</loc>
-    <lastmod>2026-08-16T16:00:00+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-08-16</lastmod>
   </url>
-
   <url>
     <loc>https://www.saniya.me/blog/full-stack-journey/</loc>
-    <lastmod>2026-08-16T16:00:00+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-08-16</lastmod>
   </url>
-
   <url>
     <loc>https://www.saniya.me/blog/php-vs-mern/</loc>
-    <lastmod>2026-08-16T16:00:00+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-08-16</lastmod>
   </url>
-
   <url>
     <loc>https://www.saniya.me/blog/top-fullstack-projects/</loc>
-    <lastmod>2026-08-16T16:00:00+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-08-16</lastmod>
   </url>
-
   <url>
     <loc>https://www.saniya.me/blog/react-native-jwt-otp/</loc>
-    <lastmod>2026-08-16T16:00:00+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-08-16</lastmod>
   </url>
 
-  <!-- ============================================================
-       RESUME
-       ============================================================ -->
+  <!-- RESUME -->
   <url>
     <loc>https://www.saniya.me/RESUME.pdf</loc>
-    <lastmod>2026-08-16T16:00:00+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-16</lastmod>
   </url>
 
 </urlset>

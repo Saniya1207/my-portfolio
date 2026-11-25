@@ -1,34 +1,47 @@
 # Saniya Farooqui — Full-Stack Web Developer
 
-> Full-Stack Web Developer based in Vasai-Virar, Nallasopara & Mumbai, India. Co-Founder of KisanX (Avishkar 2024-25 Research Convention Awardee). Expert in React, Node.js, PHP, MySQL, MongoDB, and modern responsive UI/UX.
+> Freelance Full-Stack Web Developer based in Vasai-Virar, Nallasopara & Mumbai, India. Co-Founder of KisanX (Avishkar 2024-25 Research Convention awardee). Works with React, Node.js, PHP, MySQL, MongoDB and React Native, and builds responsive websites, web apps and mobile apps for local businesses and clients worldwide.
 
-Saniya Farooqui is a professional Full-Stack Web Developer and B.Sc. IT student at Mumbai University (Patkar-Varde College). She provides freelance web development, custom full-stack solutions, and responsive website design for businesses and clients in Vasai-Virar, Nallasopara, Palghar, and Mumbai Metropolitan Region, as well as worldwide.
+Saniya Farooqui is a Full-Stack Web Developer and B.Sc. IT student at Mumbai University (Patkar-Varde College). She takes freelance web development projects, custom full-stack builds and responsive website design for businesses in Vasai-Virar, Nallasopara, Palghar and the Mumbai Metropolitan Region, and for remote clients worldwide. She is also open to internships and entry-level roles.
 
-## Primary Information
-- **Name**: Saniya Farooqui
-- **Role**: Full-Stack Web Developer | Co-Founder of KisanX
-- **Location**: Virar, Vasai-Virar, Mumbai, Maharashtra, India (Postal Code: 401303)
-- **Email**: saniya122400@gmail.com
-- **WhatsApp**: +91 7666886033
-- **Website**: https://www.saniya.me/
-- **GitHub**: https://github.com/Saniya1207
-- **LinkedIn**: https://www.linkedin.com/in/saniya-farooqui-dev/
+## Contact
+- Name: Saniya Farooqui
+- Location: Virar, Vasai-Virar, Mumbai, Maharashtra, India (PIN 401303)
+- Email: saniya122400@gmail.com
+- WhatsApp: +91 7666886033
+- Website: https://www.saniya.me/
+- GitHub: https://github.com/Saniya1207
+- LinkedIn: https://www.linkedin.com/in/saniya-farooqui-dev/
+- Resume: https://www.saniya.me/RESUME.pdf
 
-## Core Skills & Services
-- **Frontend**: React.js, JavaScript (ES6+), HTML5, CSS3, Responsive UI/UX Design, Semantic Markup.
-- **Backend & Database**: Node.js, Express.js, PHP, MySQL, MongoDB, RESTful APIs, JWT Authentication.
-- **Mobile Development**: React Native (Expo).
-- **SEO & Performance**: Local Search Engine Optimization (Vasai-Virar, Nallasopara, Mumbai), JSON-LD Structured Data Schemas, Core Web Vitals optimization.
+## Services & Skills
+- Frontend: React.js, JavaScript (ES6+), HTML5, CSS3, responsive UI/UX, semantic markup
+- Backend & Database: Node.js, Express.js, PHP, MySQL, MongoDB, REST APIs, JWT authentication
+- Mobile: React Native (Expo)
+- SEO & Performance: local SEO (Vasai-Virar, Nallasopara, Mumbai), JSON-LD structured data, Core Web Vitals
 
 ## Featured Projects
-1. **KisanX**: Full-stack Direct-to-Consumer agricultural marketplace platform (Web: PHP/MySQL; Mobile: React Native + MERN). Presented at Avishkar Inter-Collegiate Research Convention, Mumbai University 2024–25.
-2. **The Capital Home**: Fast, mobile-first real estate business landing page with zero dependencies.
-3. **Vastu Properties**: Dynamic property listing web application built with React.js.
+- InstantSellMart: appliance resale and doorstep pickup platform (PHP/MySQL) with digital payouts and conversion tracking. Site: https://instantsellmart.com
+- KisanX: direct-to-consumer agricultural marketplace (web: PHP/MySQL; mobile: React Native + MERN). Presented at the Avishkar Inter-Collegiate Research Convention, Mumbai University 2024-25.
+- The Capital Home: fast, mobile-first real estate landing page with zero dependencies.
+- Vastu Properties: dynamic property listing web app built with React.js.
 
-## Academic & Verifiable Credentials
-- **Degree**: B.Sc. in Information Technology, Patkar-Varde College, Mumbai University (FY GPA: 8.73, SY GPA: 8.30).
-- **5x IIT Bombay Certifications**: Advanced C++, PHP & MySQL, R Programming, HTML5.
-- **Python for Cyber Security**: CS4ALL / Erasmus+ Programme.
-- **Deloitte Job Simulations**: Technology & Cybersecurity simulations via Forage.
+## Blog (engineering case studies)
+- [Blog index](https://www.saniya.me/blog/)
+- [How We Built InstantSellMart](https://www.saniya.me/blog/how-we-built-instantsellmart/)
+- [How I Built KisanX Using MERN Stack & React Native](https://www.saniya.me/blog/how-i-built-kisanx/)
+- [PHP vs MERN Stack: Lessons From Real Projects](https://www.saniya.me/blog/php-vs-mern/)
+- [React Native JWT Auth with OTP Verification](https://www.saniya.me/blog/react-native-jwt-otp/)
+- [Full-Stack Journey](https://www.saniya.me/blog/full-stack-journey/)
+- [Top Full-Stack Projects](https://www.saniya.me/blog/top-fullstack-projects/)
+
+## Education & Credentials
+- Degree: B.Sc. Information Technology, Patkar-Varde College, University of Mumbai (FY GPA 8.73, SY GPA 8.30)
+- IIT Bombay certifications: Advanced C++, PHP & MySQL, R Programming, HTML5
+- Python for Cyber Security: CS4ALL / Erasmus+ programme
+- Deloitte job simulations (Technology and Cybersecurity) via Forage
+
+## Optional
+- [Homepage](https://www.saniya.me/)
 
 © 2026 Saniya Farooqui. All rights reserved.

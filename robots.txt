@@ -1,11 +1,36 @@
 # ================================================================
 #  robots.txt — saniya.me
 #  Saniya Farooqui | Full-Stack Developer | Co-Founder of KisanX
-#  Last updated: 2026-06-24
+#  Last updated: 2026-11-25
 # ================================================================
 
-# ---- Allow ALL major search engines ----
+# ---- All crawlers (search engines, social previews, AI crawlers) ----
+# Every bot named in one group so the Disallow rules below apply to all
+# of them. (A bot with its own separate group ignores the "*" group.)
 User-agent: *
+User-agent: Googlebot
+User-agent: Googlebot-Image
+User-agent: Bingbot
+User-agent: DuckDuckBot
+User-agent: Slurp
+User-agent: facebookexternalhit
+User-agent: Twitterbot
+User-agent: LinkedInBot
+User-agent: WhatsApp
+User-agent: Google-Extended
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: PerplexityBot
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: cohere-ai
+User-agent: Meta-ExternalAgent
+User-agent: Meta-ExternalFetcher
+User-agent: FacebookBot
 Allow: /
 Disallow: /private/
 Disallow: /admin/
@@ -13,107 +38,5 @@ Disallow: /cgi-bin/
 Disallow: /node_modules/
 Disallow: /.git/
 
-# ---- Google ----
-User-agent: Googlebot
-Allow: /
-
-# Image crawling fully enabled — needed for Google Images visibility
-# on the profile photo, project screenshots and logo.
-User-agent: Googlebot-Image
-Allow: /
-
-User-agent: Googlebot-Mobile
-Allow: /
-
-# ---- Bing / Microsoft ----
-User-agent: Bingbot
-Allow: /
-
-User-agent: msnbot
-Allow: /
-
-# ---- DuckDuckGo / Yahoo ----
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-# ---- Social Media Crawlers (needed for link previews) ----
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /
-
-User-agent: WhatsApp
-Allow: /
-
-# ---- AI / LLM CRAWLERS — ALLOWED FOR MAXIMUM AI-SEARCH VISIBILITY ----
-# Google-Extended controls inclusion in Google AI Overview / Gemini grounding.
-# Blocking this can cause AI Overview to omit you entirely.
-User-agent: Google-Extended
-Allow: /
-
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: YouBot
-Allow: /
-
-User-agent: Bytespider
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-User-agent: cohere-ai
-Allow: /
-
-User-agent: Meta-ExternalFetcher
-Allow: /
-
-User-agent: FacebookBot
-Allow: /
-
-# ---- SEO / Backlink tools — allowed (helps off-page SEO tracking) ----
-User-agent: AhrefsBot
-Allow: /
-
-User-agent: SemrushBot
-Allow: /
-
-User-agent: MJ12bot
-Allow: /
-
-User-agent: DotBot
-Allow: /
-
-User-agent: rogerbot
-Allow: /
-
-# ---- SITEMAPS ----
+# ---- SITEMAP ----
 Sitemap: https://www.saniya.me/sitemap.xml
-Sitemap: https://www.saniya.me/sitemap-images.xml
-
